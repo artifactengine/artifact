@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "R:\\code\\Artifact\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3B1A96A-732B-4ECD-A3D8-15D15B5D6B63}|Artifact\\Artifact.csproj|R:\\code\\Artifact\\artifact\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3B1A96A-732B-4ECD-A3D8-15D15B5D6B63}|Artifact\\Artifact.csproj|r:\\code\\artifact\\artifact\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3B1A96A-732B-4ECD-A3D8-15D15B5D6B63}|Artifact\\Artifact.csproj|solutionrelative:artifact\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|R:\\code\\Artifact\\artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|solutionrelative:artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{777275E3-3260-43E3-BB07-81FE282DB555}|TestGame\\TestGame.csproj|r:\\code\\artifact\\testgame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{777275E3-3260-43E3-BB07-81FE282DB555}|TestGame\\TestGame.csproj|R:\\code\\Artifact\\testgame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{777275E3-3260-43E3-BB07-81FE282DB555}|TestGame\\TestGame.csproj|solutionrelative:testgame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|R:\\code\\Artifact\\artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|solutionrelative:artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|r:\\code\\artifact\\artifact.plugins.rendering\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|R:\\code\\Artifact\\artifact.plugins.rendering\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|solutionrelative:artifact.plugins.rendering\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|R:\\code\\Artifact\\artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|solutionrelative:artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|r:\\code\\artifact\\artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|R:\\code\\Artifact\\artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|solutionrelative:artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -71,8 +71,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering.OpenGLBackend\\OpenGLVisual.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T15:07:35.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T15:07:35.627Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering\\Mesh.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T15:02:17.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T15:02:17.291Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXRenderingBackend.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:57:26.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T14:57:26.941Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering\\RenderingPlugin.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAAAD0AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:55:28.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T14:55:28.763Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "TestGame\\Game.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAiwCMAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:54:52.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T14:54:52.579Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
               "ViewState": "AQIAAFsAAAAAAAAAAAAAAGoAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T14:52:04.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T14:52:04.713Z"
             }
           ]
         }
