@@ -1,0 +1,12 @@
+R:\code\Artifact\Artifact\bin\Debug\net8.0\Artifact.deps.json
+R:\code\Artifact\Artifact\bin\Debug\net8.0\Artifact.dll
+R:\code\Artifact\Artifact\bin\Debug\net8.0\Artifact.pdb
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.GeneratedMSBuildEditorConfig.editorconfig
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.AssemblyInfoInputs.cache
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.AssemblyInfo.cs
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.csproj.CoreCompileInputs.cache
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.dll
+R:\code\Artifact\Artifact\obj\Debug\net8.0\refint\Artifact.dll
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.pdb
+R:\code\Artifact\Artifact\obj\Debug\net8.0\ref\Artifact.dll
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.csproj.AssemblyReference.cache

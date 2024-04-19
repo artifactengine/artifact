@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "vB2pz2K61C6J5TvXi6GD+XcIU//A2e3Gn4ED2u5qGIcdeZwwYdS5tQrtQ2dHzOHDSQu46CXV046kUfbudesFtA==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\colorhelper\\1.8.1\\colorhelper.1.8.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0-preview.3.24172.9\\microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.3.24172.9\\system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2u8F/4VZxvt5nMnEIzqYGIhzkmWyrA7DE42iTInr49Qbx01lHq9XltqTXDWk0Hg8uvMuTSoDsxqzWRkJj6PqYA==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512"
+  ],
+  "logs": []
+}

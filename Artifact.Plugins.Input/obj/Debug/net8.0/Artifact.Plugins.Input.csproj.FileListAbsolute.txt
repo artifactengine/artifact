@@ -1,0 +1,15 @@
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.csproj.AssemblyReference.cache
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.GeneratedMSBuildEditorConfig.editorconfig
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.AssemblyInfoInputs.cache
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.AssemblyInfo.cs
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.csproj.CoreCompileInputs.cache
+R:\code\Artifact\Artifact.Plugins.Input\bin\Debug\net8.0\Artifact.Plugins.Input.deps.json
+R:\code\Artifact\Artifact.Plugins.Input\bin\Debug\net8.0\Artifact.Plugins.Input.dll
+R:\code\Artifact\Artifact.Plugins.Input\bin\Debug\net8.0\Artifact.Plugins.Input.pdb
+R:\code\Artifact\Artifact.Plugins.Input\bin\Debug\net8.0\Artifact.dll
+R:\code\Artifact\Artifact.Plugins.Input\bin\Debug\net8.0\Artifact.pdb
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.D600651F.Up2Date
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.dll
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\refint\Artifact.Plugins.Input.dll
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.pdb
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\ref\Artifact.Plugins.Input.dll

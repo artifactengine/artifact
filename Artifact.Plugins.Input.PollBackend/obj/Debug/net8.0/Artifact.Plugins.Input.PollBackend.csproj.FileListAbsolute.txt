@@ -1,0 +1,17 @@
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.csproj.AssemblyReference.cache
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.GeneratedMSBuildEditorConfig.editorconfig
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.AssemblyInfoInputs.cache
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.AssemblyInfo.cs
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.csproj.CoreCompileInputs.cache
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.deps.json
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.pdb
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.Plugins.Input.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.Plugins.Input.pdb
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\bin\Debug\net8.0\Artifact.pdb
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.27771108.Up2Date
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\refint\Artifact.Plugins.Input.PollBackend.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.pdb
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\ref\Artifact.Plugins.Input.PollBackend.dll

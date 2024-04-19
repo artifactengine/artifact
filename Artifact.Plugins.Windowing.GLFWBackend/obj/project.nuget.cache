@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "HOUgZ31E0D8bL7fysvaBm/TozW2bSHMlw20yxYooUP+JhB7jjH1ljPFAJWsFayb+qFC9yeHz3pMIWu/yto54Mg==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\silk.net.core\\2.20.0\\silk.net.core.2.20.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\silk.net.glfw\\2.20.0\\silk.net.glfw.2.20.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\ultz.native.glfw\\3.3.9.2\\ultz.native.glfw.3.3.9.2.nupkg.sha512"
+  ],
+  "logs": []
+}

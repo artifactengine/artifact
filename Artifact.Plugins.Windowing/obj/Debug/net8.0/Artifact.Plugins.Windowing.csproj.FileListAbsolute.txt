@@ -1,0 +1,15 @@
+R:\code\Artifact\Artifact.Plugins.Windowing\bin\Debug\net8.0\Artifact.Plugins.Windowing.deps.json
+R:\code\Artifact\Artifact.Plugins.Windowing\bin\Debug\net8.0\Artifact.Plugins.Windowing.dll
+R:\code\Artifact\Artifact.Plugins.Windowing\bin\Debug\net8.0\Artifact.Plugins.Windowing.pdb
+R:\code\Artifact\Artifact.Plugins.Windowing\bin\Debug\net8.0\Artifact.dll
+R:\code\Artifact\Artifact.Plugins.Windowing\bin\Debug\net8.0\Artifact.pdb
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.csproj.AssemblyReference.cache
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.GeneratedMSBuildEditorConfig.editorconfig
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.AssemblyInfoInputs.cache
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.AssemblyInfo.cs
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.csproj.CoreCompileInputs.cache
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.24C624FE.Up2Date
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.dll
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\refint\Artifact.Plugins.Windowing.dll
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.pdb
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\ref\Artifact.Plugins.Windowing.dll

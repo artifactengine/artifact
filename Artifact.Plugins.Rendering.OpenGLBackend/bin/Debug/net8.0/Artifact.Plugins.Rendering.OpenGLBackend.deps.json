@@ -1,0 +1,160 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Artifact.Plugins.Rendering.OpenGLBackend/1.0.0": {
+        "dependencies": {
+          "Artifact": "1.0.0",
+          "Artifact.Plugins.Rendering": "1.0.0",
+          "SharpGL": "3.1.1"
+        },
+        "runtime": {
+          "Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
+        }
+      },
+      "ColorHelper/1.8.1": {
+        "runtime": {
+          "lib/netstandard2.0/ColorHelper.dll": {
+            "assemblyVersion": "1.8.1.0",
+            "fileVersion": "1.8.1.0"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.17209"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.17209"
+          }
+        }
+      },
+      "NLog/5.2.8": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.8.2366"
+          }
+        }
+      },
+      "SharpGL/3.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/SharpGL.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "System.Drawing.Common/9.0.0-preview.3.24172.9": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.0-preview.3.24172.9"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.17209"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.17209"
+          }
+        }
+      },
+      "Artifact/1.0.0": {
+        "dependencies": {
+          "NLog": "5.2.8"
+        },
+        "runtime": {
+          "Artifact.dll": {}
+        }
+      },
+      "Artifact.Plugins.Rendering/1.0.0": {
+        "dependencies": {
+          "Artifact": "1.0.0",
+          "Artifact.Plugins.Windowing": "1.0.0",
+          "ColorHelper": "1.8.1",
+          "System.Drawing.Common": "9.0.0-preview.3.24172.9"
+        },
+        "runtime": {
+          "Artifact.Plugins.Rendering.dll": {}
+        }
+      },
+      "Artifact.Plugins.Windowing/1.0.0": {
+        "dependencies": {
+          "Artifact": "1.0.0"
+        },
+        "runtime": {
+          "Artifact.Plugins.Windowing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Artifact.Plugins.Rendering.OpenGLBackend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ColorHelper/1.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rblWXd/02TfwJjX53xEfQnbnDRKxCm09VtavV8JaIcmIFWt9efNf6xTQ3WeXgy/she5R31eRTtnizFoUoDrs5w==",
+      "path": "colorhelper/1.8.1",
+      "hashPath": "colorhelper.1.8.1.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BXlwADoECEiOm94z5BKUNfhTnSw3exFxEpdZ9Fni4lRjmAoCqFrkN4j4MnWCsYDRuXW92ZSrGpeXf18VOmRvg==",
+      "path": "microsoft.win32.systemevents/9.0.0-preview.3.24172.9",
+      "hashPath": "microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512"
+    },
+    "NLog/5.2.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jAIELkWBs1CXFPp986KSGpDFQZHCFccO+LMbKBTTNm42KifaI1mYzFMFQQfuGmGMTrCx0TFPhDjHDE4cLAZWiQ==",
+      "path": "nlog/5.2.8",
+      "hashPath": "nlog.5.2.8.nupkg.sha512"
+    },
+    "SharpGL/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tLTsMAl0XMjLhVK++ga65tObn/8IyPEfZ9i+icELcAPJ92mgB/DllVlfDBNJOP5T3C4GuT6YEZn3CVR11GH2qQ==",
+      "path": "sharpgl/3.1.1",
+      "hashPath": "sharpgl.3.1.1.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.0-preview.3.24172.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KD3i/1Q1zvEejpW03lXKxhdyP0dAC8LQol/TU2zPVPIkLIe7fxXjMWcdZ1PKkZjbWDewqjtd815VRYBF9exESw==",
+      "path": "system.drawing.common/9.0.0-preview.3.24172.9",
+      "hashPath": "system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512"
+    },
+    "Artifact/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Artifact.Plugins.Rendering/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Artifact.Plugins.Windowing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

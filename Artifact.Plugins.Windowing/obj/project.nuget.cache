@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "c2RPld/VU+mUrw1E2M0XY81bMZ0LA7Xh/K7akjiMU9kbdHfcXX+/34VXXC9bOz9wbGMI40tNdmDtTB1u5Z/nbg==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512"
+  ],
+  "logs": []
+}

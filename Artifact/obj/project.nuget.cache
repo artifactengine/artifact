@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "e7RNWTMpJl0e5PJzxzxz1WxMpgyVU60oQRzPeyx2iWZdax+7TO2SGCqlMiPH2YbHrkcpervu3crYhddPtcvLfg==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512"
+  ],
+  "logs": []
+}

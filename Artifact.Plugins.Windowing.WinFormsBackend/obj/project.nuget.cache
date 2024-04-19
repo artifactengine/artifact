@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g1EJ9aqTi52PRF63fFbmFnH5I4pzZM1mbapwRVu1ZhW4B57TzQCvW9yF649nPnrppemLeY9+QOIyeeSnoe55nA==",
+  "success": true,
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512"
+  ],
+  "logs": []
+}
