@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj" />
     <ProjectReference Include="..\Artifact\Artifact.csproj" />
   </ItemGroup>
 

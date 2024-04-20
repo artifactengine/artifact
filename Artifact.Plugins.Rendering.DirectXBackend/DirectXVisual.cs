@@ -45,10 +45,10 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             context = DirectXRenderingBackend.deviceContext;
 
 
-            var vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
+            var vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
             vertexShader = new VertexShader(DirectXRenderingBackend.device, vertexShaderByteCode);
 
-            var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
+            var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
             pixelShader = new PixelShader(DirectXRenderingBackend.device, pixelShaderByteCode);
             /*
             layout = new InputLayout(
@@ -127,24 +127,23 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             model.Transpose();
             */
 
+            Console.WriteLine(Position);
+
             Matrix proj = Camera.ViewMatrix.ToDXMatrix();
             Matrix view = Camera.ProjectionMatrix.ToDXMatrix();
 
             Matrix translation = Matrix.Translation(Position.ToDXVec());
+            translation.Transpose();
             Matrix rotation = Matrix.RotationYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
             Matrix scale = Matrix.Scaling(Scale.ToDXVec());
 
-            Matrix model = (scale * rotation * scale);
+            Matrix model = (scale * rotation * translation);
 
             Matrix mvp = (proj * view * model);
+            mvp.Transpose();
             //mvp.Transpose();
 
-            Matrices matrices = new Matrices();
-            matrices.view = view;
-            matrices.proj = proj;
-            matrices.model = mvp;
-
-            context.UpdateSubresource(ref matrices, contantBuffer);
+            context.UpdateSubresource(ref mvp, contantBuffer);
 
             context.InputAssembler.InputLayout = layout;
             context.InputAssembler.PrimitiveTopology = PrimitiveTopology.TriangleList;
@@ -154,8 +153,6 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             context.VertexShader.Set(vertexShader);
             context.PixelShader.Set(pixelShader);
             context.OutputMerger.SetTargets(DirectXRenderingBackend.renderView);
-
-            Console.WriteLine(_mesh.Indices.Length);
 
             context.DrawIndexed(_mesh.Indices.Length, 0, 0);
         }

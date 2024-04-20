@@ -4,6 +4,153 @@
     "R:\\code\\Artifact\\TestGame\\TestGame.csproj": {}
   },
   "projects": {
+    "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj",
+        "projectName": "Artifact.Plugin.Audio",
+        "projectPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj",
+        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+        "outputPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj",
+        "projectName": "Artifact.Plugins.Audio.NAudioBackend",
+        "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj",
+        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+        "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
+              },
+              "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "NAudio": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -883,6 +1030,12 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
+              },
+              "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj"
+              },
               "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj": {
                 "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj"
               },

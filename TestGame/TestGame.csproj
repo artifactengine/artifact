@@ -15,6 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj" />
+    <ProjectReference Include="..\Artifact.Plugins.Audio.NAudioBackend\Artifact.Plugins.Audio.NAudioBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input.PollBackend\Artifact.Plugins.Input.PollBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.DirectXBackend\Artifact.Plugins.Rendering.DirectXBackend.csproj" />
@@ -29,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Assets\SFX\GlockShot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\Shaders\opengl\default.frag">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

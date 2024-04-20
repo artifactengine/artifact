@@ -1,8 +1,6 @@
 cbuffer data :register(b0)
 {
-	float4x4 model;
-	float4x4 view;
-	float4x4 proj;
+	float4x4 mvp;
 };
 
 struct VS_IN
@@ -21,7 +19,7 @@ PS_IN VS( VS_IN input )
 {
     PS_IN output = (PS_IN)0;
     
-    output.pos = mul(model, input.pos);
+    output.pos = mul(mvp, input.pos);
     output.col = input.col;
     
     return output;

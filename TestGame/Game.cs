@@ -16,6 +16,8 @@ using Artifact.Plugins.Input;
 using Artifact.Plugins.Input.PollBackend;
 using System.Numerics;
 using Artifact.Plugins.Rendering.VeldridBackend;
+using Artifact.Plugin.Audio;
+using Artifact.Plugins.Audio.NAudioBackend;
 
 namespace TestGame
 {
@@ -23,6 +25,7 @@ namespace TestGame
     {
         private RenderingPlugin renderer;
         private InputPlugin input;
+        private AudioPlugin audio;
         private bool first = true;
 
         private IVisual quad1;
@@ -35,17 +38,16 @@ namespace TestGame
             Name = "Test Game";
 
             AddPlugin(new WindowingPlugin(this, "Test Game", 1280, 720, typeof(SDL2WindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
-
-            Console.WriteLine(Camera.orthoWidth);
-            Console.WriteLine(Camera.orthoHeight);
+            AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
         }
 
         public override void OnLoad()
         {
             renderer = GetPlugin<RenderingPlugin>();
             input = GetPlugin<InputPlugin>();
+            audio = GetPlugin<AudioPlugin>();
 
             Vertex[] vertices = {
                 new Vertex(new Vector4(-0.1f, 0.1f, 0.5f, 1.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
@@ -108,8 +110,14 @@ namespace TestGame
             {
                 quad2.Position += new Vector3(0.01f, 0, 0);
             }
+
+            if (input.WasKeyPressedThisFrame(Key.Space))
+            {
+                audio.PlayWav("Assets/SFX/GlockShot.wav");
+            }
+
             quad1.Position = new Vector3(quad1.Position.X, quad1.Position.Y, -5f);
-            Console.WriteLine(quad1.Position);
+            quad2.Position = new Vector3(quad2.Position.X, quad2.Position.Y, -5f);
         }
 
         public void OnDraw()

@@ -108,3 +108,14 @@ R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\Shaders\opengl\default.vert
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\Shaders\veldrid\default.frag
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\Shaders\veldrid\default.vert
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Veldrid.StartupUtilities.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\SFX\GlockShot.wav
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.Asio.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.Core.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.Midi.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.Wasapi.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\NAudio.WinMM.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugin.Audio.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Audio.NAudioBackend.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugin.Audio.pdb
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Audio.NAudioBackend.pdb

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Windowing.SDL2Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f059b42033b6081cdd1a0db37661417aa486a98a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e08780e067c9c782cacf2371f1cd22211a2245fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Windowing.SDL2Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Windowing.SDL2Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
