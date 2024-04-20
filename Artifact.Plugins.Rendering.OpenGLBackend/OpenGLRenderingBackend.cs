@@ -63,5 +63,10 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.ClearColor(color.UnitR, color.UnitG, color.UnitB, alpha);
             gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT);
         }
+
+        public void Predraw()
+        {
+            
+        }
     }
 }

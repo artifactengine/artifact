@@ -15,6 +15,7 @@ using Artifact.Plugins.Windowing.WinFormsBackend;
 using Artifact.Plugins.Input;
 using Artifact.Plugins.Input.PollBackend;
 using System.Numerics;
+using Artifact.Plugins.Rendering.VeldridBackend;
 
 namespace TestGame
 {
@@ -24,7 +25,8 @@ namespace TestGame
         private InputPlugin input;
         private bool first = true;
 
-        private IVisual tri;
+        private IVisual quad1;
+        private IVisual quad2;
 
         private ColorHSB color = new ColorHSB(0, 100, 50, 255);
 
@@ -33,7 +35,7 @@ namespace TestGame
             Name = "Test Game";
 
             AddPlugin(new WindowingPlugin(this, "Test Game", 1280, 720, typeof(SDL2WindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
 
             Console.WriteLine(Camera.orthoWidth);
@@ -57,7 +59,8 @@ namespace TestGame
                 0, 3, 1
             ];
 
-            tri = renderer.CreateVisual(new Mesh(vertices, indices));
+            quad1 = renderer.CreateVisual(new Mesh(vertices, indices));
+            quad2 = renderer.CreateVisual(new Mesh(vertices, indices));
             base.OnLoad();
         }
 
@@ -74,29 +77,47 @@ namespace TestGame
 
             if (input.IsKeyDown(Key.W))
             {
-                tri.Position += new Vector3(0, 0.01f, 0);
+                quad1.Position += new Vector3(0, 0.01f, 0);
             }
             if (input.IsKeyDown(Key.S))
             {
-                tri.Position += new Vector3(0, -0.01f, 0);
+                quad1.Position += new Vector3(0, -0.01f, 0);
             }
             if (input.IsKeyDown(Key.A))
             {
-                tri.Position += new Vector3(-0.01f, 0, 0);
+                quad1.Position += new Vector3(-0.01f, 0, 0);
             }
             if (input.IsKeyDown(Key.D))
             {
-                tri.Position += new Vector3(0.01f, 0, 0);
+                quad1.Position += new Vector3(0.01f, 0, 0);
             }
-            tri.Position = new Vector3(tri.Position.X, tri.Position.Y, -5f);
-            Console.WriteLine(tri.Position);
+
+            if (input.IsKeyDown(Key.Up))
+            {
+                quad2.Position += new Vector3(0, 0.01f, 0);
+            }
+            if (input.IsKeyDown(Key.Down))
+            {
+                quad2.Position += new Vector3(0, -0.01f, 0);
+            }
+            if (input.IsKeyDown(Key.Left))
+            {
+                quad2.Position += new Vector3(-0.01f, 0, 0);
+            }
+            if (input.IsKeyDown(Key.Right))
+            {
+                quad2.Position += new Vector3(0.01f, 0, 0);
+            }
+            quad1.Position = new Vector3(quad1.Position.X, quad1.Position.Y, -5f);
+            Console.WriteLine(quad1.Position);
         }
 
         public void OnDraw()
         {
             renderer.Clear(color.ToRgb(), 1.0f);
 
-            tri.Draw();
+            quad1.Draw();
+            quad2.Draw();
 
             renderer.SwapBuffers();
         }

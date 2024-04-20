@@ -58,7 +58,18 @@ namespace Artifact.Plugins.Rendering
         public override void OnUpdate(float dt)
         {
             Camera.UpdateMatrices();
-            Application.Invoke("rendering:OnDraw");
+            Backend.Predraw();
+            try
+            {
+                Application.Invoke("rendering:OnDraw");
+            } catch (Exception exec)
+            {
+                if (!exec.Message.ToLower().Contains("surface has been lost"))
+                {
+                    throw exec;
+                }
+            }
+            
             base.OnUpdate(dt);
         }
     }

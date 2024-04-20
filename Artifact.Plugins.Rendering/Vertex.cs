@@ -19,5 +19,7 @@ namespace Artifact.Plugins.Rendering
             Position = position;
             Color = color;
         }
+
+        public const uint SizeInBytes = 32;
     }
 }

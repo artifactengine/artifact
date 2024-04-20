@@ -12,6 +12,8 @@ namespace Artifact.Plugins.Rendering
 
         public string FancyName { get; }
 
+        public void Predraw();
+
         public void CreateContext(IntPtr windowHandle, int width, int height);
 
         public void SwapBuffers();

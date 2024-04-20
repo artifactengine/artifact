@@ -19,6 +19,7 @@
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.DirectXBackend\Artifact.Plugins.Rendering.DirectXBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.OpenGLBackend\Artifact.Plugins.Rendering.OpenGLBackend.csproj" />
+    <ProjectReference Include="..\Artifact.Plugins.Rendering.VeldridBackend\Artifact.Plugins.Rendering.VeldridBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering\Artifact.Plugins.Rendering.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.GLFWBackend\Artifact.Plugins.Windowing.GLFWBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.SDL2Backend\Artifact.Plugins.Windowing.SDL2Backend.csproj" />
@@ -28,19 +29,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Assets\default.frag">
+    <None Update="Assets\Shaders\opengl\default.frag">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Assets\default.fx">
+    <None Update="Assets\Shaders\dx\default.fx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Assets\default.vert">
+    <None Update="Assets\Shaders\opengl\default.vert">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\FullLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\veldrid\default.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\veldrid\default.vert">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

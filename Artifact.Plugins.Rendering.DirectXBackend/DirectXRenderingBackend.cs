@@ -108,5 +108,10 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
         {
             swapchain.Present(0, PresentFlags.None);
         }
+
+        public void Predraw()
+        {
+            
+        }
     }
 }

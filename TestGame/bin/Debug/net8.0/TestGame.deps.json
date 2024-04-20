@@ -14,6 +14,7 @@
           "Artifact.Plugins.Rendering": "1.0.0",
           "Artifact.Plugins.Rendering.DirectXBackend": "1.0.0",
           "Artifact.Plugins.Rendering.OpenGLBackend": "1.0.0",
+          "Artifact.Plugins.Rendering.VeldridBackend": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
           "Artifact.Plugins.Windowing.GLFWBackend": "1.0.0",
           "Artifact.Plugins.Windowing.SDL2Backend": "1.0.0",
@@ -148,6 +149,7 @@
           }
         }
       },
+      "PolySharp/1.10.0": {},
       "protobuf-net/3.2.30": {
         "dependencies": {
           "protobuf-net.Core": "3.2.30"
@@ -286,6 +288,29 @@
           "lib/netstandard1.1/SharpDX.Mathematics.dll": {
             "assemblyVersion": "4.2.0.0",
             "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "SharpGen.Runtime/2.0.0-beta.13": {
+        "dependencies": {
+          "PolySharp": "1.10.0"
+        },
+        "runtime": {
+          "lib/net7.0/SharpGen.Runtime.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "SharpGen.Runtime.COM/2.0.0-beta.13": {
+        "dependencies": {
+          "PolySharp": "1.10.0",
+          "SharpGen.Runtime": "2.0.0-beta.13"
+        },
+        "runtime": {
+          "lib/net7.0/SharpGen.Runtime.COM.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -1014,6 +1039,41 @@
           }
         }
       },
+      "Veldrid/4.9.0": {
+        "dependencies": {
+          "NativeLibraryLoader": "1.0.13",
+          "Veldrid.MetalBindings": "4.9.0",
+          "Veldrid.OpenGLBindings": "4.9.0",
+          "Vk": "1.0.25",
+          "Vortice.D3DCompiler": "2.3.0",
+          "Vortice.Direct3D11": "2.3.0"
+        },
+        "runtime": {
+          "lib/net6.0/Veldrid.dll": {
+            "assemblyVersion": "4.9.0.0",
+            "fileVersion": "4.9.0.120"
+          }
+        }
+      },
+      "Veldrid.MetalBindings/4.9.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Veldrid.MetalBindings.dll": {
+            "assemblyVersion": "4.9.0.0",
+            "fileVersion": "4.9.0.120"
+          }
+        }
+      },
+      "Veldrid.OpenGLBindings/4.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/Veldrid.OpenGLBindings.dll": {
+            "assemblyVersion": "4.9.0.0",
+            "fileVersion": "4.9.0.120"
+          }
+        }
+      },
       "Veldrid.SDL2/4.9.0": {
         "dependencies": {
           "NativeLibraryLoader": "1.0.13",
@@ -1041,6 +1101,123 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "2.0.8.0"
+          }
+        }
+      },
+      "Veldrid.SPIRV/1.0.15": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "Veldrid": "4.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Veldrid.SPIRV.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.15.1"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libveldrid-spirv.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/libveldrid-spirv.dylib": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libveldrid-spirv.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libveldrid-spirv.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Veldrid.StartupUtilities/4.9.0": {
+        "dependencies": {
+          "Veldrid": "4.9.0",
+          "Veldrid.SDL2": "4.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Veldrid.StartupUtilities.dll": {
+            "assemblyVersion": "4.9.0.0",
+            "fileVersion": "4.9.0.120"
+          }
+        }
+      },
+      "Vk/1.0.25": {
+        "runtime": {
+          "lib/net5.0/vk.dll": {
+            "assemblyVersion": "1.0.25.0",
+            "fileVersion": "1.0.25.0"
+          }
+        }
+      },
+      "Vortice.D3DCompiler/2.3.0": {
+        "dependencies": {
+          "SharpGen.Runtime": "2.0.0-beta.13",
+          "SharpGen.Runtime.COM": "2.0.0-beta.13",
+          "Vortice.DirectX": "2.3.0",
+          "Vortice.Mathematics": "1.4.25"
+        },
+        "runtime": {
+          "lib/net6.0/Vortice.D3DCompiler.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Vortice.Direct3D11/2.3.0": {
+        "dependencies": {
+          "SharpGen.Runtime": "2.0.0-beta.13",
+          "SharpGen.Runtime.COM": "2.0.0-beta.13",
+          "Vortice.DXGI": "2.3.0",
+          "Vortice.Mathematics": "1.4.25"
+        },
+        "runtime": {
+          "lib/net6.0/Vortice.Direct3D11.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Vortice.DirectX/2.3.0": {
+        "dependencies": {
+          "SharpGen.Runtime": "2.0.0-beta.13",
+          "SharpGen.Runtime.COM": "2.0.0-beta.13",
+          "Vortice.Mathematics": "1.4.25"
+        },
+        "runtime": {
+          "lib/net7.0/Vortice.DirectX.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Vortice.DXGI/2.3.0": {
+        "dependencies": {
+          "SharpGen.Runtime": "2.0.0-beta.13",
+          "SharpGen.Runtime.COM": "2.0.0-beta.13",
+          "Vortice.DirectX": "2.3.0",
+          "Vortice.Mathematics": "1.4.25"
+        },
+        "runtime": {
+          "lib/net6.0/Vortice.DXGI.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Vortice.Mathematics/1.4.25": {
+        "runtime": {
+          "lib/net7.0/Vortice.Mathematics.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.25.54642"
           }
         }
       },
@@ -1102,6 +1279,18 @@
         },
         "runtime": {
           "Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
+        }
+      },
+      "Artifact.Plugins.Rendering.VeldridBackend/1.0.0": {
+        "dependencies": {
+          "Artifact": "1.0.0",
+          "Artifact.Plugins.Rendering": "1.0.0",
+          "Veldrid": "4.9.0",
+          "Veldrid.SPIRV": "1.0.15",
+          "Veldrid.StartupUtilities": "4.9.0"
+        },
+        "runtime": {
+          "Artifact.Plugins.Rendering.VeldridBackend.dll": {}
         }
       },
       "Artifact.Plugins.Windowing/1.0.0": {
@@ -1257,6 +1446,13 @@
       "sha512": "sha512-jAIELkWBs1CXFPp986KSGpDFQZHCFccO+LMbKBTTNm42KifaI1mYzFMFQQfuGmGMTrCx0TFPhDjHDE4cLAZWiQ==",
       "path": "nlog/5.2.8",
       "hashPath": "nlog.5.2.8.nupkg.sha512"
+    },
+    "PolySharp/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+uNyVhhKOskjJLKOwIQ2qGaA0T507FaMbz5RwLAtmRaMaTAcUAZAiZvSk4Z8z6GkmqOyO1zryYNXmO0Vh7IrYQ==",
+      "path": "polysharp/1.10.0",
+      "hashPath": "polysharp.1.10.0.nupkg.sha512"
     },
     "protobuf-net/3.2.30": {
       "type": "package",
@@ -1425,6 +1621,20 @@
       "sha512": "sha512-R2pcKLgdsP9p5WyTjHmGOZ0ka0zASAZYc6P4L6rSvjYhf6klGYbent7MiVwbkwkt9dD44p5brjy5IwAnVONWGw==",
       "path": "sharpdx.mathematics/4.2.0",
       "hashPath": "sharpdx.mathematics.4.2.0.nupkg.sha512"
+    },
+    "SharpGen.Runtime/2.0.0-beta.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H+Up2Er3ptWzcQ+CAO652fEsBLAmoXqKqtvc/6ycRV9XfLN2XJch0h8CwKQ3muD6eADPFf8Xp+nDQ8wDpcRDlg==",
+      "path": "sharpgen.runtime/2.0.0-beta.13",
+      "hashPath": "sharpgen.runtime.2.0.0-beta.13.nupkg.sha512"
+    },
+    "SharpGen.Runtime.COM/2.0.0-beta.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H22LsE3XTIOevf2TJgPgPnfYmjMlCtN+QYZVxzXlgTrgG2jHSTUTKZpIMPbKliLJGCEnDfX6yvBJvya0/xRTkA==",
+      "path": "sharpgen.runtime.com/2.0.0-beta.13",
+      "hashPath": "sharpgen.runtime.com.2.0.0-beta.13.nupkg.sha512"
     },
     "SharpGL/3.1.1": {
       "type": "package",
@@ -1909,12 +2119,89 @@
       "path": "ultz.native.glfw/3.3.9.2",
       "hashPath": "ultz.native.glfw.3.3.9.2.nupkg.sha512"
     },
+    "Veldrid/4.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rvu7/OLNt6Yy/hbC+rAmjBbxcSirbG/BjOdLCF7kl5mGBkMGka3pLuTlkbXSt4UONh3tks0I7k/OJ7Sr8HFIoA==",
+      "path": "veldrid/4.9.0",
+      "hashPath": "veldrid.4.9.0.nupkg.sha512"
+    },
+    "Veldrid.MetalBindings/4.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9qWYalATCT+/smQzFi2IFyEZpLE1l+A1r3tntKao8sYVAe18+P9rDIvpxyIL4T7Ritfm0JU2TnqckXmLenyfhQ==",
+      "path": "veldrid.metalbindings/4.9.0",
+      "hashPath": "veldrid.metalbindings.4.9.0.nupkg.sha512"
+    },
+    "Veldrid.OpenGLBindings/4.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Du3zr+qWQO2Pzsl2iOeLmg23gxdr6BQ9yx5ygmcoBn6nm1AsbG4JMeEIpSGDt8WiTmy2VsUNY0kIGZklkrRoWQ==",
+      "path": "veldrid.openglbindings/4.9.0",
+      "hashPath": "veldrid.openglbindings.4.9.0.nupkg.sha512"
+    },
     "Veldrid.SDL2/4.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-uE0sYIzNOF2DPokzjRel2to3euBRikLfgoxx0f7iQVevbDDYlg0e/DBgG+tDhyNQWrB+ttKaQvR/csoa/R8UmA==",
       "path": "veldrid.sdl2/4.9.0",
       "hashPath": "veldrid.sdl2.4.9.0.nupkg.sha512"
+    },
+    "Veldrid.SPIRV/1.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hzupRH5uGibW8P/URwTFX1lDEmi1LWZKWf0euQyfS0FKVDI2gGDTB5ucq6JViG8Bk6U7Q2s1EsTXIDfXpu0oVQ==",
+      "path": "veldrid.spirv/1.0.15",
+      "hashPath": "veldrid.spirv.1.0.15.nupkg.sha512"
+    },
+    "Veldrid.StartupUtilities/4.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-45JrS5GajAaoom0HJWtPzYgJlNo8tpXB06mJM4hWxdeBxo3y2OIJIfnnB374KB1d7euodW0XneRzKVhwzZFE5g==",
+      "path": "veldrid.startuputilities/4.9.0",
+      "hashPath": "veldrid.startuputilities.4.9.0.nupkg.sha512"
+    },
+    "Vk/1.0.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n1tpY/n9YV7j+wViUD31yc6TQMK3tkcdUXUbJUr3vIVifrRySzq5hpdxUnvC0SvBp8WrbAgowwd1YDvtc+u67A==",
+      "path": "vk/1.0.25",
+      "hashPath": "vk.1.0.25.nupkg.sha512"
+    },
+    "Vortice.D3DCompiler/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o7Jimuvr5gXQrriA8JMfNrZX+eiA5NbRPYOpscMICpKE+oKF/CNYXLI5RTQ/NjNpzIsm2QPEehXivL6IS+e40w==",
+      "path": "vortice.d3dcompiler/2.3.0",
+      "hashPath": "vortice.d3dcompiler.2.3.0.nupkg.sha512"
+    },
+    "Vortice.Direct3D11/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cNpadAL5HTm2zc3ZJhySGVJWgOD12RSX3OEk96j24rLdigfAbvzTtFJgn68gHviYMwwY76ukcobhJNDWZc4a3w==",
+      "path": "vortice.direct3d11/2.3.0",
+      "hashPath": "vortice.direct3d11.2.3.0.nupkg.sha512"
+    },
+    "Vortice.DirectX/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V+MzrsxG5sLW3PQUlJQ6n3xY8jJGx1l/9Gpy6wbgFuZtDSb9MQmDf/gyfRvrRs1vGNKPht+pg1AJ/qWQrfXJoQ==",
+      "path": "vortice.directx/2.3.0",
+      "hashPath": "vortice.directx.2.3.0.nupkg.sha512"
+    },
+    "Vortice.DXGI/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eJDvoLjhHMr78+SOSrPIUSr/JboZ7rx62kGrpj2RQZbhP3+pEdHjL+Z6mXLvkEqozFRFspLmTTI7ZnBKfjc9uQ==",
+      "path": "vortice.dxgi/2.3.0",
+      "hashPath": "vortice.dxgi.2.3.0.nupkg.sha512"
+    },
+    "Vortice.Mathematics/1.4.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V2yJMl/QKceXEjYEnf2EWcNkUJI5/zE04cNUnawHbdR0wjMHv1dVTLf0IUJk0D0w29FrCWdQQK/n4L4vx0HeQA==",
+      "path": "vortice.mathematics/1.4.25",
+      "hashPath": "vortice.mathematics.1.4.25.nupkg.sha512"
     },
     "Artifact/1.0.0": {
       "type": "project",
@@ -1942,6 +2229,11 @@
       "sha512": ""
     },
     "Artifact.Plugins.Rendering.OpenGLBackend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Artifact.Plugins.Rendering.VeldridBackend/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
