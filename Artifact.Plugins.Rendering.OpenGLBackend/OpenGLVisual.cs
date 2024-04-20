@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Artifact.Plugins.Windowing;
+using NLog;
 using SharpGL;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Artifact.Plugins.Rendering.OpenGLBackend
 {
-    public class OpenGLVisual : Visual
+    public class OpenGLVisual : ArtifactDisposable, IVisual
     {
         private OpenGL gl;
 
@@ -19,6 +20,10 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         private uint shaderProgram, vertexShader, fragmentShader;
 
         private Mesh _mesh;
+
+        public Vector3 Position { get; set; }
+        public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
+        public Vector3 Rotation { get; set; }
 
         public static IntPtr ConvertStructArrayToIntPtr<T>(T[] structArray) where T : struct
         {
@@ -36,12 +41,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             return ptr;
         }
 
-        ~OpenGLVisual()
-        {
-            Console.WriteLine("Finalize!");
-        }
-
-        public unsafe OpenGLVisual(Mesh mesh) : base(mesh)
+        public unsafe OpenGLVisual(Mesh mesh) : base()
         {
             gl = OpenGLRenderingBackend.gl;
 
@@ -52,31 +52,9 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
                 new Vertex(new Vector4(0.0f, 0.5f, 0.0f, 0.0f), new Vector4(0.180392f, 0.180392f, 0.180392f, 1.0f)),
             };
 
-            string vertexShaderSource = @" 
-#version 330 core
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
+            string vertexShaderSource = File.ReadAllText("Assets/default.vert");
 
-out vec3 color;
-
-void main()
-{
-    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
-    color = aColor;
-}
-                ";
-
-            string fragmentShaderSource = @" 
-#version 330 core
-out vec4 FragColor;
-
-in vec3 color;
-
-void main()
-{
-    FragColor = vec4(color, 1.0f);
-}
-                ";
+            string fragmentShaderSource = File.ReadAllText("Assets/default.frag");
 
             vertexShader = gl.CreateShader(OpenGL.GL_VERTEX_SHADER);
 
@@ -147,9 +125,25 @@ void main()
             _mesh = mesh;
         }
 
-        public override void Draw()
+        public void Draw()
         {
+            Matrix4x4 model = Matrix4x4.Identity;
+
+            Matrix4x4 translation = Matrix4x4.CreateTranslation(Position);
+            Matrix4x4 scale = Matrix4x4.CreateScale(Scale);
+            Matrix4x4 rotation = Matrix4x4.CreateFromYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
+
+            model = translation * scale * rotation;
+
             gl.UseProgram(shaderProgram);
+
+            gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "model"), 1, false, model.AsFloatArray());
+            gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "proj"), 1, false, Camera.ProjectionMatrix.AsFloatArray());
+            gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "view"), 1, false, Camera.ViewMatrix.AsFloatArray());
+
+            Console.WriteLine(string.Join(", ", Camera.ViewMatrix.AsFloatArray()));
+
+            //Console.WriteLine("[" + string.Join(", ", translation.AsFloatArray()) + "]");
 
             gl.BindVertexArray(vao);
             gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
@@ -158,10 +152,10 @@ void main()
 
         public override void Dispose()
         {
-            gl.DeleteBuffers(1, [vbo]);
-            gl.DeleteVertexArrays(1, [vao]);
+            //gl.DeleteBuffers()
+            //gl.DeleteVertexArrays(1, [vao]);
 
-            gl.DeleteProgram(shaderProgram);
+            //gl.DeleteProgram(shaderProgram);
         }
     }
 }

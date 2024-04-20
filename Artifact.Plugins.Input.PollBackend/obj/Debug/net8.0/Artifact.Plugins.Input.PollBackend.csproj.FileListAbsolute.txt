@@ -15,3 +15,4 @@ R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Pl
 R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\refint\Artifact.Plugins.Input.PollBackend.dll
 R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.pdb
 R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\ref\Artifact.Plugins.Input.PollBackend.dll
+R:\code\Artifact\Artifact.Plugins.Input.PollBackend\obj\Debug\net8.0\Artifact.Plugins.Input.PollBackend.sourcelink.json

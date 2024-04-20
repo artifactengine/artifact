@@ -24,7 +24,7 @@ namespace TestGame
         private InputPlugin input;
         private bool first = true;
 
-        private Visual tri;
+        private IVisual tri;
 
         private ColorHSB color = new ColorHSB(0, 100, 50, 255);
 
@@ -33,8 +33,11 @@ namespace TestGame
             Name = "Test Game";
 
             AddPlugin(new WindowingPlugin(this, "Test Game", 1280, 720, typeof(SDL2WindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(OpenGLRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
+
+            Console.WriteLine(Camera.orthoWidth);
+            Console.WriteLine(Camera.orthoHeight);
         }
 
         public override void OnLoad()
@@ -43,10 +46,10 @@ namespace TestGame
             input = GetPlugin<InputPlugin>();
 
             Vertex[] vertices = {
-                new Vertex(new Vector4(-0.5f, 0.5f, 0.5f, 1.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
-                new Vertex(new Vector4(0.5f, -0.5f, 0.5f, 1.0f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f)),
-                new Vertex(new Vector4(-0.5f, -0.5f, 0.5f, 1.0f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f)),
-                new Vertex(new Vector4(0.5f, 0.5f, 0.5f, 1.0f), new Vector4(1.0f, 1.0f, 1.0f, 1.0f)),
+                new Vertex(new Vector4(-0.1f, 0.1f, 0.5f, 1.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
+                new Vertex(new Vector4(0.1f, -0.1f, 0.5f, 1.0f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f)),
+                new Vertex(new Vector4(-0.1f, -0.1f, 0.5f, 1.0f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f)),
+                new Vertex(new Vector4(0.1f, 0.1f, 0.5f, 1.0f), new Vector4(1.0f, 1.0f, 1.0f, 1.0f)),
             };
 
             ushort[] indices = [
@@ -61,7 +64,6 @@ namespace TestGame
         public override void OnExit()
         {
             logger.Info($"Exiting...");
-            tri.Dispose();
             base.OnExit();
         }
 
@@ -70,10 +72,24 @@ namespace TestGame
             base.OnUpdate(dt);
             color.H = (color.H + 1) % 360;
 
-            if (input.WasKeyPressedThisFrame(Key.A))
+            if (input.IsKeyDown(Key.W))
             {
-                Console.WriteLine("A just pressed");
+                tri.Position += new Vector3(0, 0.01f, 0);
             }
+            if (input.IsKeyDown(Key.S))
+            {
+                tri.Position += new Vector3(0, -0.01f, 0);
+            }
+            if (input.IsKeyDown(Key.A))
+            {
+                tri.Position += new Vector3(-0.01f, 0, 0);
+            }
+            if (input.IsKeyDown(Key.D))
+            {
+                tri.Position += new Vector3(0.01f, 0, 0);
+            }
+            tri.Position = new Vector3(tri.Position.X, tri.Position.Y, -5f);
+            Console.WriteLine(tri.Position);
         }
 
         public void OnDraw()

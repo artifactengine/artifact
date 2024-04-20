@@ -15,3 +15,4 @@ R:\code\Artifact\Artifact.Plugins.Rendering\obj\Debug\net8.0\Artifact.Plugins.Re
 R:\code\Artifact\Artifact.Plugins.Rendering\obj\Debug\net8.0\ref\Artifact.Plugins.Rendering.dll
 R:\code\Artifact\Artifact.Plugins.Rendering\bin\Debug\net8.0\Artifact.Plugins.Windowing.dll
 R:\code\Artifact\Artifact.Plugins.Rendering\bin\Debug\net8.0\Artifact.Plugins.Windowing.pdb
+R:\code\Artifact\Artifact.Plugins.Rendering\obj\Debug\net8.0\Artifact.Plugins.Rendering.sourcelink.json

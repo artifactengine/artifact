@@ -24,9 +24,9 @@ namespace Artifact.Plugins.Rendering
             Backend = (Activator.CreateInstance(backend) as IRenderingBackend)!;
         }
 
-        public Visual CreateVisual(Mesh mesh)
+        public IVisual CreateVisual(Mesh mesh)
         {
-            return (Activator.CreateInstance(Backend.VisualImplementation, mesh) as Visual)!;
+            return (Activator.CreateInstance(Backend.VisualImplementation, mesh) as IVisual)!;
         }
 
         public override void OnLoad()
@@ -43,8 +43,6 @@ namespace Artifact.Plugins.Rendering
         public override void OnExit()
         {
             base.OnExit();
-
-            Backend.DisposeContext();
         }
 
         public void SwapBuffers()
@@ -59,6 +57,7 @@ namespace Artifact.Plugins.Rendering
 
         public override void OnUpdate(float dt)
         {
+            Camera.UpdateMatrices();
             Application.Invoke("rendering:OnDraw");
             base.OnUpdate(dt);
         }

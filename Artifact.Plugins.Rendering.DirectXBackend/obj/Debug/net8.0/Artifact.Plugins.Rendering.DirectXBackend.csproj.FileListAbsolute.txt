@@ -17,3 +17,4 @@ R:\code\Artifact\Artifact.Plugins.Rendering.DirectXBackend\obj\Debug\net8.0\Arti
 R:\code\Artifact\Artifact.Plugins.Rendering.DirectXBackend\obj\Debug\net8.0\refint\Artifact.Plugins.Rendering.DirectXBackend.dll
 R:\code\Artifact\Artifact.Plugins.Rendering.DirectXBackend\obj\Debug\net8.0\Artifact.Plugins.Rendering.DirectXBackend.pdb
 R:\code\Artifact\Artifact.Plugins.Rendering.DirectXBackend\obj\Debug\net8.0\ref\Artifact.Plugins.Rendering.DirectXBackend.dll
+R:\code\Artifact\Artifact.Plugins.Rendering.DirectXBackend\obj\Debug\net8.0\Artifact.Plugins.Rendering.DirectXBackend.sourcelink.json

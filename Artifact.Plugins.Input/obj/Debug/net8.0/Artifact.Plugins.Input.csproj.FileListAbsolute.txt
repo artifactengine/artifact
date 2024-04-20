@@ -13,3 +13,4 @@ R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.
 R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\refint\Artifact.Plugins.Input.dll
 R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.pdb
 R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\ref\Artifact.Plugins.Input.dll
+R:\code\Artifact\Artifact.Plugins.Input\obj\Debug\net8.0\Artifact.Plugins.Input.sourcelink.json

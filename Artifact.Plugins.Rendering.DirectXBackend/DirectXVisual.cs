@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using SharpDX;
@@ -11,10 +13,13 @@ using SharpDX.Direct3D11;
 using SharpDX.DXGI;
 using Buffer = SharpDX.Direct3D11.Buffer;
 using Device = SharpDX.Direct3D11.Device;
+using Vector3 = System.Numerics.Vector3;
+using Matrix = SharpDX.Matrix;
 
 namespace Artifact.Plugins.Rendering.DirectXBackend
 {
-    public class DirectXVisual : Visual
+
+    public class DirectXVisual : ArtifactDisposable, IVisual
     {
         private VertexShader vertexShader;
         private PixelShader pixelShader;
@@ -23,18 +28,23 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
         private Buffer vertexBuffer;
         private Buffer indexBuffer;
+        private Buffer contantBuffer;
         private VertexBufferBinding vertexBinding;
 
         private DeviceContext context;
 
         private Mesh _mesh;
 
-        public DirectXVisual(Mesh mesh) : base(mesh)
+        public Vector3 Position { get; set; }
+        public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
+        public Vector3 Rotation { get; set; }
+
+        public DirectXVisual(Mesh mesh) : base()
         {
             _mesh = mesh;
             context = DirectXRenderingBackend.deviceContext;
 
-            
+
             var vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
             vertexShader = new VertexShader(DirectXRenderingBackend.device, vertexShaderByteCode);
 
@@ -87,17 +97,60 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
             indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, mesh.Indices);
+            contantBuffer = new Buffer(DirectXRenderingBackend.device, Utilities.SizeOf<Matrix>(), ResourceUsage.Default, BindFlags.ConstantBuffer, CpuAccessFlags.None, ResourceOptionFlags.None, 0);
 
             vertexBinding = new VertexBufferBinding(vertexBuffer, 32, 0);
-
         }
 
-        public override void Draw()
+        [StructLayout(LayoutKind.Sequential)]
+        private struct Matrices
         {
+            public Matrix model;
+            public Matrix view;
+            public Matrix proj;
+        }
+
+        public void Draw()
+        {
+            /*
+            Matrix view = Camera.ViewMatrix.ToDXMatrix();
+            Matrix proj = Camera.ProjectionMatrix.ToDXMatrix();
+
+            Matrix translation = Matrix.Translation(Position.ToDXVec());
+            Matrix rotation = Matrix.RotationYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
+            Matrix scale = Matrix.Scaling(Scale.ToDXVec());
+
+            Matrix model = (rotation * translation * scale);
+
+            view.Transpose();
+            proj.Transpose();
+            model.Transpose();
+            */
+
+            Matrix proj = Camera.ViewMatrix.ToDXMatrix();
+            Matrix view = Camera.ProjectionMatrix.ToDXMatrix();
+
+            Matrix translation = Matrix.Translation(Position.ToDXVec());
+            Matrix rotation = Matrix.RotationYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
+            Matrix scale = Matrix.Scaling(Scale.ToDXVec());
+
+            Matrix model = (scale * rotation * scale);
+
+            Matrix mvp = (proj * view * model);
+            //mvp.Transpose();
+
+            Matrices matrices = new Matrices();
+            matrices.view = view;
+            matrices.proj = proj;
+            matrices.model = mvp;
+
+            context.UpdateSubresource(ref matrices, contantBuffer);
+
             context.InputAssembler.InputLayout = layout;
             context.InputAssembler.PrimitiveTopology = PrimitiveTopology.TriangleList;
             context.InputAssembler.SetVertexBuffers(0, vertexBinding);
             context.InputAssembler.SetIndexBuffer(indexBuffer, Format.R16_UInt, 0);
+            context.VertexShader.SetConstantBuffer(0, contantBuffer);
             context.VertexShader.Set(vertexShader);
             context.PixelShader.Set(pixelShader);
             context.OutputMerger.SetTargets(DirectXRenderingBackend.renderView);

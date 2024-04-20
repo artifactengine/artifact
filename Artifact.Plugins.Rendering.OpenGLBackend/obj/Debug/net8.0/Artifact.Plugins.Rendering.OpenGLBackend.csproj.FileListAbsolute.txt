@@ -17,3 +17,4 @@ R:\code\Artifact\Artifact.Plugins.Rendering.OpenGLBackend\obj\Debug\net8.0\Artif
 R:\code\Artifact\Artifact.Plugins.Rendering.OpenGLBackend\obj\Debug\net8.0\refint\Artifact.Plugins.Rendering.OpenGLBackend.dll
 R:\code\Artifact\Artifact.Plugins.Rendering.OpenGLBackend\obj\Debug\net8.0\Artifact.Plugins.Rendering.OpenGLBackend.pdb
 R:\code\Artifact\Artifact.Plugins.Rendering.OpenGLBackend\obj\Debug\net8.0\ref\Artifact.Plugins.Rendering.OpenGLBackend.dll
+R:\code\Artifact\Artifact.Plugins.Rendering.OpenGLBackend\obj\Debug\net8.0\Artifact.Plugins.Rendering.OpenGLBackend.sourcelink.json

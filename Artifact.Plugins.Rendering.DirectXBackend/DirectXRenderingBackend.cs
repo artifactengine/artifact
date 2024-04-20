@@ -16,7 +16,7 @@ using Device = SharpDX.Direct3D11.Device;
 
 namespace Artifact.Plugins.Rendering.DirectXBackend
 {
-    public class DirectXRenderingBackend : IRenderingBackend
+    public class DirectXRenderingBackend : ArtifactDisposable, IRenderingBackend
     {
         public string FancyName => "Direct3D 11";
 
@@ -27,12 +27,19 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
         internal static DeviceContext deviceContext;
         internal static Factory factory;
         internal static Texture2D backBuffer;
+        internal static Texture2D depthBuffer;
         internal static RenderTargetView renderView;
+        internal static DepthStencilView depthView;
+        
 
         private Logger logger = LogManager.GetCurrentClassLogger();
 
+
+        public DirectXRenderingBackend() : base() { }
+
         public void Clear(ColorRGB color, float alpha)
         {
+            deviceContext.ClearDepthStencilView(depthView, DepthStencilClearFlags.Depth, 1.0f, 0);
             deviceContext.ClearRenderTargetView(renderView, new RawColor4(color.UnitR, color.UnitG, color.UnitB, color.UnitA));
         }
 
@@ -62,10 +69,28 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             deviceContext.Rasterizer.SetViewport(0, 0, width, height);
 
+            depthBuffer = new Texture2D(device, new Texture2DDescription()
+            {
+                Format = Format.D32_Float_S8X24_UInt,
+                ArraySize = 1,
+                MipLevels = 1,
+                Width = width,
+                Height = height,
+                SampleDescription = new SampleDescription(1, 0),
+                Usage = ResourceUsage.Default,
+                BindFlags = BindFlags.DepthStencil,
+                CpuAccessFlags = CpuAccessFlags.None,
+                OptionFlags = ResourceOptionFlags.None
+            });
+
+            depthView = new DepthStencilView(device, depthBuffer);
+
+            deviceContext.OutputMerger.SetTargets(depthView, renderView);
+
             logger.Info("Created D3D11 Context");
         }
 
-        public void DisposeContext()
+        public override void Dispose()
         {
             renderView.Dispose();
             backBuffer.Dispose();

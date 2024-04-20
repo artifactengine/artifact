@@ -10,10 +10,14 @@ namespace Artifact
 {
     public class Application : GameLoop
     {
+        public static Application current;
+
         public string Name { get; set; } = "UNSET";
         public int TargetFPS { get; set; } = 60;
         public float FPS { get; set; } = 60;
         public bool IsOpen { get; set; } = true;
+
+        public static List<ArtifactDisposable> Disposables { get; set; } = new List<ArtifactDisposable>();
 
         public override void OnLoad() { }
         public override void OnUpdate(float dt)
@@ -63,8 +67,6 @@ namespace Artifact
 
             app.OnLoad();
 
-            AppDomain.CurrentDomain.ProcessExit += app.GarbageCollect;
-
             while (app.IsOpen)
             {
                 long currentTime = stopwatch.ElapsedTicks;
@@ -86,15 +88,23 @@ namespace Artifact
             }
 
             app.OnExit();
+
+            app.logger.Info("Disposing...");
+
+            GarbageCollect();
         }
 
-        private void GarbageCollect(object? sender, EventArgs e)
+        public static void GarbageCollect()
         {
-            logger.Info("Running garbage collection...");
-            Console.WriteLine("Hi");
-            GC.Collect();
-            GC.WaitForFullGCComplete();
-            GC.WaitForPendingFinalizers();
+            foreach (ArtifactDisposable disposable in Disposables)
+            {
+                disposable.Dispose();
+            }
+        }
+
+        public Application()
+        {
+            current = this;
         }
     }
 }

@@ -19,3 +19,4 @@ R:\code\Artifact\Artifact.Plugins.Windowing.WinFormsBackend\obj\Debug\net8.0\Art
 R:\code\Artifact\Artifact.Plugins.Windowing.WinFormsBackend\obj\Debug\net8.0\refint\Artifact.Plugins.Windowing.WinFormsBackend.dll
 R:\code\Artifact\Artifact.Plugins.Windowing.WinFormsBackend\obj\Debug\net8.0\Artifact.Plugins.Windowing.WinFormsBackend.pdb
 R:\code\Artifact\Artifact.Plugins.Windowing.WinFormsBackend\obj\Debug\net8.0\ref\Artifact.Plugins.Windowing.WinFormsBackend.dll
+R:\code\Artifact\Artifact.Plugins.Windowing.WinFormsBackend\obj\Debug\net8.0\Artifact.Plugins.Windowing.WinFormsBackend.sourcelink.json

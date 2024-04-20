@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QGRGB0/mhNaa9k5kmgsitqOJCLCvGWrKJ/JaLA53VRRDigGrYO4rF/8CProqiFDhpTpA3MfpVn/fa9uVNHa0jg==",
+  "dgSpecHash": "eQcuTe+/PHn8BhtiS9JiJwHavkloez8t/Dc9rgZSkPAoy7Wn6gj1TtUBfrC27TSVbzd7AdODtZHdjlMTQAQH7A==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.d3dcompiler\\4.2.0\\sharpdx.d3dcompiler.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct3d11\\4.2.0\\sharpdx.direct3d11.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

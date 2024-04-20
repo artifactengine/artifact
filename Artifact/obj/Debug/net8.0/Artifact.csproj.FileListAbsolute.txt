@@ -10,3 +10,4 @@ R:\code\Artifact\Artifact\obj\Debug\net8.0\refint\Artifact.dll
 R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.pdb
 R:\code\Artifact\Artifact\obj\Debug\net8.0\ref\Artifact.dll
 R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.csproj.AssemblyReference.cache
+R:\code\Artifact\Artifact\obj\Debug\net8.0\Artifact.sourcelink.json

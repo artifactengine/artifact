@@ -13,3 +13,4 @@ R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Wi
 R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\refint\Artifact.Plugins.Windowing.dll
 R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.pdb
 R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\ref\Artifact.Plugins.Windowing.dll
+R:\code\Artifact\Artifact.Plugins.Windowing\obj\Debug\net8.0\Artifact.Plugins.Windowing.sourcelink.json

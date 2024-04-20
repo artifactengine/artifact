@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Artifact.Plugins.Rendering
 {
-    public abstract class Visual
+    public interface IVisual
     {
-        private Mesh _mesh;
+        public Vector3 Position { get; set; }
+        public Vector3 Scale { get; set; }
+        public Vector3 Rotation { get; set; }
 
-        public Visual(Mesh mesh)
-        {
-            _mesh = mesh;
-        }
-
-        public abstract void Draw();
-        public abstract void Dispose();
+        public void Draw();
     }
 }

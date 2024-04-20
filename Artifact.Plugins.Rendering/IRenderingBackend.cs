@@ -14,8 +14,6 @@ namespace Artifact.Plugins.Rendering
 
         public void CreateContext(IntPtr windowHandle, int width, int height);
 
-        public void DisposeContext();
-
         public void SwapBuffers();
 
         public void Clear(ColorRGB color, float alpha);

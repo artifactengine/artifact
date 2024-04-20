@@ -83,3 +83,7 @@ R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.dl
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\default.fx
+R:\code\Artifact\TestGame\obj\Debug\net8.0\TestGame.sourcelink.json
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\default.frag
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Assets\default.vert
+R:\code\Artifact\TestGame\bin\Debug\net8.0\SharpDX.Mathematics.dll

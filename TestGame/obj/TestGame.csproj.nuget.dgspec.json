@@ -213,6 +213,10 @@
             "SharpDX.Direct3D11": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "SharpDX.Mathematics": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             }
           },
           "imports": [
@@ -841,6 +845,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "SharpDX.Mathematics": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
               "version": "[9.0.0-preview.3.24172.9, )"

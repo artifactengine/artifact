@@ -32,3 +32,4 @@ R:\code\Artifact\Artifact.Plugins.Windowing.SDL2Backend\obj\Debug\net8.0\Artifac
 R:\code\Artifact\Artifact.Plugins.Windowing.SDL2Backend\obj\Debug\net8.0\refint\Artifact.Plugins.Windowing.SDL2Backend.dll
 R:\code\Artifact\Artifact.Plugins.Windowing.SDL2Backend\obj\Debug\net8.0\Artifact.Plugins.Windowing.SDL2Backend.pdb
 R:\code\Artifact\Artifact.Plugins.Windowing.SDL2Backend\obj\Debug\net8.0\ref\Artifact.Plugins.Windowing.SDL2Backend.dll
+R:\code\Artifact\Artifact.Plugins.Windowing.SDL2Backend\obj\Debug\net8.0\Artifact.Plugins.Windowing.SDL2Backend.sourcelink.json

@@ -11,16 +11,18 @@ using System.Threading.Tasks;
 namespace Artifact.Plugins.Rendering.OpenGLBackend
 {
 
-    public class OpenGLRenderingBackend : IRenderingBackend
+    public class OpenGLRenderingBackend : ArtifactDisposable, IRenderingBackend
     {
         public Type VisualImplementation => typeof(OpenGLVisual);
 
         internal static OpenGL gl;
         private Graphics gfx;
 
-        public string FancyName => "OpenGL 4.4";
+        public string FancyName => "OpenGL 3.3";
 
         private Logger logger = LogManager.GetCurrentClassLogger();
+
+        public OpenGLRenderingBackend() : base() { }
 
         public void CreateContext(nint windowHandle, int width, int height)
         {
@@ -48,7 +50,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             
         }
 
-        public void DisposeContext()
+        public override void Dispose()
         {
             gl.MakeNothingCurrent();
             gfx.Dispose();
