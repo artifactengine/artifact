@@ -74,7 +74,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             {
                 vertexShader = vertexShaderCache[fullVertexPath];
                 vertexShaderByteCode = vertexShaderBytecodeCache[fullVertexPath];
-                Console.WriteLine("Used cached vertex shader");
+                //Console.WriteLine("Used cached vertex shader");
             } else
             {
                 vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
@@ -83,14 +83,14 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
                 vertexShaderCache.Add(fullVertexPath, vertexShader);
                 vertexShaderBytecodeCache.Add(fullVertexPath, vertexShaderByteCode);
 
-                Console.WriteLine("Compiled vertex shader");
+                //Console.WriteLine("Compiled vertex shader");
             }
             
             if (pixelShaderCache.ContainsKey(fullPixelPath))
             {
                 pixelShader = pixelShaderCache[fullPixelPath];
 
-                Console.WriteLine("Used cached pixel shader");
+                //Console.WriteLine("Used cached pixel shader");
             } else
             {
                 var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
@@ -98,7 +98,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             
                 pixelShaderCache.Add(fullPixelPath, pixelShader);
 
-                Console.WriteLine("Compiled pixel shader");
+                //Console.WriteLine("Compiled pixel shader");
             }
             
 
@@ -111,8 +111,28 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
                         new InputElement("TEXCOORD", 0, Format.R32G32_Float, 16, 0)
                     });
 
-            vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
-            indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, mesh.Indices);
+            if (vertexBufferCache.ContainsKey(mesh.Vertices))
+            {
+                Console.WriteLine("Using cached vertex buffer");
+                vertexBuffer = vertexBufferCache[mesh.Vertices];
+            } else
+            {
+                Console.WriteLine("Created new vertex buffer");
+                vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
+                vertexBufferCache.Add(mesh.Vertices, vertexBuffer);
+            }
+            
+            if (indexBufferCache.ContainsKey(mesh.Indices))
+            {
+                Console.WriteLine("Using cached index buffer");
+                indexBuffer = indexBufferCache[mesh.Indices];
+            } else
+            {
+                Console.WriteLine("Created new index buffer");
+                indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, mesh.Indices);
+                indexBufferCache.Add(mesh.Indices, indexBuffer);
+            }
+            
             contantBuffer = new Buffer(DirectXRenderingBackend.device, Utilities.SizeOf<Matrix>(), ResourceUsage.Default, BindFlags.ConstantBuffer, CpuAccessFlags.None, ResourceOptionFlags.None, 0);
 
             vertexBinding = new VertexBufferBinding(vertexBuffer, 24, 0);
@@ -121,6 +141,8 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             dtexture.Initialize(DirectXRenderingBackend.device, mesh.TexturePath);
 
             texture = dtexture.TextureResource;
+
+
         }
 
         [StructLayout(LayoutKind.Sequential)]

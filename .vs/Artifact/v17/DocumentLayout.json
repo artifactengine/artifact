@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "R:\\code\\Artifact\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|solutionrelative:artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,8 +86,8 @@
               "Title": "Mesh.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Mesh.cs",
               "RelativeDocumentMoniker": "Artifact.Plugins.Rendering\\Mesh.cs",
-              "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Mesh.cs*",
-              "RelativeToolTip": "Artifact.Plugins.Rendering\\Mesh.cs*",
+              "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Mesh.cs",
+              "RelativeToolTip": "Artifact.Plugins.Rendering\\Mesh.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T16:38:28.784Z",
@@ -95,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DirectXVisual.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
               "RelativeDocumentMoniker": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
               "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
               "RelativeToolTip": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAcwFQAAAAAAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAswHcAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T16:34:35.982Z",
               "EditorCaption": ""
@@ -190,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\PlatformerGame\\Game.cs",
               "RelativeDocumentMoniker": "PlatformerGame\\Game.cs",
