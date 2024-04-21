@@ -28,6 +28,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         private static Dictionary<string, uint> fragmentShaderCache = new Dictionary<string, uint>();
         private static Dictionary<Vertex[], uint> vertexArrayCache = new Dictionary<Vertex[], uint>();
         private static Dictionary<ushort[], uint> elementBufferCache = new Dictionary<ushort[], uint>();
+        private static Dictionary<string, uint> textureCache = new Dictionary<string, uint>();
 
         public Vector3 Position { get; set; }
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
@@ -73,11 +74,9 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             
             if (fragmentShaderCache.ContainsKey(fullFragmentPath))
             {
-                Console.WriteLine("Using cached fragment shader");
                 fragmentShader = fragmentShaderCache[fullFragmentPath];
             } else
             {
-                Console.WriteLine("Compiling new fragment shader");
                 string fragmentShaderSource = File.ReadAllText(fullFragmentPath);
 
                 fragmentShader = gl.CreateShader(OpenGL.GL_FRAGMENT_SHADER);
@@ -160,34 +159,45 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
             _mesh = mesh;
 
-            uint[] textures = new uint[1];
-            gl.GenTextures(1, textures);
+            if (textureCache.ContainsKey(mesh.TexturePath))
+            {
+                Console.WriteLine("Use cached texture");
+                texture = textureCache[mesh.TexturePath];
+            } else
+            {
+                uint[] textures = new uint[1];
+                gl.GenTextures(1, textures);
 
-            texture = textures[0];
+                texture = textures[0];
 
-            gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
-            //gl.ActiveTexture(OpenGL.GL_TEXTURE0);
+                gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
+                //gl.ActiveTexture(OpenGL.GL_TEXTURE0);
 
-            gl.UseProgram(shaderProgram);
+                gl.UseProgram(shaderProgram);
 
-            gl.Uniform1(gl.GetUniformLocation(shaderProgram, "tex0"), 0);
+                gl.Uniform1(gl.GetUniformLocation(shaderProgram, "tex0"), 0);
 
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_S, OpenGL.GL_REPEAT);
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_T, OpenGL.GL_REPEAT);
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
+                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_S, OpenGL.GL_REPEAT);
+                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_T, OpenGL.GL_REPEAT);
+                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
+                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
 
 
-            StbImage.stbi_set_flip_vertically_on_load(0);
+                StbImage.stbi_set_flip_vertically_on_load(0);
 
-            FileStream stream = File.OpenRead(mesh.TexturePath);
+                FileStream stream = File.OpenRead(mesh.TexturePath);
 
-            ImageResult image = ImageResult.FromStream(stream, ColorComponents.RedGreenBlueAlpha);
+                ImageResult image = ImageResult.FromStream(stream, ColorComponents.RedGreenBlueAlpha);
 
-            gl.TexImage2D(OpenGL.GL_TEXTURE_2D, 0, OpenGL.GL_RGBA, image.Width, image.Height, 0, OpenGL.GL_RGBA, OpenGL.GL_UNSIGNED_BYTE, image.Data);
-            gl.GenerateMipmapEXT(OpenGL.GL_TEXTURE_2D);
+                gl.TexImage2D(OpenGL.GL_TEXTURE_2D, 0, OpenGL.GL_RGBA, image.Width, image.Height, 0, OpenGL.GL_RGBA, OpenGL.GL_UNSIGNED_BYTE, image.Data);
+                gl.GenerateMipmapEXT(OpenGL.GL_TEXTURE_2D);
 
-            
+                textureCache.Add(mesh.TexturePath, texture);
+
+                Console.WriteLine("Load new texture");
+            }
+
+
         }
 
         public void Draw()
