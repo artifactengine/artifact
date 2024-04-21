@@ -38,6 +38,9 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
         private Texture texture;
         private TextureView textureView;
 
+        private static Dictionary<Vertex[], DeviceBuffer> vertexBufferCache = new Dictionary<Vertex[], DeviceBuffer>();
+        private static Dictionary<ushort[], DeviceBuffer> indexBufferCache = new Dictionary<ushort[], DeviceBuffer>();
+
         public (Texture, TextureView) LoadTextureAndView(GraphicsDevice gd, string texturePath)
         {
             // Load the image using ImageSharp
@@ -78,9 +81,24 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             ResourceFactory factory = VeldridRenderingBackend.factory;
             GraphicsDevice device = VeldridRenderingBackend.device;
 
+            if (vertexBufferCache.ContainsKey(mesh.Vertices))
+            {
+                vertexBuffer = vertexBufferCache[mesh.Vertices];
+            } else
+            {
+                vertexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Vertices.Length * Vertex.SizeInBytes), BufferUsage.VertexBuffer));
+                vertexBufferCache.Add(mesh.Vertices, vertexBuffer);
+            }
+            
+            if (indexBufferCache.ContainsKey(mesh.Indices))
+            {
+                indexBuffer = indexBufferCache[mesh.Indices];
+            } else
+            {
+                indexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Indices.Length * sizeof(ushort)), BufferUsage.IndexBuffer));
 
-            vertexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Vertices.Length * Vertex.SizeInBytes), BufferUsage.VertexBuffer));
-            indexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Indices.Length * sizeof(ushort)), BufferUsage.IndexBuffer));
+                indexBufferCache.Add(mesh.Indices, indexBuffer);
+            }
 
 
             using FileStream stream = File.OpenRead(mesh.TexturePath);
