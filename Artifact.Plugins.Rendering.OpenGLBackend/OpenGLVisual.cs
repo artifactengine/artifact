@@ -26,7 +26,8 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
         private static Dictionary<string, uint> vertexShaderCache = new Dictionary<string, uint>();
         private static Dictionary<string, uint> fragmentShaderCache = new Dictionary<string, uint>();
-
+        private static Dictionary<Vertex[], uint> vertexArrayCache = new Dictionary<Vertex[], uint>();
+        private static Dictionary<ushort[], uint> elementBufferCache = new Dictionary<ushort[], uint>();
 
         public Vector3 Position { get; set; }
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
@@ -96,48 +97,66 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
             gl.LinkProgram(shaderProgram);
 
+            if (vertexArrayCache.ContainsKey(mesh.Vertices))
+            {
+                Console.WriteLine("Use cached VAO");
+                vao = vertexArrayCache[mesh.Vertices];
+            } else
+            {
+                Console.WriteLine("Create new VAO");
+                uint[] vbos = new uint[1];
 
-            gl.DeleteShader(vertexShader);
-            gl.DeleteShader(fragmentShader);
+                gl.GenBuffers(1, vbos);
 
-            uint[] vbos = new uint[1];
+                vbo = vbos[0];
 
-            gl.GenBuffers(1, vbos);
+                uint[] vaos = new uint[1];
 
-            vbo = vbos[0];
+                gl.GenVertexArrays(1, vaos);
 
-            uint[] vaos = new uint[1];
-
-            gl.GenVertexArrays(1, vaos);
-
-            vao = vaos[0];
-            gl.BindVertexArray(vao);
-
-
-            gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, vbo);
-            gl.BufferData(OpenGL.GL_ARRAY_BUFFER, mesh.Vertices.Length * sizeof(Vertex), ConvertStructArrayToIntPtr(mesh.Vertices), OpenGL.GL_STATIC_DRAW);
-
-            uint positionLocation = (uint)gl.GetAttribLocation(shaderProgram, "aPos");
-            uint colorLocation = (uint)gl.GetAttribLocation(shaderProgram, "aTexCoord");
-
-            Console.WriteLine(positionLocation);
-
-            gl.VertexAttribPointer(positionLocation, 4, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 0);
-            gl.VertexAttribPointer(colorLocation, 2, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 4 * sizeof(float));
-            gl.EnableVertexAttribArray(positionLocation);
-            gl.EnableVertexAttribArray(colorLocation);
-
-            gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, 0);
+                vao = vaos[0];
+                gl.BindVertexArray(vao);
 
 
-            uint[] ebos = new uint[1];
-            gl.GenBuffers(1, ebos);
+                gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, vbo);
+                gl.BufferData(OpenGL.GL_ARRAY_BUFFER, mesh.Vertices.Length * sizeof(Vertex), ConvertStructArrayToIntPtr(mesh.Vertices), OpenGL.GL_STATIC_DRAW);
 
-            ebo = ebos[0];
+                uint positionLocation = (uint)gl.GetAttribLocation(shaderProgram, "aPos");
+                uint colorLocation = (uint)gl.GetAttribLocation(shaderProgram, "aTexCoord");
 
-            gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
-            gl.BufferData(OpenGL.GL_ELEMENT_ARRAY_BUFFER, mesh.Indices, OpenGL.GL_STATIC_DRAW);
-            gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, 0);
+                Console.WriteLine(positionLocation);
+
+                gl.VertexAttribPointer(positionLocation, 4, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 0);
+                gl.VertexAttribPointer(colorLocation, 2, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 4 * sizeof(float));
+                gl.EnableVertexAttribArray(positionLocation);
+                gl.EnableVertexAttribArray(colorLocation);
+
+                gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, 0);
+
+                vertexArrayCache.Add(mesh.Vertices, vao);
+            }
+
+            
+            if (elementBufferCache.ContainsKey(mesh.Indices))
+            {
+                Console.WriteLine("Use cached ebo");
+                ebo = elementBufferCache[mesh.Indices];
+            } else
+            {
+                Console.WriteLine("Create new ebo");
+                uint[] ebos = new uint[1];
+                gl.GenBuffers(1, ebos);
+
+                ebo = ebos[0];
+
+                gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
+                gl.BufferData(OpenGL.GL_ELEMENT_ARRAY_BUFFER, mesh.Indices, OpenGL.GL_STATIC_DRAW);
+                gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, 0);
+
+                elementBufferCache.Add(mesh.Indices, ebo);
+
+            }
+
 
             _mesh = mesh;
 
