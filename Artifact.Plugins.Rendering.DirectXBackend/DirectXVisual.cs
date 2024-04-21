@@ -25,6 +25,8 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
     public class DirectXVisual : ArtifactDisposable, IVisual
     {
         private VertexShader vertexShader;
+        private ShaderBytecode vertexShaderByteCode;
+
         private PixelShader pixelShader;
 
         private InputLayout layout;
@@ -34,11 +36,27 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
         private Buffer contantBuffer;
         private VertexBufferBinding vertexBinding;
         private ShaderResourceView texture;
-        private SamplerState samplerState;
+        private static SamplerState samplerState = new SamplerState(DirectXRenderingBackend.device, new SamplerStateDescription
+        {
+            Filter = Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.PixelArt ? Filter.ComparisonMinLinearMagMipPoint : Filter.MinMagMipLinear,
+            AddressU = TextureAddressMode.Wrap,
+            AddressV = TextureAddressMode.Wrap,
+            AddressW = TextureAddressMode.Wrap,
+            ComparisonFunction = Comparison.Never,
+            MinimumLod = 0,
+            MaximumLod = float.MaxValue
+        });
 
         private DeviceContext context;
 
         private Mesh _mesh;
+
+        private static Dictionary<Vertex[], Buffer> vertexBufferCache = new Dictionary<Vertex[], Buffer>();
+        private static Dictionary<ushort[], Buffer> indexBufferCache = new Dictionary<ushort[], Buffer>();
+        private static Dictionary<string, VertexShader> vertexShaderCache = new Dictionary<string, VertexShader>();
+        private static Dictionary<string, ShaderBytecode> vertexShaderBytecodeCache = new Dictionary<string, ShaderBytecode>();
+        private static Dictionary<string, PixelShader> pixelShaderCache = new Dictionary<string, PixelShader>();
+        private static Dictionary<string, ShaderResourceView> textureCache = new Dictionary<string, ShaderResourceView>();
 
         public Vector3 Position { get; set; }
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
@@ -49,12 +67,40 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             _mesh = mesh;
             context = DirectXRenderingBackend.deviceContext;
 
+            string fullVertexPath = "Assets/dx/" + mesh.VertexShaderPath + ".fx";
+            string fullPixelPath = "Assets/dx/" + mesh.FragmentShaderPath + ".fx";
+            
+            if (vertexShaderCache.ContainsKey(fullVertexPath))
+            {
+                vertexShader = vertexShaderCache[fullVertexPath];
+                vertexShaderByteCode = vertexShaderBytecodeCache[fullVertexPath];
+                Console.WriteLine("Used cached vertex shader");
+            } else
+            {
+                vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
+                vertexShader = new VertexShader(DirectXRenderingBackend.device, vertexShaderByteCode);
+            
+                vertexShaderCache.Add(fullVertexPath, vertexShader);
+                vertexShaderBytecodeCache.Add(fullVertexPath, vertexShaderByteCode);
 
-            var vertexShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "VS", "vs_4_0", ShaderFlags.None, EffectFlags.None);
-            vertexShader = new VertexShader(DirectXRenderingBackend.device, vertexShaderByteCode);
+                Console.WriteLine("Compiled vertex shader");
+            }
+            
+            if (pixelShaderCache.ContainsKey(fullPixelPath))
+            {
+                pixelShader = pixelShaderCache[fullPixelPath];
 
-            var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
-            pixelShader = new PixelShader(DirectXRenderingBackend.device, pixelShaderByteCode);
+                Console.WriteLine("Used cached pixel shader");
+            } else
+            {
+                var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
+                pixelShader = new PixelShader(DirectXRenderingBackend.device, pixelShaderByteCode);
+            
+                pixelShaderCache.Add(fullPixelPath, pixelShader);
+
+                Console.WriteLine("Compiled pixel shader");
+            }
+            
 
             layout = new InputLayout(
                 DirectXRenderingBackend.device,
@@ -75,17 +121,6 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             dtexture.Initialize(DirectXRenderingBackend.device, mesh.TexturePath);
 
             texture = dtexture.TextureResource;
-
-            samplerState = new SamplerState(DirectXRenderingBackend.device, new SamplerStateDescription
-            {
-                Filter = Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.PixelArt ? Filter.ComparisonMinLinearMagMipPoint : Filter.MinMagMipLinear,
-                AddressU = TextureAddressMode.Wrap,
-                AddressV = TextureAddressMode.Wrap,
-                AddressW = TextureAddressMode.Wrap,
-                ComparisonFunction = Comparison.Never,
-                MinimumLod = 0,
-                MaximumLod = float.MaxValue
-            });
         }
 
         [StructLayout(LayoutKind.Sequential)]

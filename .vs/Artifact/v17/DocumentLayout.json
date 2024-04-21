@@ -7,31 +7,43 @@
       "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\assets\\shaders\\opengl\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|solutionrelative:artifact.plugins.rendering.directxbackend\\directxvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DB0F237-1DDA-4AB7-9160-B7640EFE7A83}|Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj|solutionrelative:artifact.plugins.rendering.directxbackend\\directxrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|r:\\code\\artifact\\artifact.plugins.rendering\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|solutionrelative:artifact.plugins.rendering\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|R:\\code\\Artifact\\platformergame\\assets\\shaders\\opengl\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\assets\\shaders\\opengl\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1786D79-F947-463F-8B1F-1B60C52613CA}|Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.veldridbackend\\veldridrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1786D79-F947-463F-8B1F-1B60C52613CA}|Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj|R:\\code\\Artifact\\artifact.plugins.rendering.veldridbackend\\veldridrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1786D79-F947-463F-8B1F-1B60C52613CA}|Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj|solutionrelative:artifact.plugins.rendering.veldridbackend\\veldridrenderingbackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\assets\\shaders\\veldrid\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|R:\\code\\Artifact\\platformergame\\assets\\shaders\\veldrid\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\assets\\shaders\\veldrid\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\assets\\shaders\\opengl\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|R:\\code\\Artifact\\platformergame\\assets\\shaders\\opengl\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\assets\\shaders\\opengl\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|r:\\code\\artifact\\platformergame\\assets\\shaders\\dx\\default.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|R:\\code\\Artifact\\platformergame\\assets\\shaders\\dx\\default.fx||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}|PlatformerGame\\PlatformerGame.csproj|solutionrelative:platformergame\\assets\\shaders\\dx\\default.fx||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|r:\\code\\artifact\\artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|R:\\code\\Artifact\\artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D34F192-D35C-41B1-BBE6-B1D97C278A35}|Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj|solutionrelative:artifact.plugins.rendering\\renderingplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|r:\\code\\artifact\\artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|R:\\code\\Artifact\\artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{994650CF-6E16-4C3B-9D1E-738AD1AF64B0}|Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj|solutionrelative:artifact.plugins.rendering.openglbackend\\openglvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -45,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,7 +69,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DirectXRenderingBackend.cs",
+              "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXRenderingBackend.cs",
+              "RelativeDocumentMoniker": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXRenderingBackend.cs",
+              "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXRenderingBackend.cs",
+              "RelativeToolTip": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXRenderingBackend.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:39:52.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mesh.cs",
+              "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Mesh.cs",
+              "RelativeDocumentMoniker": "Artifact.Plugins.Rendering\\Mesh.cs",
+              "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Mesh.cs*",
+              "RelativeToolTip": "Artifact.Plugins.Rendering\\Mesh.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:38:28.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DirectXVisual.cs",
+              "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
+              "RelativeDocumentMoniker": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
+              "ToolTip": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
+              "RelativeToolTip": "Artifact.Plugins.Rendering.DirectXBackend\\DirectXVisual.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAcwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T16:34:35.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "default.vert",
               "DocumentMoniker": "R:\\code\\Artifact\\PlatformerGame\\Assets\\Shaders\\opengl\\default.vert",
               "RelativeDocumentMoniker": "PlatformerGame\\Assets\\Shaders\\opengl\\default.vert",
@@ -65,12 +116,11 @@
               "RelativeToolTip": "PlatformerGame\\Assets\\Shaders\\opengl\\default.vert",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-21T11:17:43.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T11:17:43.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "default.fx",
               "DocumentMoniker": "R:\\code\\Artifact\\PlatformerGame\\Assets\\Shaders\\dx\\default.fx",
               "RelativeDocumentMoniker": "PlatformerGame\\Assets\\Shaders\\dx\\default.fx",
@@ -78,12 +128,11 @@
               "RelativeToolTip": "PlatformerGame\\Assets\\Shaders\\dx\\default.fx",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-21T11:15:45.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T11:15:45.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "default.frag",
               "DocumentMoniker": "R:\\code\\Artifact\\PlatformerGame\\Assets\\Shaders\\veldrid\\default.frag",
               "RelativeDocumentMoniker": "PlatformerGame\\Assets\\Shaders\\veldrid\\default.frag",
@@ -91,12 +140,11 @@
               "RelativeToolTip": "PlatformerGame\\Assets\\Shaders\\veldrid\\default.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-21T11:05:53.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T11:05:53.142Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "RenderingPlugin.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\RenderingPlugin.cs",
               "RelativeDocumentMoniker": "Artifact.Plugins.Rendering\\RenderingPlugin.cs",
@@ -104,23 +152,21 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering\\RenderingPlugin.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAjwCoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T10:59:32.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T10:59:32.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "MethodBaseInvoker.cs",
               "DocumentMoniker": "C:\\Users\\rhys\\AppData\\Local\\SourceServer\\818b926a1e1db2c4d33835816768f789008e97f471c84d02461fb28b81af34eb\\src\\libraries\\System.Private.CoreLib\\src\\System\\Reflection\\MethodBaseInvoker.cs",
               "ToolTip": "C:\\Users\\rhys\\AppData\\Local\\SourceServer\\818b926a1e1db2c4d33835816768f789008e97f471c84d02461fb28b81af34eb\\src\\libraries\\System.Private.CoreLib\\src\\System\\Reflection\\MethodBaseInvoker.cs",
               "ViewState": "AQIAAFIAAAAAAAAAAAAAwGIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T10:59:25.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T10:59:25.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "OpenGLVisual.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\OpenGLVisual.cs",
               "RelativeDocumentMoniker": "Artifact.Plugins.Rendering.OpenGLBackend\\OpenGLVisual.cs",
@@ -128,12 +174,11 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering.OpenGLBackend\\OpenGLVisual.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T10:54:00.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T10:54:00.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "VeldridRenderingBackend.cs",
               "DocumentMoniker": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.VeldridBackend\\VeldridRenderingBackend.cs",
               "RelativeDocumentMoniker": "Artifact.Plugins.Rendering.VeldridBackend\\VeldridRenderingBackend.cs",
@@ -141,8 +186,7 @@
               "RelativeToolTip": "Artifact.Plugins.Rendering.VeldridBackend\\VeldridRenderingBackend.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAAACsAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T10:53:53.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T10:53:53.601Z"
             },
             {
               "$type": "Document",
@@ -152,14 +196,14 @@
               "RelativeDocumentMoniker": "PlatformerGame\\Game.cs",
               "ToolTip": "R:\\code\\Artifact\\PlatformerGame\\Game.cs",
               "RelativeToolTip": "PlatformerGame\\Game.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAYwCAAAAAsAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAYwCAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T08:20:58.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "default.frag",
               "DocumentMoniker": "R:\\code\\Artifact\\PlatformerGame\\Assets\\Shaders\\opengl\\default.frag",
               "RelativeDocumentMoniker": "PlatformerGame\\Assets\\Shaders\\opengl\\default.frag",
@@ -167,8 +211,7 @@
               "RelativeToolTip": "PlatformerGame\\Assets\\Shaders\\opengl\\default.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-21T08:57:26.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T08:57:26.046Z"
             }
           ]
         }

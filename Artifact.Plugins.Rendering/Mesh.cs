@@ -14,12 +14,18 @@ namespace Artifact.Plugins.Rendering
 
         public string TexturePath { get; set; }
 
-        public Mesh(Vertex[] vertices, ushort[] indices, string texturePath = "NONE")
+        public string VertexShaderPath { get; set; }
+        public string FragmentShaderPath { get; set; }
+
+        public Mesh(Vertex[] vertices, ushort[] indices, string texturePath = "NONE", string vertexShaderPath = "default", string fragmentShaderPath = "default")
         {
             Vertices = vertices;
             Indices = indices;
 
             TexturePath = texturePath;
+
+            VertexShaderPath = vertexShaderPath;
+            FragmentShaderPath = fragmentShaderPath;
         }
     }
 }

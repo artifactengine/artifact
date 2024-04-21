@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Rendering.DirectXBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8576df8e6825b9c6885f2935938c2deee470bbe2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9f4d1c6970ce391360b107d9b4d49c832b85e8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Rendering.DirectXBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Rendering.DirectXBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
