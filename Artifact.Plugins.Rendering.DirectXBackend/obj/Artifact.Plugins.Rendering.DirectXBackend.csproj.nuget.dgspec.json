@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "SharpDX.Direct2D1": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
             "SharpDX.Direct3D11": {
               "target": "Package",
               "version": "[4.2.0, )"
@@ -76,6 +80,10 @@
             "SharpDX.Mathematics": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "StbImageSharp": {
+              "target": "Package",
+              "version": "[2.27.14, )"
             }
           },
           "imports": [

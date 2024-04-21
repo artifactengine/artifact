@@ -18,6 +18,7 @@ using System.Numerics;
 using Artifact.Plugins.Rendering.VeldridBackend;
 using Artifact.Plugin.Audio;
 using Artifact.Plugins.Audio.NAudioBackend;
+using Artifact.Plugins.SplashScreen;
 
 namespace TestGame
 {
@@ -26,21 +27,23 @@ namespace TestGame
         private RenderingPlugin renderer;
         private InputPlugin input;
         private AudioPlugin audio;
+        private SplashScreenPlugin splashScreen;
         private bool first = true;
 
         private IVisual quad1;
         private IVisual quad2;
 
-        private ColorHSB color = new ColorHSB(0, 100, 50, 255);
+        private ColorRGB color = new ColorRGB(255, 0, 0, 255);
 
         public Game()
         {
             Name = "Test Game";
 
             AddPlugin(new WindowingPlugin(this, "Test Game", 1280, 720, typeof(SDL2WindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
+            AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
         }
 
         public override void OnLoad()
@@ -48,12 +51,13 @@ namespace TestGame
             renderer = GetPlugin<RenderingPlugin>();
             input = GetPlugin<InputPlugin>();
             audio = GetPlugin<AudioPlugin>();
+            splashScreen = GetPlugin<SplashScreenPlugin>();
 
             Vertex[] vertices = {
-                new Vertex(new Vector4(-0.1f, 0.1f, 0.5f, 1.0f), new Vector4(1.0f, 0.0f, 0.0f, 1.0f)),
-                new Vertex(new Vector4(0.1f, -0.1f, 0.5f, 1.0f), new Vector4(0.0f, 1.0f, 0.0f, 1.0f)),
-                new Vertex(new Vector4(-0.1f, -0.1f, 0.5f, 1.0f), new Vector4(0.0f, 0.0f, 1.0f, 1.0f)),
-                new Vertex(new Vector4(0.1f, 0.1f, 0.5f, 1.0f), new Vector4(1.0f, 1.0f, 1.0f, 1.0f)),
+                new Vertex(new Vector4(-0.1f, 0.1f, 0.5f, 1.0f), new Vector2(0.0f, 0.0f)),
+                new Vertex(new Vector4(0.1f, -0.1f, 0.5f, 1.0f), new Vector2(1.0f, 1.0f)),
+                new Vertex(new Vector4(-0.1f, -0.1f, 0.5f, 1.0f), new Vector2(0.0f, 1.0f)),
+                new Vertex(new Vector4(0.1f, 0.1f, 0.5f, 1.0f), new Vector2(1.0f, 0.0f)),
             };
 
             ushort[] indices = [
@@ -61,8 +65,8 @@ namespace TestGame
                 0, 3, 1
             ];
 
-            quad1 = renderer.CreateVisual(new Mesh(vertices, indices));
-            quad2 = renderer.CreateVisual(new Mesh(vertices, indices));
+            quad1 = renderer.CreateVisual(new Mesh(vertices, indices, "Assets/FullLogo.png"));
+            quad2 = renderer.CreateVisual(new Mesh(vertices, indices, "Assets/FullLogo.png"));
             base.OnLoad();
         }
 
@@ -75,7 +79,11 @@ namespace TestGame
         public override void OnUpdate(float dt)
         {
             base.OnUpdate(dt);
-            color.H = (color.H + 1) % 360;
+
+            if (splashScreen.show)
+            {
+                return;
+            }
 
             if (input.IsKeyDown(Key.W))
             {
@@ -122,10 +130,12 @@ namespace TestGame
 
         public void OnDraw()
         {
-            renderer.Clear(color.ToRgb(), 1.0f);
+            renderer.Clear(color, 1.0f);
 
             quad1.Draw();
             quad2.Draw();
+
+            splashScreen.Draw();
 
             renderer.SwapBuffers();
         }

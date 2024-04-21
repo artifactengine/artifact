@@ -1,10 +1,12 @@
 ﻿using Artifact.Plugins.Windowing;
 using NLog;
 using SharpGL;
+using StbImageSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -18,6 +20,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
         private uint vbo, vao, ebo;
         private uint shaderProgram, vertexShader, fragmentShader;
+        private uint texture;
 
         private Mesh _mesh;
 
@@ -45,16 +48,9 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         {
             gl = OpenGLRenderingBackend.gl;
 
+            string vertexShaderSource = File.ReadAllText("Assets/Shaders/opengl/default.vert");
 
-            Vertex[] vertices = {
-                new Vertex(new Vector4(-0.5f, -0.5f, 0.0f, 0.0f), new Vector4(0.180392f, 0.180392f, 0.180392f, 1.0f)),
-                new Vertex(new Vector4(0.5f, -0.5f, 0.0f, 0.0f), new Vector4(0.180392f, 0.180392f, 0.180392f, 1.0f)),
-                new Vertex(new Vector4(0.0f, 0.5f, 0.0f, 0.0f), new Vector4(0.180392f, 0.180392f, 0.180392f, 1.0f)),
-            };
-
-            string vertexShaderSource = File.ReadAllText("Assets/default.vert");
-
-            string fragmentShaderSource = File.ReadAllText("Assets/default.frag");
+            string fragmentShaderSource = File.ReadAllText("Assets/Shaders/opengl/default.frag");
 
             vertexShader = gl.CreateShader(OpenGL.GL_VERTEX_SHADER);
 
@@ -90,23 +86,17 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             vao = vaos[0];
             gl.BindVertexArray(vao);
 
-            float[] verticesF = {
-                0.0f, 0.5f, 0.0f, 1.0f, 1.0f, 0.0f,
-                0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.0f,
-                -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.0f,
-            };
-
 
             gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, vbo);
             gl.BufferData(OpenGL.GL_ARRAY_BUFFER, mesh.Vertices.Length * sizeof(Vertex), ConvertStructArrayToIntPtr(mesh.Vertices), OpenGL.GL_STATIC_DRAW);
 
             uint positionLocation = (uint)gl.GetAttribLocation(shaderProgram, "aPos");
-            uint colorLocation = (uint)gl.GetAttribLocation(shaderProgram, "aColor");
+            uint colorLocation = (uint)gl.GetAttribLocation(shaderProgram, "aTexCoord");
 
             Console.WriteLine(positionLocation);
 
-            gl.VertexAttribPointer(positionLocation, 4, OpenGL.GL_FLOAT, false, 8 * sizeof(float), 0);
-            gl.VertexAttribPointer(colorLocation, 4, OpenGL.GL_FLOAT, false, 8 * sizeof(float), 4 * sizeof(float));
+            gl.VertexAttribPointer(positionLocation, 4, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 0);
+            gl.VertexAttribPointer(colorLocation, 2, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 4 * sizeof(float));
             gl.EnableVertexAttribArray(positionLocation);
             gl.EnableVertexAttribArray(colorLocation);
 
@@ -123,6 +113,35 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, 0);
 
             _mesh = mesh;
+
+            uint[] textures = new uint[1];
+            gl.GenTextures(1, textures);
+
+            texture = textures[0];
+
+            gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
+            gl.ActiveTexture(OpenGL.GL_TEXTURE0);
+
+            gl.UseProgram(shaderProgram);
+
+            gl.Uniform1(gl.GetUniformLocation(shaderProgram, "tex0"), 0);
+
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_S, OpenGL.GL_REPEAT);
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_T, OpenGL.GL_REPEAT);
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, OpenGL.GL_LINEAR_MIPMAP_LINEAR);
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, OpenGL.GL_LINEAR);
+
+
+            StbImage.stbi_set_flip_vertically_on_load(0);
+
+            FileStream stream = File.OpenRead(mesh.TexturePath);
+
+            ImageResult image = ImageResult.FromStream(stream, ColorComponents.RedGreenBlueAlpha);
+
+            gl.TexImage2D(OpenGL.GL_TEXTURE_2D, 0, OpenGL.GL_RGBA, image.Width, image.Height, 0, OpenGL.GL_RGBA, OpenGL.GL_UNSIGNED_BYTE, image.Data);
+            gl.GenerateMipmapEXT(OpenGL.GL_TEXTURE_2D);
+
+            
         }
 
         public void Draw()
@@ -141,12 +160,13 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "proj"), 1, false, Camera.ProjectionMatrix.AsFloatArray());
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "view"), 1, false, Camera.ViewMatrix.AsFloatArray());
 
-            Console.WriteLine(string.Join(", ", Camera.ViewMatrix.AsFloatArray()));
+            //Console.WriteLine(string.Join(", ", Camera.ViewMatrix.AsFloatArray()));
 
             //Console.WriteLine("[" + string.Join(", ", translation.AsFloatArray()) + "]");
 
             gl.BindVertexArray(vao);
             gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
+            
             gl.DrawElements(OpenGL.GL_TRIANGLES, _mesh.Indices.Length, OpenGL.GL_UNSIGNED_SHORT, 0);
         }
 

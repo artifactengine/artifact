@@ -119,3 +119,9 @@ R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugin.Audio.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Audio.NAudioBackend.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugin.Audio.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Audio.NAudioBackend.pdb
+R:\code\Artifact\TestGame\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Veldrid.ImageSharp.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.SplashScreen.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.SplashScreen.pdb
+R:\code\Artifact\TestGame\bin\Debug\net8.0\StbImageSharp.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\SharpDX.Direct2D1.dll

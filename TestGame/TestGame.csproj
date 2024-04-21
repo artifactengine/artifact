@@ -9,9 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
+    <PackageReference Include="StbImageSharp" Version="2.27.14" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="System.Security.Permissions" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="Veldrid.ImageSharp" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +25,7 @@
     <ProjectReference Include="..\Artifact.Plugins.Rendering.OpenGLBackend\Artifact.Plugins.Rendering.OpenGLBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.VeldridBackend\Artifact.Plugins.Rendering.VeldridBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering\Artifact.Plugins.Rendering.csproj" />
+    <ProjectReference Include="..\Artifact.Plugins.SplashScreen\Artifact.Plugins.SplashScreen.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.GLFWBackend\Artifact.Plugins.Windowing.GLFWBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.SDL2Backend\Artifact.Plugins.Windowing.SDL2Backend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.WinFormsBackend\Artifact.Plugins.Windowing.WinFormsBackend.csproj" />

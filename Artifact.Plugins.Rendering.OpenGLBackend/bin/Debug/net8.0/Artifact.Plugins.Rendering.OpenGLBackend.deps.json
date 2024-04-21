@@ -10,7 +10,9 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
-          "SharpGL": "3.1.1"
+          "SharpGL": "3.1.1",
+          "SixLabors.ImageSharp": "3.1.4",
+          "StbImageSharp": "2.27.14"
         },
         "runtime": {
           "Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
@@ -53,6 +55,22 @@
           "lib/netcoreapp3.1/SharpGL.dll": {
             "assemblyVersion": "3.1.1.0",
             "fileVersion": "3.1.1.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/3.1.4": {
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.1.4.0"
+          }
+        }
+      },
+      "StbImageSharp/2.27.14": {
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {
+            "assemblyVersion": "2.27.14.0",
+            "fileVersion": "2.27.14.0"
           }
         }
       },
@@ -133,6 +151,20 @@
       "sha512": "sha512-tLTsMAl0XMjLhVK++ga65tObn/8IyPEfZ9i+icELcAPJ92mgB/DllVlfDBNJOP5T3C4GuT6YEZn3CVR11GH2qQ==",
       "path": "sharpgl/3.1.1",
       "hashPath": "sharpgl.3.1.1.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lFIdxgGDA5iYkUMRFOze7BGLcdpoLFbR+a20kc1W7NepvzU7ejtxtWOg9RvgG7kb9tBoJ3ONYOK6kLil/dgF1w==",
+      "path": "sixlabors.imagesharp/3.1.4",
+      "hashPath": "sixlabors.imagesharp.3.1.4.nupkg.sha512"
+    },
+    "StbImageSharp/2.27.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4C38oL8igoocaywMr4+WDYoXwnVma3gm26heCAVgzWqO91MMPuhgqTlTT7vVpGDMo4/c0h2/zqQuAS6QxJKgmA==",
+      "path": "stbimagesharp/2.27.14",
+      "hashPath": "stbimagesharp.2.27.14.nupkg.sha512"
     },
     "System.Drawing.Common/9.0.0-preview.3.24172.9": {
       "type": "package",

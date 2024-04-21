@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zp4Oiu7IHT/D13Qqi2vBjPbJHdlhvLOkfISMvwsfR3vogzRV7q7UpuYT6nLcMHHdUjT9rbtnU9jlHpdTikyr6A==",
+  "dgSpecHash": "0YbycLCf71sM5b7t9Cj4jgzRTIU64LJG9uxCDICKBpXAs8+WNFrcVBXsSTCq4HZ3G0nmtkt+DvS/3W3qAAqVvg==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\rhys\\.nuget\\packages\\sdl-sharp\\2.2.3-beta2\\sdl-sharp.2.2.3-beta2.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx\\4.2.0\\sharpdx.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.d3dcompiler\\4.2.0\\sharpdx.d3dcompiler.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct2d1\\4.2.0\\sharpdx.direct2d1.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct3d11\\4.2.0\\sharpdx.direct3d11.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
@@ -52,6 +53,8 @@
     "C:\\Users\\rhys\\.nuget\\packages\\sharpgl\\3.1.1\\sharpgl.3.1.1.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\silk.net.core\\2.20.0\\silk.net.core.2.20.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\silk.net.glfw\\2.20.0\\silk.net.glfw.2.20.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sixlabors.imagesharp\\3.1.4\\sixlabors.imagesharp.3.1.4.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\stbimagesharp\\2.27.14\\stbimagesharp.2.27.14.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
@@ -121,6 +124,7 @@
     "C:\\Users\\rhys\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\ultz.native.glfw\\3.3.9.2\\ultz.native.glfw.3.3.9.2.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\veldrid\\4.9.0\\veldrid.4.9.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\veldrid.imagesharp\\4.9.0\\veldrid.imagesharp.4.9.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\veldrid.metalbindings\\4.9.0\\veldrid.metalbindings.4.9.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\veldrid.openglbindings\\4.9.0\\veldrid.openglbindings.4.9.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\veldrid.sdl2\\4.9.0\\veldrid.sdl2.4.9.0.nupkg.sha512",

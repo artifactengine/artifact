@@ -15,6 +15,9 @@ using Buffer = SharpDX.Direct3D11.Buffer;
 using Device = SharpDX.Direct3D11.Device;
 using Vector3 = System.Numerics.Vector3;
 using Matrix = SharpDX.Matrix;
+using SharpDX.WIC;
+using Artifact.Plugins.Rendering.DirectXBackend.CommonDX;
+using StbImageSharp;
 
 namespace Artifact.Plugins.Rendering.DirectXBackend
 {
@@ -30,6 +33,8 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
         private Buffer indexBuffer;
         private Buffer contantBuffer;
         private VertexBufferBinding vertexBinding;
+        private ShaderResourceView texture;
+        private SamplerState samplerState;
 
         private DeviceContext context;
 
@@ -50,41 +55,6 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             var pixelShaderByteCode = ShaderBytecode.CompileFromFile("Assets/Shaders/dx/default.fx", "PS", "ps_4_0", ShaderFlags.None, EffectFlags.None);
             pixelShader = new PixelShader(DirectXRenderingBackend.device, pixelShaderByteCode);
-            /*
-            layout = new InputLayout(
-                DirectXRenderingBackend.device,
-                ShaderSignature.GetInputSignature(vertexShaderByteCode),
-                new[]
-                    {
-                        new InputElement("POSITION", 0, Format.R32G32B32A32_Float, 0, 0),
-                        new InputElement("COLOR", 0, Format.R32G32B32A32_Float, 16, 0)
-                    });
-
-
-            vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
-
-            /*
-            var indexBufferDescription = new BufferDescription(
-                mesh.Indices.Length * sizeof(short), // Size in bytes
-                ResourceUsage.Dynamic, // Usage
-                BindFlags.IndexBuffer, // Bind flags
-                CpuAccessFlags.Write, // CPU access flags
-                ResourceOptionFlags.None, // Option flags
-                0 // Structure byte stride
-            );
-
-            using (var dataStream = new DataStream(mesh.Indices.Length * sizeof(short), true, true))
-            {
-                dataStream.WriteRange(mesh.Indices);
-                dataStream.Position = 0;
-
-                indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, ref indexBufferDescription);
-            }
-            */
-            /*
-            vertexBinding = new VertexBufferBinding(vertexBuffer, 32, 0);
-        
-            */
 
             layout = new InputLayout(
                 DirectXRenderingBackend.device,
@@ -92,14 +62,30 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
                 new[]
                     {
                         new InputElement("POSITION", 0, Format.R32G32B32A32_Float, 0, 0),
-                        new InputElement("COLOR", 0, Format.R32G32B32A32_Float, 16, 0)
+                        new InputElement("TEXCOORD", 0, Format.R32G32_Float, 16, 0)
                     });
 
             vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
             indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, mesh.Indices);
             contantBuffer = new Buffer(DirectXRenderingBackend.device, Utilities.SizeOf<Matrix>(), ResourceUsage.Default, BindFlags.ConstantBuffer, CpuAccessFlags.None, ResourceOptionFlags.None, 0);
 
-            vertexBinding = new VertexBufferBinding(vertexBuffer, 32, 0);
+            vertexBinding = new VertexBufferBinding(vertexBuffer, 24, 0);
+
+            DTexture dtexture = new DTexture();
+            dtexture.Initialize(DirectXRenderingBackend.device, mesh.TexturePath);
+
+            texture = dtexture.TextureResource;
+
+            samplerState = new SamplerState(DirectXRenderingBackend.device, new SamplerStateDescription
+            {
+                Filter = Filter.MinMagMipLinear,
+                AddressU = TextureAddressMode.Wrap,
+                AddressV = TextureAddressMode.Wrap,
+                AddressW = TextureAddressMode.Wrap,
+                ComparisonFunction = Comparison.Never,
+                MinimumLod = 0,
+                MaximumLod = float.MaxValue
+            });
         }
 
         [StructLayout(LayoutKind.Sequential)]
@@ -127,8 +113,6 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             model.Transpose();
             */
 
-            Console.WriteLine(Position);
-
             Matrix proj = Camera.ViewMatrix.ToDXMatrix();
             Matrix view = Camera.ProjectionMatrix.ToDXMatrix();
 
@@ -152,6 +136,8 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             context.VertexShader.SetConstantBuffer(0, contantBuffer);
             context.VertexShader.Set(vertexShader);
             context.PixelShader.Set(pixelShader);
+            context.PixelShader.SetSampler(0, samplerState);
+            context.PixelShader.SetShaderResource(0, texture);
             context.OutputMerger.SetTargets(DirectXRenderingBackend.renderView);
 
             context.DrawIndexed(_mesh.Indices.Length, 0, 0);

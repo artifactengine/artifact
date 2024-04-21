@@ -12,10 +12,14 @@ namespace Artifact.Plugins.Rendering
         public Vertex[] Vertices { get; set; }
         public ushort[] Indices { get; set; }
 
-        public Mesh(Vertex[] vertices, ushort[] indices)
+        public string TexturePath { get; set; }
+
+        public Mesh(Vertex[] vertices, ushort[] indices, string texturePath = "NONE")
         {
             Vertices = vertices;
             Indices = indices;
+
+            TexturePath = texturePath;
         }
     }
 }

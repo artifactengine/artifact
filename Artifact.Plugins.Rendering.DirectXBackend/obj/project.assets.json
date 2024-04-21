@@ -330,6 +330,24 @@
           }
         }
       },
+      "SharpDX.Direct2D1/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SharpDX": "4.2.0",
+          "SharpDX.DXGI": "4.2.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/SharpDX.Direct2D1.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/SharpDX.Direct2D1.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "SharpDX.Direct3D11/4.2.0": {
         "type": "package",
         "dependencies": {
@@ -380,6 +398,15 @@
           "lib/netstandard1.1/SharpDX.Mathematics.dll": {
             "related": ".pdb;.xml"
           }
+        }
+      },
+      "StbImageSharp/2.27.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -1905,6 +1932,30 @@
         "sharpdx.d3dcompiler.nuspec"
       ]
     },
+    "SharpDX.Direct2D1/4.2.0": {
+      "sha512": "Qs8LzDMaQf1u3KB8ArHu9pDv6itZ++QXs99a/bVAG+nKr0Hx5NG4mcN5vsfE0mVR2TkeHfeUm4PksRah6VUPtA==",
+      "type": "package",
+      "path": "sharpdx.direct2d1/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/SharpDX.Direct2D1.dll",
+        "lib/net40/SharpDX.Direct2D1.pdb",
+        "lib/net40/SharpDX.Direct2D1.xml",
+        "lib/net45/SharpDX.Direct2D1.dll",
+        "lib/net45/SharpDX.Direct2D1.pdb",
+        "lib/net45/SharpDX.Direct2D1.xml",
+        "lib/netstandard1.1/SharpDX.Direct2D1.dll",
+        "lib/netstandard1.1/SharpDX.Direct2D1.pdb",
+        "lib/netstandard1.1/SharpDX.Direct2D1.xml",
+        "lib/uap10.0/SharpDX.Direct2D1.dll",
+        "lib/uap10.0/SharpDX.Direct2D1.pdb",
+        "lib/uap10.0/SharpDX.Direct2D1.pri",
+        "lib/uap10.0/SharpDX.Direct2D1.xml",
+        "sharpdx.direct2d1.4.2.0.nupkg.sha512",
+        "sharpdx.direct2d1.nuspec"
+      ]
+    },
     "SharpDX.Direct3D11/4.2.0": {
       "sha512": "oTm/iT5X/IIuJ8kNYP+DTC/MhBhqtRF5dbgPPFgLBdQv0BKzNTzXQQXd7SveBFjQg6hXEAJ2jGCAzNYvGFc9LA==",
       "type": "package",
@@ -1975,6 +2026,19 @@
         "lib/uap10.0/SharpDX.Mathematics.xml",
         "sharpdx.mathematics.4.2.0.nupkg.sha512",
         "sharpdx.mathematics.nuspec"
+      ]
+    },
+    "StbImageSharp/2.27.14": {
+      "sha512": "4C38oL8igoocaywMr4+WDYoXwnVma3gm26heCAVgzWqO91MMPuhgqTlTT7vVpGDMo4/c0h2/zqQuAS6QxJKgmA==",
+      "type": "package",
+      "path": "stbimagesharp/2.27.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.27.14.nupkg.sha512",
+        "stbimagesharp.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -5006,8 +5070,10 @@
       "SharpDX >= 4.2.0",
       "SharpDX.D3DCompiler >= 4.2.0",
       "SharpDX.DXGI >= 4.2.0",
+      "SharpDX.Direct2D1 >= 4.2.0",
       "SharpDX.Direct3D11 >= 4.2.0",
-      "SharpDX.Mathematics >= 4.2.0"
+      "SharpDX.Mathematics >= 4.2.0",
+      "StbImageSharp >= 2.27.14"
     ]
   },
   "packageFolders": {
@@ -5079,6 +5145,10 @@
             "target": "Package",
             "version": "[4.2.0, )"
           },
+          "SharpDX.Direct2D1": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
           "SharpDX.Direct3D11": {
             "target": "Package",
             "version": "[4.2.0, )"
@@ -5086,6 +5156,10 @@
           "SharpDX.Mathematics": {
             "target": "Package",
             "version": "[4.2.0, )"
+          },
+          "StbImageSharp": {
+            "target": "Package",
+            "version": "[2.27.14, )"
           }
         },
         "imports": [

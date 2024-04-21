@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQcuTe+/PHn8BhtiS9JiJwHavkloez8t/Dc9rgZSkPAoy7Wn6gj1TtUBfrC27TSVbzd7AdODtZHdjlMTQAQH7A==",
+  "dgSpecHash": "2bkpFD4H+mnbGGI6kveVWxVdyrfhMtUbewUXHQb7rYLfauDUV7ChGfx7O8nOOr5fOJeTgIfUy0WXyuhhvkSOVg==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj",
   "expectedPackageFiles": [
@@ -29,9 +29,11 @@
     "C:\\Users\\rhys\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx\\4.2.0\\sharpdx.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.d3dcompiler\\4.2.0\\sharpdx.d3dcompiler.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct2d1\\4.2.0\\sharpdx.direct2d1.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct3d11\\4.2.0\\sharpdx.direct3d11.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\stbimagesharp\\2.27.14\\stbimagesharp.2.27.14.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

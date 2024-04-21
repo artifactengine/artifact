@@ -564,6 +564,24 @@
           }
         }
       },
+      "SharpDX.Direct2D1/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SharpDX": "4.2.0",
+          "SharpDX.DXGI": "4.2.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/SharpDX.Direct2D1.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/SharpDX.Direct2D1.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "SharpDX.Direct3D11/4.2.0": {
         "type": "package",
         "dependencies": {
@@ -702,6 +720,31 @@
           "lib/net5.0/Silk.NET.GLFW.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SixLabors.ImageSharp/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "StbImageSharp/2.27.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -2053,6 +2096,23 @@
           }
         }
       },
+      "Veldrid.ImageSharp/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.ImageSharp": "1.0.4",
+          "Veldrid": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Veldrid.ImageSharp.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Veldrid.ImageSharp.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Veldrid.MetalBindings/4.9.0": {
         "type": "package",
         "dependencies": {
@@ -2380,8 +2440,10 @@
           "SharpDX": "4.2.0",
           "SharpDX.D3DCompiler": "4.2.0",
           "SharpDX.DXGI": "4.2.0",
+          "SharpDX.Direct2D1": "4.2.0",
           "SharpDX.Direct3D11": "4.2.0",
-          "SharpDX.Mathematics": "4.2.0"
+          "SharpDX.Mathematics": "4.2.0",
+          "StbImageSharp": "2.27.14"
         },
         "compile": {
           "bin/placeholder/Artifact.Plugins.Rendering.DirectXBackend.dll": {}
@@ -2396,7 +2458,9 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
-          "SharpGL": "3.1.1"
+          "SharpGL": "3.1.1",
+          "SixLabors.ImageSharp": "3.1.4",
+          "StbImageSharp": "2.27.14"
         },
         "compile": {
           "bin/placeholder/Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
@@ -2411,6 +2475,8 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
+          "SixLabors.ImageSharp": "2.1.8",
+          "StbImageSharp": "2.27.14",
           "Veldrid": "4.9.0",
           "Veldrid.SPIRV": "1.0.15",
           "Veldrid.StartupUtilities": "4.9.0"
@@ -2420,6 +2486,20 @@
         },
         "runtime": {
           "bin/placeholder/Artifact.Plugins.Rendering.VeldridBackend.dll": {}
+        }
+      },
+      "Artifact.Plugins.SplashScreen/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Artifact": "1.0.0",
+          "Artifact.Plugins.Rendering": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Artifact.Plugins.SplashScreen.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Artifact.Plugins.SplashScreen.dll": {}
         }
       },
       "Artifact.Plugins.Windowing/1.0.0": {
@@ -3248,6 +3328,30 @@
         "sharpdx.d3dcompiler.nuspec"
       ]
     },
+    "SharpDX.Direct2D1/4.2.0": {
+      "sha512": "Qs8LzDMaQf1u3KB8ArHu9pDv6itZ++QXs99a/bVAG+nKr0Hx5NG4mcN5vsfE0mVR2TkeHfeUm4PksRah6VUPtA==",
+      "type": "package",
+      "path": "sharpdx.direct2d1/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/SharpDX.Direct2D1.dll",
+        "lib/net40/SharpDX.Direct2D1.pdb",
+        "lib/net40/SharpDX.Direct2D1.xml",
+        "lib/net45/SharpDX.Direct2D1.dll",
+        "lib/net45/SharpDX.Direct2D1.pdb",
+        "lib/net45/SharpDX.Direct2D1.xml",
+        "lib/netstandard1.1/SharpDX.Direct2D1.dll",
+        "lib/netstandard1.1/SharpDX.Direct2D1.pdb",
+        "lib/netstandard1.1/SharpDX.Direct2D1.xml",
+        "lib/uap10.0/SharpDX.Direct2D1.dll",
+        "lib/uap10.0/SharpDX.Direct2D1.pdb",
+        "lib/uap10.0/SharpDX.Direct2D1.pri",
+        "lib/uap10.0/SharpDX.Direct2D1.xml",
+        "sharpdx.direct2d1.4.2.0.nupkg.sha512",
+        "sharpdx.direct2d1.nuspec"
+      ]
+    },
     "SharpDX.Direct3D11/4.2.0": {
       "sha512": "oTm/iT5X/IIuJ8kNYP+DTC/MhBhqtRF5dbgPPFgLBdQv0BKzNTzXQQXd7SveBFjQg6hXEAJ2jGCAzNYvGFc9LA==",
       "type": "package",
@@ -3427,6 +3531,35 @@
         "silk.net.glfw.2.20.0.nupkg.sha512",
         "silk.net.glfw.nuspec",
         "silkdotnet_v3.png"
+      ]
+    },
+    "SixLabors.ImageSharp/3.1.4": {
+      "sha512": "lFIdxgGDA5iYkUMRFOze7BGLcdpoLFbR+a20kc1W7NepvzU7ejtxtWOg9RvgG7kb9tBoJ3ONYOK6kLil/dgF1w==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.4.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "StbImageSharp/2.27.14": {
+      "sha512": "4C38oL8igoocaywMr4+WDYoXwnVma3gm26heCAVgzWqO91MMPuhgqTlTT7vVpGDMo4/c0h2/zqQuAS6QxJKgmA==",
+      "type": "package",
+      "path": "stbimagesharp/2.27.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.27.14.nupkg.sha512",
+        "stbimagesharp.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -6953,6 +7086,21 @@
         "veldrid.nuspec"
       ]
     },
+    "Veldrid.ImageSharp/4.9.0": {
+      "sha512": "yrhNrYA5FXZWWjmopXUCP9sEMxEjJmzzDkSBWq3cPWKOvzYQ9wXPkRlkj9cRljmhqQCkBH2gC2wtl6ddsjE50w==",
+      "type": "package",
+      "path": "veldrid.imagesharp/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Veldrid.ImageSharp.dll",
+        "lib/net6.0/Veldrid.ImageSharp.pdb",
+        "lib/netstandard2.0/Veldrid.ImageSharp.dll",
+        "lib/netstandard2.0/Veldrid.ImageSharp.pdb",
+        "veldrid.imagesharp.4.9.0.nupkg.sha512",
+        "veldrid.imagesharp.nuspec"
+      ]
+    },
     "Veldrid.MetalBindings/4.9.0": {
       "sha512": "9qWYalATCT+/smQzFi2IFyEZpLE1l+A1r3tntKao8sYVAe18+P9rDIvpxyIL4T7Ritfm0JU2TnqckXmLenyfhQ==",
       "type": "package",
@@ -7200,6 +7348,11 @@
       "path": "../Artifact.Plugins.Rendering.VeldridBackend/Artifact.Plugins.Rendering.VeldridBackend.csproj",
       "msbuildProject": "../Artifact.Plugins.Rendering.VeldridBackend/Artifact.Plugins.Rendering.VeldridBackend.csproj"
     },
+    "Artifact.Plugins.SplashScreen/1.0.0": {
+      "type": "project",
+      "path": "../Artifact.Plugins.SplashScreen/Artifact.Plugins.SplashScreen.csproj",
+      "msbuildProject": "../Artifact.Plugins.SplashScreen/Artifact.Plugins.SplashScreen.csproj"
+    },
     "Artifact.Plugins.Windowing/1.0.0": {
       "type": "project",
       "path": "../Artifact.Plugins.Windowing/Artifact.Plugins.Windowing.csproj",
@@ -7232,14 +7385,17 @@
       "Artifact.Plugins.Rendering.DirectXBackend >= 1.0.0",
       "Artifact.Plugins.Rendering.OpenGLBackend >= 1.0.0",
       "Artifact.Plugins.Rendering.VeldridBackend >= 1.0.0",
+      "Artifact.Plugins.SplashScreen >= 1.0.0",
       "Artifact.Plugins.Windowing >= 1.0.0",
       "Artifact.Plugins.Windowing.GLFWBackend >= 1.0.0",
       "Artifact.Plugins.Windowing.SDL2Backend >= 1.0.0",
       "Artifact.Plugins.Windowing.WinFormsBackend >= 1.0.0",
       "SharpDX.Mathematics >= 4.2.0",
+      "StbImageSharp >= 2.27.14",
       "System.Configuration.ConfigurationManager >= 9.0.0-preview.3.24172.9",
       "System.Drawing.Common >= 9.0.0-preview.3.24172.9",
-      "System.Security.Permissions >= 9.0.0-preview.3.24172.9"
+      "System.Security.Permissions >= 9.0.0-preview.3.24172.9",
+      "Veldrid.ImageSharp >= 4.9.0"
     ]
   },
   "packageFolders": {
@@ -7299,6 +7455,9 @@
             "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
               "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
             },
+            "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj"
+            },
             "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
               "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj"
             },
@@ -7336,6 +7495,10 @@
             "target": "Package",
             "version": "[4.2.0, )"
           },
+          "StbImageSharp": {
+            "target": "Package",
+            "version": "[2.27.14, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[9.0.0-preview.3.24172.9, )"
@@ -7347,6 +7510,10 @@
           "System.Security.Permissions": {
             "target": "Package",
             "version": "[9.0.0-preview.3.24172.9, )"
+          },
+          "Veldrid.ImageSharp": {
+            "target": "Package",
+            "version": "[4.9.0, )"
           }
         },
         "imports": [

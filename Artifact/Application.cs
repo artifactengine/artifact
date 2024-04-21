@@ -42,7 +42,7 @@ namespace Artifact
         public void AddPlugin(PluginBase plugin)
         {
             plugins.Add(plugin);
-            plugin.OnLoad();
+            //plugin.OnLoad();
 
             logger.Info($"Loaded plugin {plugin.BundleID}");
         }
@@ -64,6 +64,11 @@ namespace Artifact
 
             long targetElapsedTime = Stopwatch.Frequency / app.TargetFPS; // Target time per frame for 60 FPS
             long lastTime = stopwatch.ElapsedTicks;
+
+            foreach (PluginBase plugin in app.plugins)
+            {
+                plugin.OnLoad();
+            }
 
             app.OnLoad();
 

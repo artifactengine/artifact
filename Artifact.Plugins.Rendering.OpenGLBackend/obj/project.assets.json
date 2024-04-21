@@ -59,6 +59,31 @@
           }
         }
       },
+      "SixLabors.ImageSharp/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {}
+        }
+      },
+      "StbImageSharp/2.27.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        }
+      },
       "System.Drawing.Common/9.0.0-preview.3.24172.9": {
         "type": "package",
         "dependencies": {
@@ -221,6 +246,35 @@
         "sharpgl.nuspec"
       ]
     },
+    "SixLabors.ImageSharp/3.1.4": {
+      "sha512": "lFIdxgGDA5iYkUMRFOze7BGLcdpoLFbR+a20kc1W7NepvzU7ejtxtWOg9RvgG7kb9tBoJ3ONYOK6kLil/dgF1w==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "lib/net6.0/SixLabors.ImageSharp.dll",
+        "lib/net6.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.3.1.4.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "StbImageSharp/2.27.14": {
+      "sha512": "4C38oL8igoocaywMr4+WDYoXwnVma3gm26heCAVgzWqO91MMPuhgqTlTT7vVpGDMo4/c0h2/zqQuAS6QxJKgmA==",
+      "type": "package",
+      "path": "stbimagesharp/2.27.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.27.14.nupkg.sha512",
+        "stbimagesharp.nuspec"
+      ]
+    },
     "System.Drawing.Common/9.0.0-preview.3.24172.9": {
       "sha512": "KD3i/1Q1zvEejpW03lXKxhdyP0dAC8LQol/TU2zPVPIkLIe7fxXjMWcdZ1PKkZjbWDewqjtd815VRYBF9exESw==",
       "type": "package",
@@ -283,7 +337,9 @@
     "net8.0": [
       "Artifact >= 1.0.0",
       "Artifact.Plugins.Rendering >= 1.0.0",
-      "SharpGL >= 3.1.1"
+      "SharpGL >= 3.1.1",
+      "SixLabors.ImageSharp >= 3.1.4",
+      "StbImageSharp >= 2.27.14"
     ]
   },
   "packageFolders": {
@@ -346,6 +402,14 @@
           "SharpGL": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[3.1.4, )"
+          },
+          "StbImageSharp": {
+            "target": "Package",
+            "version": "[2.27.14, )"
           }
         },
         "imports": [

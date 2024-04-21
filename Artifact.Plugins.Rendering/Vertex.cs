@@ -12,14 +12,14 @@ namespace Artifact.Plugins.Rendering
     public struct Vertex
     {
         public Vector4 Position;
-        public Vector4 Color;
+        public Vector2 TexCoord;
     
-        public Vertex(Vector4 position, Vector4 color)
+        public Vertex(Vector4 position, Vector2 texCoord)
         {
             Position = position;
-            Color = color;
+            TexCoord = texCoord;
         }
 
-        public const uint SizeInBytes = 32;
+        public const uint SizeInBytes = 24;
     }
 }

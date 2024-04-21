@@ -60,6 +60,14 @@
             "SharpGL": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "StbImageSharp": {
+              "target": "Package",
+              "version": "[2.27.14, )"
             }
           },
           "imports": [
