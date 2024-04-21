@@ -40,6 +40,7 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
 
         private static Dictionary<Vertex[], DeviceBuffer> vertexBufferCache = new Dictionary<Vertex[], DeviceBuffer>();
         private static Dictionary<ushort[], DeviceBuffer> indexBufferCache = new Dictionary<ushort[], DeviceBuffer>();
+        private static Dictionary<(string, string), Shader[]> shaderCache = new Dictionary<(string, string), Shader[]>();
 
         public (Texture, TextureView) LoadTextureAndView(GraphicsDevice gd, string texturePath)
         {
@@ -87,6 +88,7 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             } else
             {
                 vertexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Vertices.Length * Vertex.SizeInBytes), BufferUsage.VertexBuffer));
+                device.UpdateBuffer(vertexBuffer, 0, mesh.Vertices);
                 vertexBufferCache.Add(mesh.Vertices, vertexBuffer);
             }
             
@@ -96,7 +98,7 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             } else
             {
                 indexBuffer = factory.CreateBuffer(new BufferDescription((uint)(mesh.Indices.Length * sizeof(ushort)), BufferUsage.IndexBuffer));
-
+                device.UpdateBuffer(indexBuffer, 0, mesh.Indices);
                 indexBufferCache.Add(mesh.Indices, indexBuffer);
             }
 
@@ -129,25 +131,33 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
 
             layout = factory.CreateResourceLayout(layoutDescription);
 
-
-            device.UpdateBuffer(vertexBuffer, 0, mesh.Vertices);
-            device.UpdateBuffer(indexBuffer, 0, mesh.Indices);
-
             VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
                 new VertexElementDescription("Position", VertexElementSemantic.Position, VertexElementFormat.Float4),
                 new VertexElementDescription("TexCoord", VertexElementSemantic.TextureCoordinate, VertexElementFormat.Float2));
 
+            string fullVertexPath = "Assets/Shaders/veldrid/" + mesh.VertexShaderPath + ".vert";
+            string fullFragmentPath = "Assets/Shaders/veldrid/" + mesh.FragmentShaderPath + ".frag";
 
-            ShaderDescription vertexShaderDesc = new ShaderDescription(
+            if (shaderCache.ContainsKey((fullVertexPath, fullFragmentPath)))
+            {
+                shaders = shaderCache[(fullVertexPath, fullFragmentPath)];
+            } else
+            {
+                ShaderDescription vertexShaderDesc = new ShaderDescription(
     ShaderStages.Vertex,
-    Encoding.UTF8.GetBytes(File.ReadAllText("Assets/Shaders/veldrid/default.vert")),
+    Encoding.UTF8.GetBytes(File.ReadAllText(fullVertexPath)),
     "main");
-            ShaderDescription fragmentShaderDesc = new ShaderDescription(
-                ShaderStages.Fragment,
-                Encoding.UTF8.GetBytes(File.ReadAllText("Assets/Shaders/veldrid/default.frag")),
-                "main");
+                ShaderDescription fragmentShaderDesc = new ShaderDescription(
+                    ShaderStages.Fragment,
+                    Encoding.UTF8.GetBytes(File.ReadAllText(fullFragmentPath)),
+                    "main");
 
-            shaders = factory.CreateFromSpirv(vertexShaderDesc, fragmentShaderDesc);
+                shaders = factory.CreateFromSpirv(vertexShaderDesc, fragmentShaderDesc);
+
+                shaderCache.Add((fullVertexPath, fullFragmentPath), shaders);
+            }
+
+            
 
             GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
             pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
