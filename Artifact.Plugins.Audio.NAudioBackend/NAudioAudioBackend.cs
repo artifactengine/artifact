@@ -15,20 +15,27 @@ namespace Artifact.Plugins.Audio.NAudioBackend
 
         private void PlayWavInternal(string path)
         {
-            if (!waveStreamCache.ContainsKey(path))
+            try
             {
-                FileStream wavStream = File.OpenRead(path);
-                WaveStream ws1 = new WaveFileReader(wavStream);
-                ws1 = WaveFormatConversionStream.CreatePcmStream(ws1);
-                waveStreamCache[path] = ws1;
+                if (!waveStreamCache.ContainsKey(path))
+                {
+                    FileStream wavStream = File.OpenRead(path);
+                    WaveStream ws1 = new WaveFileReader(wavStream);
+                    ws1 = WaveFormatConversionStream.CreatePcmStream(ws1);
+                    waveStreamCache[path] = ws1;
+                }
+
+                WaveStream ws = waveStreamCache[path];
+                ws.Position = 0; // Reset position to start
+
+                WaveOutEvent output = new WaveOutEvent();
+                output.Init(ws);
+                output.Play();
+            } catch (NullReferenceException)
+            {
+
             }
-
-            WaveStream ws = waveStreamCache[path];
-            ws.Position = 0; // Reset position to start
-
-            WaveOutEvent output = new WaveOutEvent();
-            output.Init(ws);
-            output.Play();
+            
         }
 
         public void PlayWav(string path)

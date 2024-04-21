@@ -41,6 +41,7 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
         private static Dictionary<Vertex[], DeviceBuffer> vertexBufferCache = new Dictionary<Vertex[], DeviceBuffer>();
         private static Dictionary<ushort[], DeviceBuffer> indexBufferCache = new Dictionary<ushort[], DeviceBuffer>();
         private static Dictionary<(string, string), Shader[]> shaderCache = new Dictionary<(string, string), Shader[]>();
+        private static Dictionary<string, TextureView> textureCache = new Dictionary<string, TextureView>();
 
         public (Texture, TextureView) LoadTextureAndView(GraphicsDevice gd, string texturePath)
         {
@@ -102,16 +103,24 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
                 indexBufferCache.Add(mesh.Indices, indexBuffer);
             }
 
+            if (textureCache.ContainsKey(mesh.TexturePath))
+            {
+                textureView = textureCache[mesh.TexturePath];
+            } else
+            {
+                using FileStream stream = File.OpenRead(mesh.TexturePath);
+                ImageResult image = ImageResult.FromStream(stream);
 
-            using FileStream stream = File.OpenRead(mesh.TexturePath);
-            ImageResult image = ImageResult.FromStream(stream);
+                //Console.WriteLine(string.Join(", ", image.Data));
 
-            //Console.WriteLine(string.Join(", ", image.Data));
+                (Texture tex, TextureView texView) = LoadTextureAndView(device, mesh.TexturePath);
 
-            (Texture tex, TextureView texView) = LoadTextureAndView(device, mesh.TexturePath);
+                texture = tex;
+                textureView = texView;
 
-            texture = tex;
-            textureView = texView;
+                textureCache.Add(mesh.TexturePath, textureView);
+            }
+            
 
             BufferDescription mvpBufferDescription = new BufferDescription(
                 sizeInBytes: 64,
@@ -191,19 +200,23 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
 
         public override void Dispose()
         {
-            if (!vertexBuffer.IsDisposed) { vertexBuffer.Dispose(); }
-            if (!indexBuffer.IsDisposed) { indexBuffer.Dispose(); }
-            if (!mvpBuffer.IsDisposed) { mvpBuffer.Dispose(); }
-
-            if (!pipeline.IsDisposed) { pipeline.Dispose(); }
-
-            foreach (Shader shader in shaders)
+            try
             {
-                if (!shader.IsDisposed) { pipeline.Dispose(); }
-            }
+                if (!vertexBuffer.IsDisposed) { vertexBuffer.Dispose(); }
+                if (!indexBuffer.IsDisposed) { indexBuffer.Dispose(); }
+                if (!mvpBuffer.IsDisposed) { mvpBuffer.Dispose(); }
+
+                if (!pipeline.IsDisposed) { pipeline.Dispose(); }
+
+                foreach (Shader shader in shaders)
+                {
+                    if (!shader.IsDisposed) { pipeline.Dispose(); }
+                }
+
+                if (!textureView.IsDisposed) { textureView.Dispose(); }
+                if (!texture.IsDisposed) { texture.Dispose(); }
+            } catch { }
             
-            if (!textureView.IsDisposed) { textureView.Dispose(); }
-            if (!texture.IsDisposed) { texture.Dispose(); }
         }
 
         public void Draw()
