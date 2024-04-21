@@ -113,22 +113,18 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             if (vertexBufferCache.ContainsKey(mesh.Vertices))
             {
-                Console.WriteLine("Using cached vertex buffer");
                 vertexBuffer = vertexBufferCache[mesh.Vertices];
             } else
             {
-                Console.WriteLine("Created new vertex buffer");
                 vertexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.VertexBuffer, mesh.Vertices);
                 vertexBufferCache.Add(mesh.Vertices, vertexBuffer);
             }
             
             if (indexBufferCache.ContainsKey(mesh.Indices))
             {
-                Console.WriteLine("Using cached index buffer");
                 indexBuffer = indexBufferCache[mesh.Indices];
             } else
             {
-                Console.WriteLine("Created new index buffer");
                 indexBuffer = Buffer.Create(DirectXRenderingBackend.device, BindFlags.IndexBuffer, mesh.Indices);
                 indexBufferCache.Add(mesh.Indices, indexBuffer);
             }
@@ -137,12 +133,18 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             vertexBinding = new VertexBufferBinding(vertexBuffer, 24, 0);
 
-            DTexture dtexture = new DTexture();
-            dtexture.Initialize(DirectXRenderingBackend.device, mesh.TexturePath);
+            if (textureCache.ContainsKey(mesh.TexturePath))
+            {
+                texture = textureCache[mesh.TexturePath];
+            } else
+            {
+                DTexture dtexture = new DTexture();
+                dtexture.Initialize(DirectXRenderingBackend.device, mesh.TexturePath);
 
-            texture = dtexture.TextureResource;
+                texture = dtexture.TextureResource;
 
-
+                textureCache.Add(mesh.TexturePath, texture);
+            }
         }
 
         [StructLayout(LayoutKind.Sequential)]
