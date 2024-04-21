@@ -1,6 +1,7 @@
 ﻿using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Advanced;
 using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
 using StbImageSharp;
 using System;
 using System.Collections.Generic;
@@ -42,10 +43,13 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             // Load the image using ImageSharp
             using (var image = SixLabors.ImageSharp.Image.Load<Rgba32>(texturePath))
             {
+                //image.Mutate(x => x.Rotate(90));
+
                 // Create a Texture from the image
+                Console.WriteLine(image.PixelType.BitsPerPixel);
                 var texture = gd.ResourceFactory.CreateTexture(new TextureDescription(
-                    (uint)image.Width, (uint)image.Height, 1, 1, 1,
-                    PixelFormat.R8_G8_B8_A8_UNorm, TextureUsage.Sampled, TextureType.Texture2D));
+                    (uint)image.Height, (uint)image.Width, 1, 1, 1,
+                    image.PixelType.BitsPerPixel == 32 ? PixelFormat.R8_G8_B8_A8_UNorm : PixelFormat.BC1_Rgb_UNorm, TextureUsage.Sampled, TextureType.Texture2D));
 
                 // Upload the image data to the texture using TryGetPixelSpan
                 List<Rgba32> pixels = new List<Rgba32>();
@@ -54,11 +58,11 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
                 {
                     for (int y = 0; y < image.Height; y++)
                     {
-                        pixels.Add(image[y, x]);
+                        pixels.Add(image[x, y]);
                     }
                 }
 
-                gd.UpdateTexture(texture, pixels.ToArray(), 0, 0, 0, (uint)image.Width, (uint)image.Height, 1, 0, 0);
+                gd.UpdateTexture(texture, pixels.ToArray(), 0, 0, 0, (uint)image.Height, (uint)image.Width, 1, 0, 0);
 
                 // Create a TextureView for the texture
                 var textureView = gd.ResourceFactory.CreateTextureView(texture);

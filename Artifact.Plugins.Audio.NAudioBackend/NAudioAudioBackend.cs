@@ -33,7 +33,7 @@ namespace Artifact.Plugins.Audio.NAudioBackend
 
         public void PlayWav(string path)
         {
-            new Thread(() => PlayWavInternal(path)).Start();
+            PlayWavInternal(path);
         }
 
         public override void Dispose()

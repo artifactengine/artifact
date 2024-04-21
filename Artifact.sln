@@ -43,13 +43,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.Plugins.Rendering.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Audio", "Audio", "{41A20BBC-428F-4FF0-8CC6-2508F3454EA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artifact.Plugin.Audio", "Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj", "{CA20215F-DC75-4CE2-8EDB-788E6D6135F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.Plugin.Audio", "Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj", "{CA20215F-DC75-4CE2-8EDB-788E6D6135F3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.Plugins.Audio.NAudioBackend", "Artifact.Plugins.Audio.NAudioBackend\Artifact.Plugins.Audio.NAudioBackend.csproj", "{D56CFA4F-44DA-42C9-8206-288340047D8C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{0DD44A69-0157-48F8-B27D-64BD76A57B82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artifact.Plugins.SplashScreen", "Artifact.Plugins.SplashScreen\Artifact.Plugins.SplashScreen.csproj", "{81EF43E5-A09B-4DC4-9F80-B002DCAF189E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.Plugins.SplashScreen", "Artifact.Plugins.SplashScreen\Artifact.Plugins.SplashScreen.csproj", "{81EF43E5-A09B-4DC4-9F80-B002DCAF189E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AssetImporter", "AssetImporter", "{B4B783FD-1370-458F-BE2B-9E28EBC806E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter", "Artifact.Plugins.AssetImporter\Artifact.AssetImporter.csproj", "{A72EF875-6E75-4D27-8A9D-68619410F237}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter.MeshImporter", "Artifact.AssetImporter.MeshImporter\Artifact.AssetImporter.MeshImporter.csproj", "{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformerGame", "PlatformerGame\PlatformerGame.csproj", "{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +125,18 @@ Global
 		{81EF43E5-A09B-4DC4-9F80-B002DCAF189E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81EF43E5-A09B-4DC4-9F80-B002DCAF189E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81EF43E5-A09B-4DC4-9F80-B002DCAF189E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72EF875-6E75-4D27-8A9D-68619410F237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72EF875-6E75-4D27-8A9D-68619410F237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72EF875-6E75-4D27-8A9D-68619410F237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72EF875-6E75-4D27-8A9D-68619410F237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +160,9 @@ Global
 		{D56CFA4F-44DA-42C9-8206-288340047D8C} = {41A20BBC-428F-4FF0-8CC6-2508F3454EA0}
 		{0DD44A69-0157-48F8-B27D-64BD76A57B82} = {6AC0B246-103E-4812-BCD5-7A84DA006435}
 		{81EF43E5-A09B-4DC4-9F80-B002DCAF189E} = {0DD44A69-0157-48F8-B27D-64BD76A57B82}
+		{B4B783FD-1370-458F-BE2B-9E28EBC806E6} = {6AC0B246-103E-4812-BCD5-7A84DA006435}
+		{A72EF875-6E75-4D27-8A9D-68619410F237} = {B4B783FD-1370-458F-BE2B-9E28EBC806E6}
+		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7} = {B4B783FD-1370-458F-BE2B-9E28EBC806E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCAE1ED7-DD1C-4C81-9B42-69030120C047}

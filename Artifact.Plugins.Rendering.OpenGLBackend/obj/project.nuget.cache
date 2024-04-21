@@ -1,16 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "xdHxRdtOOUKdN0v+Kr/gkaSqpBs9WHi+Wk9mxK4s/b2P8BngjoyLXUBqT2Tb0CV1igCConccZBE67u5otB4RuA==",
+  "dgSpecHash": "v36qbHXm5rWUvA6VhoTSJXV737DS82vrQATYX34I7dgicemN1gXWAElh0hsfAYWyGC0lycVxH03nYXtcnIQy6w==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhys\\.nuget\\packages\\colorhelper\\1.8.1\\colorhelper.1.8.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\imgui.net\\1.90.1.1\\imgui.net.1.90.1.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\imgui.net.docking\\1.75.0\\imgui.net.docking.1.75.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0-preview.3.24172.9\\microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpgl\\3.1.1\\sharpgl.3.1.1.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sixlabors.imagesharp\\3.1.4\\sixlabors.imagesharp.3.1.4.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\stbimagesharp\\2.27.14\\stbimagesharp.2.27.14.nupkg.sha512",
-    "C:\\Users\\rhys\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.3.24172.9\\system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512"
+    "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.3.24172.9\\system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }

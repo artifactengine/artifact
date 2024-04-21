@@ -78,7 +78,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
 
             samplerState = new SamplerState(DirectXRenderingBackend.device, new SamplerStateDescription
             {
-                Filter = Filter.MinMagMipLinear,
+                Filter = Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.PixelArt ? Filter.ComparisonMinLinearMagMipPoint : Filter.MinMagMipLinear,
                 AddressU = TextureAddressMode.Wrap,
                 AddressV = TextureAddressMode.Wrap,
                 AddressW = TextureAddressMode.Wrap,

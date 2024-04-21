@@ -120,7 +120,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             texture = textures[0];
 
             gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
-            gl.ActiveTexture(OpenGL.GL_TEXTURE0);
+            //gl.ActiveTexture(OpenGL.GL_TEXTURE0);
 
             gl.UseProgram(shaderProgram);
 
@@ -128,8 +128,8 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
             gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_S, OpenGL.GL_REPEAT);
             gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_T, OpenGL.GL_REPEAT);
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, OpenGL.GL_LINEAR_MIPMAP_LINEAR);
-            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, OpenGL.GL_LINEAR);
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
+            gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
 
 
             StbImage.stbi_set_flip_vertically_on_load(0);
@@ -159,6 +159,9 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "model"), 1, false, model.AsFloatArray());
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "proj"), 1, false, Camera.ProjectionMatrix.AsFloatArray());
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "view"), 1, false, Camera.ViewMatrix.AsFloatArray());
+
+            gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
+            gl.ActiveTexture(OpenGL.GL_TEXTURE0);
 
             //Console.WriteLine(string.Join(", ", Camera.ViewMatrix.AsFloatArray()));
 

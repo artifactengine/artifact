@@ -18,9 +18,9 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
 
         public string FancyName { get; set; }
 
-        internal static GraphicsDevice device;
-        internal static CommandList commandList;
-        internal static ResourceFactory factory;
+        public static GraphicsDevice device;
+        public static CommandList commandList;
+        public static ResourceFactory factory;
 
         [DllImport("kernel32.dll")]
         static extern IntPtr GetModuleHandle(string lpModuleName);

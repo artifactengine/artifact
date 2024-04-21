@@ -3,14 +3,23 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Artifact.Plugins.Rendering
 {
+    public enum SamplerMode
+    {
+        Smooth,
+        PixelArt
+    }
+
     public class RenderingPlugin : PluginBase
     {
-        private IRenderingBackend Backend { get; set; }
+        public IRenderingBackend Backend { get; set; }
+
+        public SamplerMode SamplerMode { get; set; } = SamplerMode.PixelArt;
 
         public RenderingPlugin(Application app, Type backend) : base(app)
         {
@@ -26,7 +35,14 @@ namespace Artifact.Plugins.Rendering
 
         public IVisual CreateVisual(Mesh mesh)
         {
-            return (Activator.CreateInstance(Backend.VisualImplementation, mesh) as IVisual)!;
+            try
+            {
+                return (Activator.CreateInstance(Backend.VisualImplementation, mesh) as IVisual)!;
+            } catch (TargetInvocationException e)
+            {
+                throw e.InnerException!;
+            }
+            
         }
 
         public override void OnLoad()
