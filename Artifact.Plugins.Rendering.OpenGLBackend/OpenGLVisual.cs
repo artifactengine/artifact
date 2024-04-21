@@ -24,6 +24,10 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
         private Mesh _mesh;
 
+        private static Dictionary<string, uint> vertexShaderCache = new Dictionary<string, uint>();
+        private static Dictionary<string, uint> fragmentShaderCache = new Dictionary<string, uint>();
+
+
         public Vector3 Position { get; set; }
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
         public Vector3 Rotation { get; set; }
@@ -48,19 +52,42 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         {
             gl = OpenGLRenderingBackend.gl;
 
-            string vertexShaderSource = File.ReadAllText("Assets/Shaders/opengl/default.vert");
+            string fullVertexPath = "Assets/Shaders/opengl/" + mesh.VertexShaderPath + ".vert";
+            string fullFragmentPath = "Assets/Shaders/opengl/" + mesh.FragmentShaderPath + ".frag";
 
-            string fragmentShaderSource = File.ReadAllText("Assets/Shaders/opengl/default.frag");
+            if (vertexShaderCache.ContainsKey(fullVertexPath))
+            {
+                vertexShader = vertexShaderCache[fullVertexPath];
+            } else
+            {
+                string vertexShaderSource = File.ReadAllText(fullVertexPath);
 
-            vertexShader = gl.CreateShader(OpenGL.GL_VERTEX_SHADER);
+                vertexShader = gl.CreateShader(OpenGL.GL_VERTEX_SHADER);
 
-            gl.ShaderSource(vertexShader, vertexShaderSource);
-            gl.CompileShader(vertexShader);
+                gl.ShaderSource(vertexShader, vertexShaderSource);
+                gl.CompileShader(vertexShader);
 
-            fragmentShader = gl.CreateShader(OpenGL.GL_FRAGMENT_SHADER);
+                vertexShaderCache.Add(fullVertexPath, vertexShader);
+            }
+            
+            if (fragmentShaderCache.ContainsKey(fullFragmentPath))
+            {
+                Console.WriteLine("Using cached fragment shader");
+                fragmentShader = fragmentShaderCache[fullFragmentPath];
+            } else
+            {
+                Console.WriteLine("Compiling new fragment shader");
+                string fragmentShaderSource = File.ReadAllText(fullFragmentPath);
 
-            gl.ShaderSource(fragmentShader, fragmentShaderSource);
-            gl.CompileShader(fragmentShader);
+                fragmentShader = gl.CreateShader(OpenGL.GL_FRAGMENT_SHADER);
+
+                gl.ShaderSource(fragmentShader, fragmentShaderSource);
+                gl.CompileShader(fragmentShader);
+
+                fragmentShaderCache.Add(fullFragmentPath, fragmentShader);
+            }
+
+            
 
             shaderProgram = gl.CreateProgram();
 
