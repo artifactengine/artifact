@@ -260,6 +260,8 @@ namespace Platformer
 
             fontRenderer.DrawString(score.ToString(), new ColorRGB(255, 255, 255, 255), new Vector3(0, 0.3f, -5));
 
+            ImmediateRenderer.Draw("Assets/Sprites/Player/yellowbird-midflap.png", new Vector2(0, 0), new Vector2(128, 128), new ColorRGB(255, 255, 255, 255));
+
             splashScreen.Draw();
         }
     }
