@@ -37,7 +37,7 @@ namespace Artifact
 
         public Logger logger = LogManager.GetCurrentClassLogger();
 
-        private List<PluginBase> plugins = new List<PluginBase>();
+        public List<PluginBase> plugins = new List<PluginBase>();
 
         public void AddPlugin(PluginBase plugin)
         {

@@ -57,7 +57,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter.MeshImporter", "Artifact.AssetImporter.MeshImporter\Artifact.AssetImporter.MeshImporter.csproj", "{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlatformerGame", "PlatformerGame\PlatformerGame.csproj", "{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatformerGame", "PlatformerGame\PlatformerGame.csproj", "{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FontGenerator", "FontGenerator\FontGenerator.csproj", "{3960C1CA-D7B9-4D40-8D79-9973E0A62512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artifact.Plugins.DebugMenu", "Artifact.Plugins.DebugMenu\Artifact.Plugins.DebugMenu.csproj", "{8887783B-77F2-4901-9BC2-2BAF472BAEE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +141,14 @@ Global
 		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3960C1CA-D7B9-4D40-8D79-9973E0A62512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3960C1CA-D7B9-4D40-8D79-9973E0A62512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3960C1CA-D7B9-4D40-8D79-9973E0A62512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3960C1CA-D7B9-4D40-8D79-9973E0A62512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +175,7 @@ Global
 		{B4B783FD-1370-458F-BE2B-9E28EBC806E6} = {6AC0B246-103E-4812-BCD5-7A84DA006435}
 		{A72EF875-6E75-4D27-8A9D-68619410F237} = {B4B783FD-1370-458F-BE2B-9E28EBC806E6}
 		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7} = {B4B783FD-1370-458F-BE2B-9E28EBC806E6}
+		{8887783B-77F2-4901-9BC2-2BAF472BAEE6} = {0DD44A69-0157-48F8-B27D-64BD76A57B82}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FCAE1ED7-DD1C-4C81-9B42-69030120C047}

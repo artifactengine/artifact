@@ -21,5 +21,10 @@ namespace Artifact.Plugins.Rendering
         }
 
         public const uint SizeInBytes = 24;
+
+        public override string ToString()
+        {
+            return $"[ Position: <{Position.X:F3}, {Position.Y:F3}, {Position.Z: F3}, {Position.W: F3}>, TexCoord: {TexCoord} ]";
+        }
     }
 }

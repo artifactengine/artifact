@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "K7ywrQ4J5AgVZsqVXKVSzeirdVEXOtrPh36jy/pgSTWR7/mXV/J6MyIRhmzSnNs8uzLXM4NhP6XnMANfhHXDZA==",
+  "dgSpecHash": "clpjLm6ZPn1e2ISGr3D1JFSU/hWUJTAj3xFl5FLreEkc3+5KFsxQ57UGEEPSytDWBZZvtxgPZbvSaL9xOT+3xA==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhys\\.nuget\\packages\\colorhelper\\1.8.1\\colorhelper.1.8.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\freetypesharp\\3.0.0\\freetypesharp.3.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net\\1.90.1.1\\imgui.net.1.90.1.1.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net.docking\\1.75.0\\imgui.net.docking.1.75.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0-preview.3.24172.9\\microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpfont.dependencies\\2.6.0\\sharpfont.dependencies.2.6.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.3.24172.9\\system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",

@@ -13,6 +13,8 @@ namespace Artifact.Plugins.Rendering
         public Vector3 Scale { get; set; }
         public Vector3 Rotation { get; set; }
 
+        public ColorRGB Tint { get; set; }
+
         public void Draw();
     }
 }

@@ -16,3 +16,4 @@ R:\code\Artifact\Artifact.Plugins.Rendering\obj\Debug\net8.0\ref\Artifact.Plugin
 R:\code\Artifact\Artifact.Plugins.Rendering\bin\Debug\net8.0\Artifact.Plugins.Windowing.dll
 R:\code\Artifact\Artifact.Plugins.Rendering\bin\Debug\net8.0\Artifact.Plugins.Windowing.pdb
 R:\code\Artifact\Artifact.Plugins.Rendering\obj\Debug\net8.0\Artifact.Plugins.Rendering.sourcelink.json
+R:\code\Artifact\Artifact.Plugins.Rendering\bin\Debug\net8.0\freetype6.dll

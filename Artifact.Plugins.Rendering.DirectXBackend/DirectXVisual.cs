@@ -62,6 +62,8 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
         public Vector3 Rotation { get; set; }
 
+        public ColorRGB Tint { get; set; } = new ColorRGB(255, 255, 255, 255);
+
         public DirectXVisual(Mesh mesh) : base()
         {
             _mesh = mesh;

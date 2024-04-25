@@ -5,11 +5,13 @@ in vec2 texCoord;
 
 uniform sampler2D tex0;
 
+uniform vec4 tint;
+
 void main()
 {
-    FragColor = texture(tex0, texCoord);
+    FragColor = tint * texture(tex0, texCoord);
 
-    if (FragColor.a != 1) {
+    if (FragColor.a == 0) {
         discard;
     }
 }

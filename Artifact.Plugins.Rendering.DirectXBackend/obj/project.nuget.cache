@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "S9/Oh/AKSd+t0/j4pkbgA6hogu1fSh02iDO632lpEQ0rQWsOO7d48SxLC44mVhU3Cldz2/lrec1b956vbpP+eQ==",
+  "dgSpecHash": "D+rvccA/PS6eedKobn6rnZxbsmvGHyggTPjRLTFWAx8bZiJtkvjPTgkU7n9eD8mgcHY50e19GqUzZlgBlEA8Pw==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhys\\.nuget\\packages\\colorhelper\\1.8.1\\colorhelper.1.8.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\freetypesharp\\3.0.0\\freetypesharp.3.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net\\1.90.1.1\\imgui.net.1.90.1.1.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net.docking\\1.75.0\\imgui.net.docking.1.75.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -35,6 +36,7 @@
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct3d11\\4.2.0\\sharpdx.direct3d11.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpfont.dependencies\\2.6.0\\sharpfont.dependencies.2.6.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\stbimagesharp\\2.27.14\\stbimagesharp.2.27.14.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",

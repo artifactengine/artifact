@@ -18,6 +18,8 @@ using Artifact.Plugins.SplashScreen;
 using Artifact.Plugins.Rendering.OpenGLBackend;
 using System.Drawing;
 using Artifact.Plugins.Rendering.VeldridBackend;
+using Artifact.Plugins.DebugMenu;
+using Artifact.Plugins.Rendering.Font;
 
 namespace Platformer
 {
@@ -46,6 +48,10 @@ namespace Platformer
         private bool showPlayer = true;
         private bool canGetPoint = true;
 
+        private FontRenderer fontRenderer;
+
+        private int score = 0;
+
         private ColorRGB color = new ColorRGB(255, 0, 0, 255);
 
         public Game()
@@ -53,11 +59,14 @@ namespace Platformer
             Name = "Flappy Bird";
 
             AddPlugin(new WindowingPlugin(this, "Flappy Bird", 1280, 720, typeof(GLFWWindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(OpenGLRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
+            AddPlugin(new DebugMenuPlugin(this));
         }
+
+
 
         public override void OnLoad()
         {
@@ -65,6 +74,8 @@ namespace Platformer
             input = GetPlugin<InputPlugin>();
             audio = GetPlugin<AudioPlugin>();
             splashScreen = GetPlugin<SplashScreenPlugin>();
+
+            fontRenderer = new FontRenderer("Assets/Fonts/score.ttf", 128);
 
             Vertex[] vertices = {
                 new Vertex(new Vector4(-0.025f, 0.02f, 0.5f, 1.0f), new Vector2(0.0f, 0.0f)),
@@ -175,6 +186,8 @@ namespace Platformer
                 }).Start();
 
                 canGetPoint = false;
+
+                score = 0;
             }
 
             if (player.Position.Y < -1 && showPlayer)
@@ -196,12 +209,15 @@ namespace Platformer
                 }).Start();
 
                 canGetPoint = false;
+
+                score = 0;
             }
 
             if (pipeX < -0.75f && !gavePoint && canGetPoint)
             {
                 audio.PlayWav("Assets/SFX/point.wav");
                 gavePoint = true;
+                score++;
             }
 
             if (pipeX < -1.2f)
@@ -242,9 +258,9 @@ namespace Platformer
 
             pipeTop.Draw();
 
-            splashScreen.Draw();
+            fontRenderer.DrawString(score.ToString(), new ColorRGB(255, 255, 255, 255), new Vector3(0, 0.3f, -5));
 
-            renderer.SwapBuffers();
+            splashScreen.Draw();
         }
     }
 }

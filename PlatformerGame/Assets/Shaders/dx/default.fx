@@ -33,7 +33,7 @@ float4 PS(PS_IN input) : SV_Target
     // Sample the texture using the texture coordinates and the sampler
     float4 color = myTexture.Sample(mySampler, input.texcoord);
     
-    if (color.a != 1) {
+    if (color.a == 0) {
         discard;
     }
     

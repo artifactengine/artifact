@@ -1,4 +1,5 @@
 ﻿using Artifact.Plugins.Windowing;
+using NLog.LayoutRenderers;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -31,6 +32,8 @@ namespace Artifact.Plugins.Rendering
             }
 
             Backend = (Activator.CreateInstance(backend) as IRenderingBackend)!;
+        
+            
         }
 
         public IVisual CreateVisual(Mesh mesh)
@@ -54,6 +57,8 @@ namespace Artifact.Plugins.Rendering
             Backend.CreateContext(windowing.Backend.WindowHandle, windowing.Width, windowing.Height);
 
             windowing.Backend.TitleSuffix = " (" + Backend.FancyName + ")";
+
+            new Debug();
         }
 
         public override void OnExit()
@@ -78,6 +83,11 @@ namespace Artifact.Plugins.Rendering
             try
             {
                 Application.Invoke("rendering:OnDraw");
+
+                foreach (PluginBase plugin in Application.plugins)
+                {
+                    plugin.Invoke("rendering:OnDraw");
+                }
             } catch (Exception exec)
             {
                 if (!exec.Message.ToLower().Contains("surface has been lost"))
@@ -85,6 +95,7 @@ namespace Artifact.Plugins.Rendering
                     throw exec;
                 }
             }
+            SwapBuffers();
             
             base.OnUpdate(dt);
         }

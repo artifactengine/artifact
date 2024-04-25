@@ -34,6 +34,8 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
         public Vector3 Rotation { get; set; }
 
+        public ColorRGB Tint { get; set; } = new ColorRGB(255, 255, 255, 255);
+
         public static IntPtr ConvertStructArrayToIntPtr<T>(T[] structArray) where T : struct
         {
             // Allocate unmanaged memory
@@ -215,6 +217,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "model"), 1, false, model.AsFloatArray());
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "proj"), 1, false, Camera.ProjectionMatrix.AsFloatArray());
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "view"), 1, false, Camera.ViewMatrix.AsFloatArray());
+            gl.Uniform4(gl.GetUniformLocation(shaderProgram, "tint"), Tint.UnitR, Tint.UnitG, Tint.UnitB, Tint.UnitA);
 
             gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
             gl.ActiveTexture(OpenGL.GL_TEXTURE0);

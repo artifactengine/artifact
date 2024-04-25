@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Xppvz8V1smT3MBenApLrLzwbMxV+dZqfSAj9OahteFd+T8esY2dzficM/FvSDq0i6qHobwHKEny0lFknAZy8rQ==",
+  "dgSpecHash": "Jx8bhWuqlawWHD2/ctnE9wAQzc1eRBnaPl0A/NJCNCit+63Hy58NaZOQjENEfVw/Zwp9GQdix2RWICSoJPvolA==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rhys\\.nuget\\packages\\colorhelper\\1.8.1\\colorhelper.1.8.1.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\freetypesharp\\3.0.0\\freetypesharp.3.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net\\1.90.1.1\\imgui.net.1.90.1.1.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\imgui.net.docking\\1.75.0\\imgui.net.docking.1.75.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -50,6 +51,7 @@
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.direct3d11\\4.2.0\\sharpdx.direct3d11.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.dxgi\\4.2.0\\sharpdx.dxgi.4.2.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpdx.mathematics\\4.2.0\\sharpdx.mathematics.4.2.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\sharpfont.dependencies\\2.6.0\\sharpfont.dependencies.2.6.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpgen.runtime\\2.0.0-beta.13\\sharpgen.runtime.2.0.0-beta.13.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpgen.runtime.com\\2.0.0-beta.13\\sharpgen.runtime.com.2.0.0-beta.13.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\sharpgl\\3.1.1\\sharpgl.3.1.1.nupkg.sha512",

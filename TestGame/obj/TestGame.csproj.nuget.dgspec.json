@@ -631,6 +631,10 @@
               "target": "Package",
               "version": "[1.8.1, )"
             },
+            "FreeTypeSharp": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "ImGui.NET": {
               "target": "Package",
               "version": "[1.90.1.1, )"
@@ -638,6 +642,10 @@
             "ImGui.NET.Docking": {
               "target": "Package",
               "version": "[1.75.0, )"
+            },
+            "SharpFont.Dependencies": {
+              "target": "Package",
+              "version": "[2.6.0, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

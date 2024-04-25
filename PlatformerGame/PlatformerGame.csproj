@@ -8,8 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\rhys\.nuget\packages\sharpfont.dependencies\2.6.0\build\..\bin\msvc10\x86\freetype6.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpFont.Dependencies.x64" Version="2.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Audio.NAudioBackend\Artifact.Plugins.Audio.NAudioBackend.csproj" />
+    <ProjectReference Include="..\Artifact.Plugins.DebugMenu\Artifact.Plugins.DebugMenu.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input.PollBackend\Artifact.Plugins.Input.PollBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.DirectXBackend\Artifact.Plugins.Rendering.DirectXBackend.csproj" />
@@ -23,6 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Assets\debugFont.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Fonts\score.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\FullLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -44,13 +59,28 @@
     <None Update="Assets\SFX\wing.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\Shaders\dx\font.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\Shaders\dx\default.fx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\opengl\font.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\opengl\font.vert">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\Shaders\opengl\default.frag">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\Shaders\opengl\default.vert">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\veldrid\font.frag">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Shaders\veldrid\font.vert">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Assets\Shaders\veldrid\default.frag">

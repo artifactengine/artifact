@@ -11,7 +11,7 @@ void main()
     vec2 rotatedTexCoord = vec2(fsin_TexCoord.y, 1.0 + fsin_TexCoord.x); // Rotate 90 degrees to the left
     fsout_Color = texture(sampler2D(aTexture, aSampler), rotatedTexCoord);
 
-    if (fsout_Color.a != 1) {
+    if (fsout_Color.a == 0) {
         discard;
     }
 }

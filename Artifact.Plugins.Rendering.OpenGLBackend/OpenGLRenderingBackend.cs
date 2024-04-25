@@ -33,6 +33,8 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.Viewport(0, 0, width, height);
             gfx = Graphics.FromHwnd(windowHandle);
 
+            gl.Enable(OpenGL.GL_MULTISAMPLE);
+
             logger.Info("Created OpenGL 4.4 Context");
         }
 
