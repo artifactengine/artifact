@@ -59,7 +59,7 @@ namespace Platformer
             Name = "Flappy Bird";
 
             AddPlugin(new WindowingPlugin(this, "Flappy Bird", 1280, 720, typeof(GLFWWindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(OpenGLRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
@@ -75,7 +75,7 @@ namespace Platformer
             audio = GetPlugin<AudioPlugin>();
             splashScreen = GetPlugin<SplashScreenPlugin>();
 
-            fontRenderer = new FontRenderer("C:\\Windows\\Fonts\\ARLRDBD.TTF", 128);
+            //fontRenderer = new FontRenderer("C:\\Windows\\Fonts\\ARLRDBD.TTF", 128);
 
             Vertex[] vertices = {
                 new Vertex(new Vector4(-0.025f, 0.02f, 0.5f, 1.0f), new Vector2(0.0f, 0.0f)),
@@ -258,9 +258,9 @@ namespace Platformer
 
             pipeTop.Draw();
 
-            fontRenderer.DrawStringShadowedCentered(score.ToString(), new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(0, 0.3f, -5));
+            //fontRenderer.DrawStringShadowedCentered(score.ToString(), new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(0, 0.3f, -5));
 
-            ImmediateRenderer.Draw("Assets/Sprites/Player/yellowbird-midflap.png", new Vector2(0, 0), new Vector2(128, 128), new ColorRGB(255, 255, 255, 255));
+            //ImmediateRenderer.Draw("Assets/Sprites/Player/yellowbird-midflap.png", new Vector2(0, 0), new Vector2(128, 128), new ColorRGB(255, 255, 255, 255));
 
             splashScreen.Draw();
         }
