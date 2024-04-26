@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Rendering")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+391a58413b3e922516bac9a14592e57003e2d488")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+784301675649baed972ed2e7892e57e67d54191e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Rendering")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Rendering")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -127,5 +127,35 @@ namespace Artifact.Plugins.Rendering.Font
                 }
             }
         }
+
+        public void DrawStringShadowed(string s, ColorRGB color, ColorRGB shadowColor, Vector3 position, float characterOffset = 0.005f, float shadowOffsetX = -0.0008f, float shadowOffsetY = -0.0008f)
+        {
+            DrawString(s, shadowColor, position + new Vector3(shadowOffsetX, shadowOffsetY, 0), characterOffset);
+            DrawString(s, color, position, characterOffset);
+        }
+
+        public void DrawCenteredString(string s, ColorRGB color, Vector3 position, float charcterOffset = 0.005f)
+        {
+            float length = 0f;
+            foreach (char c in s)
+            {
+                if (c != ' ')
+                {
+                    length += characterSizes[c] + charcterOffset;
+                } else 
+                {
+                    length += 0.02f;
+                }
+            }
+            Console.WriteLine(length);
+            //DrawString(s, color, position, length);
+            DrawString(s, color, position - new Vector3(length / 2, 0, 0));
+        }
+
+        public void DrawStringShadowedCentered(string s, ColorRGB color, ColorRGB shadowColor, Vector3 position, float characterOffset = 0.005f, float shadowOffsetX = -0.0004f, float shadowOffsetY = -0.0004f)
+        {
+            DrawCenteredString(s, shadowColor, position + new Vector3(shadowOffsetX, shadowOffsetY, 0), characterOffset);
+            DrawCenteredString(s, color, position, characterOffset);
+        }
     }
 }

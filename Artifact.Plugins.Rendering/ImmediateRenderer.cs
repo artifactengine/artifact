@@ -39,8 +39,6 @@ namespace Artifact.Plugins.Rendering
             visual.Scale = new Vector3((size.X * resolution.X / resolution.Y) / resolution.X, size.Y / resolution.Y, 1);
             visual.Tint = color;
 
-            Console.WriteLine(visual.Position);
-            Console.WriteLine(visual.Scale);
             visual.Draw();
         }
     }

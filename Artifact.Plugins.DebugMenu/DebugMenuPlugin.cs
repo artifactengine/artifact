@@ -38,9 +38,9 @@ namespace Artifact.Plugins.DebugMenu
 
             if (show)
             {
-                fontRenderer.DrawString("Artifact Engine v1.0", new ColorRGB(255, 255, 255, 255), new Vector3(-0.88f, 0.47f, -4));
-                fontRenderer.DrawString("FPS: " + Application.FPS, new ColorRGB(255, 255, 255, 255), new Vector3(-0.88f, 0.435f, -4));
-                fontRenderer.DrawString("Rendering Backend: " + Application.GetPlugin<RenderingPlugin>().Backend.FancyName, new ColorRGB(255, 255, 255, 255), new Vector3(-0.88f, 0.4f, -4));
+                fontRenderer.DrawStringShadowed("Artifact Engine v1.0", new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(-0.88f, 0.47f, -4));
+                fontRenderer.DrawStringShadowed("FPS: " + Application.FPS, new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(-0.88f, 0.435f, -4));
+                fontRenderer.DrawStringShadowed("Rendering Backend: " + Application.GetPlugin<RenderingPlugin>().Backend.FancyName, new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(-0.88f, 0.4f, -4));
                 //fontRenderer.DrawString("FPS: " + Application.FPS, new ColorRGB(255, 255, 255, 255), new Vector3(-0.87f, 0.42f, -4));
                 //fontRenderer.DrawString("Renderer: " + Application.GetPlugin<RenderingPlugin>().Backend.FancyName, new ColorRGB(255, 255, 255, 255), new Vector3(-0.87f, 0.42f, -4));
             }
