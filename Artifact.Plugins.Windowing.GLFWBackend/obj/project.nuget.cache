@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HOUgZ31E0D8bL7fysvaBm/TozW2bSHMlw20yxYooUP+JhB7jjH1ljPFAJWsFayb+qFC9yeHz3pMIWu/yto54Mg==",
+  "dgSpecHash": "SRD6+HMET9A7059I1+oNTOwvoJ4U3dP935LD0nPKkxw5qojsYHuZSLM6vGOXO7U7Wt6JrGsQD/3ff5LFL6WJGg==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,8 @@
     "C:\\Users\\rhys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
-    "C:\\Users\\rhys\\.nuget\\packages\\ultz.native.glfw\\3.3.9.2\\ultz.native.glfw.3.3.9.2.nupkg.sha512"
+    "C:\\Users\\rhys\\.nuget\\packages\\ultz.native.glfw\\3.3.9.2\\ultz.native.glfw.3.3.9.2.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
   ],
   "logs": []
 }

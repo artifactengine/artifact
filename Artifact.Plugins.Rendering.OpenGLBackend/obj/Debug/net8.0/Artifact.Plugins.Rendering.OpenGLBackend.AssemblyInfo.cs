@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Rendering.OpenGLBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+784301675649baed972ed2e7892e57e67d54191e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+357526dfe220ce28c8d549994fdc49adf026c148")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Rendering.OpenGLBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Rendering.OpenGLBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

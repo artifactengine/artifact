@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J4Sdn0FqWlcGdeBJzQ6iIX0GbYK2wmab1gtSII9qzlyAMYe9vCLh2AEGF7+5q/O0KavxfrfNIaCeAwMzgbRYaw==",
+  "dgSpecHash": "VkvUjnGbzNjd2yOZY/7I0hYuRY5Q9ObBv6KLnuEmBMSI5dyOlvPlrTcyRRlPNfSrGTMimhJrOvwGd4yKOTbM6g==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,8 @@
     "C:\\Users\\rhys\\.nuget\\packages\\system.threading.tasks.extensions\\4.0.0\\system.threading.tasks.extensions.4.0.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\rhys\\.nuget\\packages\\veldrid.sdl2\\4.9.0\\veldrid.sdl2.4.9.0.nupkg.sha512"
+    "C:\\Users\\rhys\\.nuget\\packages\\veldrid.sdl2\\4.9.0\\veldrid.sdl2.4.9.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
   ],
   "logs": []
 }

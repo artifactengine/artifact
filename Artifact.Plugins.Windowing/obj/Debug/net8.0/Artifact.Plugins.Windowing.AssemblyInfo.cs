@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Windowing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+391a58413b3e922516bac9a14592e57003e2d488")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+357526dfe220ce28c8d549994fdc49adf026c148")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Windowing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Windowing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

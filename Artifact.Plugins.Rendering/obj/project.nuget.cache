@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "clpjLm6ZPn1e2ISGr3D1JFSU/hWUJTAj3xFl5FLreEkc3+5KFsxQ57UGEEPSytDWBZZvtxgPZbvSaL9xOT+3xA==",
+  "dgSpecHash": "yycFMbXtq8KUjsdmqZvGvlu69NXvaEZBr3bkCNtnSbIVKh5i6wLrNwWHfFO72oWdjvht5Dqw8SZc8Lm8t7/Bng==",
   "success": true,
   "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\rhys\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.3.24172.9\\system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512",
     "C:\\Users\\rhys\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Users\\rhys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+    "C:\\Users\\rhys\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
   ],
   "logs": []
 }

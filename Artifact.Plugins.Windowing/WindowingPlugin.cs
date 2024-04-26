@@ -1,11 +1,13 @@
 ﻿using NLog;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using X11;
 
 namespace Artifact.Plugins.Windowing
 {
@@ -50,8 +52,17 @@ namespace Artifact.Plugins.Windowing
         {
             Backend.CreateWindow(Title, Width, Height, Application);
 
-            IntPtr hIcon = LoadImage(IntPtr.Zero, "Assets/icon.ico", IMAGE_ICON, 256, 256, LR_LOADFROMFILE);
-            SendMessage(Backend.WindowHandle, WM_SETICON, ICON_SMALL, hIcon);
+            Console.WriteLine("Set icon");
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+            {
+                Console.WriteLine("Set icon windows");
+                IntPtr hIcon = LoadImage(IntPtr.Zero, "Assets/icon.ico", IMAGE_ICON, 256, 256, LR_LOADFROMFILE);
+                SendMessage(Backend.WindowHandle, WM_SETICON, ICON_SMALL, hIcon);
+            } else
+            {
+                Console.WriteLine("no icons for windows in linux :(");
+            }
+            
         }
 
         public override void OnUpdate(float dt)
