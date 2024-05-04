@@ -59,7 +59,7 @@ namespace Platformer
             Name = "Flappy Bird";
 
             AddPlugin(new WindowingPlugin(this, "Flappy Bird", 1280, 720, typeof(GLFWWindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(OpenGLRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
@@ -258,7 +258,7 @@ namespace Platformer
 
             pipeTop.Draw();
 
-            fontRenderer.DrawStringShadowedCentered(score.ToString(), new ColorRGB(255, 255, 255, 255), new ColorRGB(42, 42, 42, 255), new Vector3(0, 0.3f, -5));
+            fontRenderer.DrawStringCentered(score.ToString(), new ColorRGB(255, 255, 255, 255), new Vector3(0, 0.3f, -5));
 
             ImmediateRenderer.Draw("Assets/Sprites/Player/yellowbird-midflap.png", new Vector2(0, 0), new Vector2(128, 128), new ColorRGB(255, 255, 255, 255));
 

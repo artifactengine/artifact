@@ -18,10 +18,10 @@ namespace Artifact.Plugins.Rendering
             if (!textureLookup.ContainsKey(texture))
             {
                 Vertex[] vertices = {
-                    new Vertex(new Vector4(0f, 1f, 0.0f, 1.0f), new Vector2(0.0f, 0.0f)),
-                    new Vertex(new Vector4(1f, 0f, 0.0f, 1.0f), new Vector2(1.0f, 1.0f)),
-                    new Vertex(new Vector4(0f, 0f, 0.0f, 1.0f), new Vector2(0.0f, 1.0f)),
-                    new Vertex(new Vector4(1f, 1f, 0.0f, 1.0f), new Vector2(1.0f, 0.0f)),
+                    new Vertex(new Vector4(0.0f, 1.0f, 0.0f, 1.0f), new Vector2(0.0f, 0.0f)),
+                    new Vertex(new Vector4(1.0f, 0.0f, 0.0f, 1.0f), new Vector2(1.0f, 1.0f)),
+                    new Vertex(new Vector4(0.0f, 0.0f, 0.0f, 1.0f), new Vector2(0.0f, 1.0f)),
+                    new Vertex(new Vector4(1.0f, 1.0f, 0.0f, 1.0f), new Vector2(1.0f, 0.0f)),
                 };
 
                 ushort[] indices = [
@@ -35,8 +35,16 @@ namespace Artifact.Plugins.Rendering
             IVisual visual = textureLookup[texture];
 
             Vector2 resolution = new Vector2(Application.current.GetPlugin<WindowingPlugin>().Width, Application.current.GetPlugin<WindowingPlugin>().Height);
-            visual.Position = new Vector3((position * resolution) - new Vector2(0.5f), -5);
+            Vector3 resV3 = new Vector3(resolution, 1.0f);
+
+            float scaleFactor = 1.0f / resolution.X;
+
+            Vector3 vertexPos = new Vector3(position, -5);
+
+            visual.Position = vertexPos;
+            Console.WriteLine(visual.Position);
             visual.Scale = new Vector3((size.X * resolution.X / resolution.Y) / resolution.X, size.Y / resolution.Y, 1);
+            //visual.Scale = new Vector3(0.2f, 0.2f, 0.2f);
             visual.Tint = color;
 
             visual.Draw();

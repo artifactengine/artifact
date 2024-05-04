@@ -915,6 +915,14 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "X11/1.0.6": {
+        "runtime": {
+          "lib/netcoreapp2.1/X11.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        }
+      },
       "Artifact/1.0.0": {
         "dependencies": {
           "NLog": "5.2.8"
@@ -940,7 +948,8 @@
       },
       "Artifact.Plugins.Windowing/1.0.0": {
         "dependencies": {
-          "Artifact": "1.0.0"
+          "Artifact": "1.0.0",
+          "X11": "1.0.6"
         },
         "runtime": {
           "Artifact.Plugins.Windowing.dll": {}
@@ -1583,6 +1592,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "X11/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z9mLLyDjeB3k3FI2r3sqP35fKbAx1+gVKLapgFeKxAyXlKIhuQMMYht6jgTrvNaP+cmc6hg0kgh5MvTkqNynVA==",
+      "path": "x11/1.0.6",
+      "hashPath": "x11.1.0.6.nupkg.sha512"
     },
     "Artifact/1.0.0": {
       "type": "project",

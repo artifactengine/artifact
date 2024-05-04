@@ -182,7 +182,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             Matrix rotation = Matrix.RotationYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
             Matrix scale = Matrix.Scaling(Scale.ToDXVec());
 
-            Matrix model = (scale * rotation * translation);
+            Matrix model = (translation * scale);
 
             Matrix mvp = (proj * view * model);
             mvp.Transpose();

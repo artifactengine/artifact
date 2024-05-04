@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Artifact.Plugins.ECS\Artifact.Plugins.ECS.csproj" />
+    <ProjectReference Include="..\Artifact.Plugins.Rendering\Artifact.Plugins.Rendering.csproj" />
+    <ProjectReference Include="..\Artifact\Artifact.csproj" />
+  </ItemGroup>
+
+</Project>

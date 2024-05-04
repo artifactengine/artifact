@@ -116,6 +116,14 @@
           }
         }
       },
+      "X11/1.0.6": {
+        "runtime": {
+          "lib/netcoreapp2.1/X11.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        }
+      },
       "Artifact/1.0.0": {
         "dependencies": {
           "NLog": "5.2.8"
@@ -126,7 +134,8 @@
       },
       "Artifact.Plugins.Windowing/1.0.0": {
         "dependencies": {
-          "Artifact": "1.0.0"
+          "Artifact": "1.0.0",
+          "X11": "1.0.6"
         },
         "runtime": {
           "Artifact.Plugins.Windowing.dll": {}
@@ -223,6 +232,13 @@
       "sha512": "sha512-4b7gJEfMZcw207CZkFV3VUBagmHlX9jYVkk1mrzacnAOgr90JoZSILTEFPc5lz5LT7yFKxQnsnqqIsFnVO7k/Q==",
       "path": "ultz.native.glfw/3.3.9.2",
       "hashPath": "ultz.native.glfw.3.3.9.2.nupkg.sha512"
+    },
+    "X11/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z9mLLyDjeB3k3FI2r3sqP35fKbAx1+gVKLapgFeKxAyXlKIhuQMMYht6jgTrvNaP+cmc6hg0kgh5MvTkqNynVA==",
+      "path": "x11/1.0.6",
+      "hashPath": "x11.1.0.6.nupkg.sha512"
     },
     "Artifact/1.0.0": {
       "type": "project",
