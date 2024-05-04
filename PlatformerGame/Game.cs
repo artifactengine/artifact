@@ -59,7 +59,7 @@ namespace Platformer
             Name = "Flappy Bird";
 
             AddPlugin(new WindowingPlugin(this, "Flappy Bird", 1280, 720, typeof(GLFWWindowingBackend)));
-            AddPlugin(new RenderingPlugin(this, typeof(DirectXRenderingBackend)));
+            AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
             AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
