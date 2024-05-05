@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Input.PollBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e6b213fc3c31344829f55ef40efc67c688dbf54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d42a068505431c96462fb3628f8a1296eac024c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Input.PollBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Input.PollBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

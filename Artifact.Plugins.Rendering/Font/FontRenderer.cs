@@ -33,7 +33,10 @@ namespace Artifact.Plugins.Rendering.Font
 
                 FT.FT_Set_Pixel_Sizes(face, 0, size);
 
-                
+                if (!Directory.Exists("Assets/FontGlyphs"))
+                {
+                    Directory.CreateDirectory("Assets/FontGlyphs");
+                }
 
                 if (!Directory.Exists("Assets/FontGlyphs/" + *face->family_name))
                 {

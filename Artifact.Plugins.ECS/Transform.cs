@@ -12,5 +12,10 @@ namespace Artifact.Plugins.ECS
         public Vector3 Position { get; set; }
         public Vector3 Scale { get; set; } = new Vector3(1, 1, 1);
         public Vector3 Rotation { get; set; }
+
+        public void Translate(Vector3 offset)
+        {
+            Position += offset;
+        }
     }
 }

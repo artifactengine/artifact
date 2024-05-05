@@ -19,5 +19,10 @@ namespace Artifact.Plugin.Audio
         {
             Backend.PlayWav(path);
         }
+
+        public void PlayWavAndWait(string path)
+        {
+            Backend.PlayWavAndWait(path);
+        }
     }
 }

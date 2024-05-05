@@ -701,23 +701,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rhys\\.nuget\\packages\\": {},
+    "C:\\Users\\joel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj",
+      "projectUniqueName": "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj",
       "projectName": "Artifact.Plugins.Rendering.OpenGLBackend",
-      "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj",
-      "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
-      "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\obj\\",
+      "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj",
+      "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
+      "outputPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -733,11 +733,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
             },
-            "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
+            "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
             }
           }
         }

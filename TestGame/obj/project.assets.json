@@ -7638,23 +7638,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rhys\\.nuget\\packages\\": {},
+    "C:\\Users\\joel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
+      "projectUniqueName": "J:\\code\\artifact\\TestGame\\TestGame.csproj",
       "projectName": "TestGame",
-      "projectPath": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
-      "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
-      "outputPath": "R:\\code\\Artifact\\TestGame\\obj\\",
+      "projectPath": "J:\\code\\artifact\\TestGame\\TestGame.csproj",
+      "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
+      "outputPath": "J:\\code\\artifact\\TestGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7670,47 +7670,47 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
+            "J:\\code\\artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj"
             },
-            "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
             },
-            "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
+            "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
             }
           }
         }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {}
+    "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {}
   },
   "projects": {
-    "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+    "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+        "projectUniqueName": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
         "projectName": "Artifact.Plugins.Windowing",
-        "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
-        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
-        "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\obj\\",
+        "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
+        "outputPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
-                "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
+              "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
+                "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
               }
             }
           }
@@ -79,20 +79,20 @@
         }
       }
     },
-    "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+    "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "R:\\code\\Artifact\\Artifact\\Artifact.csproj",
+        "projectUniqueName": "J:\\code\\artifact\\Artifact\\Artifact.csproj",
         "projectName": "Artifact",
-        "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj",
-        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
-        "outputPath": "R:\\code\\Artifact\\Artifact\\obj\\",
+        "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj",
+        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
+        "outputPath": "J:\\code\\artifact\\Artifact\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

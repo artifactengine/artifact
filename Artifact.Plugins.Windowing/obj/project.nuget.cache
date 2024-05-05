@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7lcDCqL3xhDX4ZSzgktANaLxzt8qcj7fG0bNcwYuI3r77EHujisEBU59RRzjMgDrGqT93uwxnpUd8TkYvGuGGA==",
+  "dgSpecHash": "CX7mTIXoTjspbF3Mkl8Fq9E6p1L4egswAksunximk5wQgc/W15fDfnD86BF7lHskU0pmzVsFPI3mM6mskLySLQ==",
   "success": true,
-  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+  "projectFilePath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
-    "C:\\Users\\rhys\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
+    "C:\\Users\\joel\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\joel\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
   ],
   "logs": []
 }

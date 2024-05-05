@@ -3349,23 +3349,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rhys\\.nuget\\packages\\": {},
+    "C:\\Users\\joel\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj",
+      "projectUniqueName": "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj",
       "projectName": "Artifact.Plugins.Windowing.SDL2Backend",
-      "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj",
-      "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
-      "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\obj\\",
+      "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj",
+      "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
+      "outputPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3381,8 +3381,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
-              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
+            "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
             }
           }
         }

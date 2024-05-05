@@ -162,6 +162,7 @@ namespace Artifact.Plugins.Input
         Play = 0xFA,
         Zoom = 0xFB,
         PA1 = 0xFD,
-        OEMClear = 0xFE
+        OEMClear = 0xFE,
+        Any
     }
 }

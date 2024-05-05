@@ -57,9 +57,9 @@ namespace Artifact.Utils.RenderingComponents
 
         public void OnDraw()
         {
-            visual.Position = Transform.Position / 4.0f;
+            visual.Position = Transform.Position / 8.0f;
             visual.Position = new Vector3(visual.Position.X, visual.Position.Y, -5);
-            visual.Scale = Transform.Scale / 4.0f;
+            visual.Scale = Transform.Scale / 8.0f;
             visual.Scale = new Vector3(visual.Scale.X, visual.Scale.Y, 1);
             visual.Draw();
         }

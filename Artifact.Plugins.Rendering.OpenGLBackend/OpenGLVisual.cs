@@ -210,7 +210,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             Matrix4x4 scale = Matrix4x4.CreateScale(Scale);
             Matrix4x4 rotation = Matrix4x4.CreateFromYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
 
-            model = translation * scale * rotation;
+            model = scale * rotation * translation;
 
             gl.UseProgram(shaderProgram);
 
