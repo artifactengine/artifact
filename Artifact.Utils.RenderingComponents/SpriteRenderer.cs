@@ -55,27 +55,11 @@ namespace Artifact.Utils.RenderingComponents
             base.OnUpdate(dt);
         }
 
-        public Vector3 ToScreenSpace(Vector3 input)
-        {
-            Vector3 size = new Vector3(Application.current.GetPlugin<WindowingPlugin>().Width, Application.current.GetPlugin<WindowingPlugin>().Height, 0);
-            input = new Vector3(input.X / 2, input.Y, input.Z);
-            return input / size;
-        }
-
-        public Vector3 ToScreenSpaceRaw(Vector3 input)
-        {
-            Vector3 size = new Vector3(Application.current.GetPlugin<WindowingPlugin>().Width, Application.current.GetPlugin<WindowingPlugin>().Height, 0);
-
-            input = new Vector3(input.X * (size.X / size.Y), input.Y, input.Z);
-
-            return input / size;
-        }
-
         public void OnDraw()
         {
-            visual.Position = ToScreenSpace(Transform.Position);
+            visual.Position = Transform.Position / 4.0f;
             visual.Position = new Vector3(visual.Position.X, visual.Position.Y, -5);
-            visual.Scale = ToScreenSpaceRaw(Transform.Scale);
+            visual.Scale = Transform.Scale / 4.0f;
             visual.Scale = new Vector3(visual.Scale.X, visual.Scale.Y, 1);
             visual.Draw();
         }

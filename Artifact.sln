@@ -57,8 +57,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.AssetImporter.MeshImporter", "Artifact.AssetImporter.MeshImporter\Artifact.AssetImporter.MeshImporter.csproj", "{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlappyBird", "PlatformerGame\FlappyBird.csproj", "{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Artifact.Plugins.DebugMenu", "Artifact.Plugins.DebugMenu\Artifact.Plugins.DebugMenu.csproj", "{8887783B-77F2-4901-9BC2-2BAF472BAEE6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{A97F10D2-E89B-4F9A-BB69-7D63F21C89E6}"
@@ -72,6 +70,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Physics", "Physics", "{0D15E3BB-3D96-498A-A848-E6963FE422D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artifact.Physics.Box2D", "Artifact.Physics.Box2D\Artifact.Physics.Box2D.csproj", "{D42BF588-7B73-4E4B-9D5C-C676DEC81E68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlappyBird", "FlappyBird\FlappyBird.csproj", "{91CC2F38-F425-4E40-BA45-EDBCD731E153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer", "Platformer\Platformer.csproj", "{407F0393-6802-46BB-BE3B-9AF89DDCC5C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,10 +149,6 @@ Global
 		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D207306-0A63-4D8C-8AA2-F69176AE3CD7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B85A7A9-2FB8-4CB2-B642-14757E7DA30B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8887783B-77F2-4901-9BC2-2BAF472BAEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -171,6 +169,14 @@ Global
 		{D42BF588-7B73-4E4B-9D5C-C676DEC81E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D42BF588-7B73-4E4B-9D5C-C676DEC81E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D42BF588-7B73-4E4B-9D5C-C676DEC81E68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CC2F38-F425-4E40-BA45-EDBCD731E153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CC2F38-F425-4E40-BA45-EDBCD731E153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CC2F38-F425-4E40-BA45-EDBCD731E153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CC2F38-F425-4E40-BA45-EDBCD731E153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{407F0393-6802-46BB-BE3B-9AF89DDCC5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407F0393-6802-46BB-BE3B-9AF89DDCC5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407F0393-6802-46BB-BE3B-9AF89DDCC5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407F0393-6802-46BB-BE3B-9AF89DDCC5C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

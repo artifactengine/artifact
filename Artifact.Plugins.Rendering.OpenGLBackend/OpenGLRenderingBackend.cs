@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,11 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
         private Logger logger = LogManager.GetCurrentClassLogger();
 
+
+        uint pointShader;
+        uint pointVao;
+
+
         public OpenGLRenderingBackend() : base() { }
 
         public void CreateContext(nint windowHandle, int width, int height)
@@ -34,8 +40,6 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gfx = Graphics.FromHwnd(windowHandle);
 
             gl.Enable(OpenGL.GL_MULTISAMPLE);
-
-            logger.Info("Created OpenGL 4.4 Context");
         }
 
         public void SwapBuffers()
@@ -69,6 +73,11 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         public void Predraw()
         {
             
+        }
+
+        public void DrawPoint(Vector3 position, ColorRGB color, float size = 10f)
+        {
+
         }
     }
 }

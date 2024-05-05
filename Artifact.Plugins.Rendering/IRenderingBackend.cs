@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,5 +20,7 @@ namespace Artifact.Plugins.Rendering
         public void SwapBuffers();
 
         public void Clear(ColorRGB color, float alpha);
+
+        public void DrawPoint(Vector3 position, ColorRGB color) { }
     }
 }
