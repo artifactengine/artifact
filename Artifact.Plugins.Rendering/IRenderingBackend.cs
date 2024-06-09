@@ -15,7 +15,7 @@ namespace Artifact.Plugins.Rendering
 
         public void Predraw();
 
-        public void CreateContext(IntPtr windowHandle, int width, int height);
+        public void CreateContext(object windowHandle, int width, int height);
 
         public void SwapBuffers();
 

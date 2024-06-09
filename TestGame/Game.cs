@@ -13,7 +13,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Artifact.Plugins.Windowing.WinFormsBackend;
 using Artifact.Plugins.Input;
-using Artifact.Plugins.Input.PollBackend;
 using System.Numerics;
 using Artifact.Plugins.Rendering.VeldridBackend;
 using Artifact.Plugin.Audio;
@@ -41,7 +40,7 @@ namespace TestGame
 
             AddPlugin(new WindowingPlugin(this, "Test Game", 1280, 720, typeof(SDL2WindowingBackend)));
             AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
-            AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
+            AddPlugin(new InputPlugin(this));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
         }

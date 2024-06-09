@@ -3,38 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Artifact.Plugins.Windowing;
 
 namespace Artifact.Plugins.Input
 {
     public class InputPlugin : PluginBase
     {
-        private IInputBackend backend;
+        private WindowingPlugin windowing;
 
-        public InputPlugin(Application app, Type backendType) : base(app)
+        private Dictionary<Key, bool> previousKeyStates = new Dictionary<Key, bool>();
+
+        public InputPlugin(Application app) : base(app)
         {
             BundleID = "com.artifact.plugins.input";
 
-            if (!backendType.GetInterfaces().Contains(typeof(IInputBackend)))
-            {
-                throw new Exception("Invalid input backend " + backendType.Name);
-            }
-
-            backend = (IInputBackend)Activator.CreateInstance(backendType);
+            windowing = app.GetPlugin<WindowingPlugin>();
         }
 
         public bool IsKeyDown(Key key)
         {
-            return backend.IsKeyDown(key);
+            return windowing.Backend.IsKeyDown(key);
         }
 
         public bool IsKeyUp(Key key)
         {
-            return backend.IsKeyUp(key);
+            return !windowing.Backend.IsKeyDown(key);
         }
 
         public bool WasKeyPressedThisFrame(Key key)
         {
-            return backend.WasKeyPressedThisFrame(key);
+            bool isKeyDown = IsKeyUp(key);
+            bool wasKeyDown = previousKeyStates.ContainsKey(key) && previousKeyStates[key];
+
+            // Update the previous state for the next frame
+            previousKeyStates[key] = isKeyDown;
+
+            // Return true if the key was down in the previous frame and is up in the current frame
+            return wasKeyDown && !isKeyDown;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Artifact.Plugins.Input;
+using NLog;
 using SDL_Sharp;
 using System.Runtime.InteropServices;
 using Veldrid.Sdl2;
@@ -19,7 +20,7 @@ namespace Artifact.Plugins.Windowing.SDL2Backend
         public string Title { get; set; } = "";
         public string TitleSuffix { get; set; } = "";
 
-        public nint WindowHandle => window.Handle;
+        public object WindowHandle => window.Handle;
 
         public void CreateWindow(string title, int width, int height, Application app)
         {
@@ -53,6 +54,11 @@ namespace Artifact.Plugins.Windowing.SDL2Backend
         {
             window.Close();
             logger.Info("SDL2 window closed");
+        }
+
+        public bool IsKeyDown(Key key)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
 namespace Artifact.Plugins.Rendering
 {
     public class Debug
@@ -26,6 +27,8 @@ namespace Artifact.Plugins.Rendering
             renderer = Application.current.GetPlugin<RenderingPlugin>();
 
             char c = (char)0;
+
+            
 
             using Image fontTexture = Image.FromFile("Assets/debugFont.bmp");
 
@@ -204,3 +207,4 @@ namespace Artifact.Plugins.Rendering
         }
     }
 }
+*/

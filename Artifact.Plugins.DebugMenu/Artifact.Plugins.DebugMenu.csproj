@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering\Artifact.Plugins.Rendering.csproj" />
+    <ProjectReference Include="..\Artifact.Rendering.Text\Artifact.Rendering.Text.csproj" />
     <ProjectReference Include="..\Artifact\Artifact.csproj" />
   </ItemGroup>
 

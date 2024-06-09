@@ -30,110 +30,6 @@
           }
         }
       },
-      "FreeTypeSharp/3.0.0": {
-        "runtime": {
-          "lib/net8.0/FreeTypeSharp.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libfreetype.so": {
-            "rid": "linux-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx/native/libfreetype.dylib": {
-            "rid": "osx",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-arm64/native/freetype.dll": {
-            "rid": "win-arm64",
-            "assetType": "native",
-            "fileVersion": "2.13.2.0"
-          },
-          "runtimes/win-x64/native/freetype.dll": {
-            "rid": "win-x64",
-            "assetType": "native",
-            "fileVersion": "2.13.2.0"
-          },
-          "runtimes/win-x86/native/freetype.dll": {
-            "rid": "win-x86",
-            "assetType": "native",
-            "fileVersion": "2.13.2.0"
-          }
-        }
-      },
-      "ImGui.NET/1.90.1.1": {
-        "dependencies": {
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
-        },
-        "runtime": {
-          "lib/net6.0/ImGui.NET.dll": {
-            "assemblyVersion": "1.90.1.1",
-            "fileVersion": "1.90.1.1"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libcimgui.so": {
-            "rid": "linux-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx/native/libcimgui.dylib": {
-            "rid": "osx",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-arm64/native/cimgui.dll": {
-            "rid": "win-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x64/native/cimgui.dll": {
-            "rid": "win-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x86/native/cimgui.dll": {
-            "rid": "win-x86",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "ImGui.NET.Docking/1.75.0": {
-        "dependencies": {
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libcimgui.so": {
-            "rid": "linux-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx-x64/native/libcimgui.dylib": {
-            "rid": "osx-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x64/native/cimgui.dll": {
-            "rid": "win-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x86/native/cimgui.dll": {
-            "rid": "win-x86",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -141,22 +37,6 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
-        "runtime": {
-          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
-          }
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -336,7 +216,6 @@
           }
         }
       },
-      "SharpFont.Dependencies/2.6.0": {},
       "StbImageSharp/2.27.14": {
         "runtime": {
           "lib/netstandard2.0/StbImageSharp.dll": {
@@ -350,7 +229,15 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Buffers/4.4.0": {},
+      "System.Buffers/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
       "System.Collections/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -411,21 +298,6 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Drawing.Common/9.0.0-preview.3.24172.9": {
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "9.0.0-preview.3.24172.9"
-        },
-        "runtime": {
-          "lib/net8.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
-          },
-          "lib/net8.0/System.Private.Windows.Core.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
-          }
-        }
-      },
       "System.Globalization/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -463,7 +335,7 @@
       "System.IO.Compression/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "System.Buffers": "4.4.0",
+          "System.Buffers": "4.3.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
           "System.IO": "4.3.0",
@@ -481,7 +353,7 @@
       },
       "System.IO.Compression.ZipFile/4.3.0": {
         "dependencies": {
-          "System.Buffers": "4.4.0",
+          "System.Buffers": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.Compression": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
@@ -587,7 +459,6 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Numerics.Vectors/4.4.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -666,7 +537,6 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.4.0": {},
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -935,12 +805,7 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "ColorHelper": "1.8.1",
-          "FreeTypeSharp": "3.0.0",
-          "ImGui.NET": "1.90.1.1",
-          "ImGui.NET.Docking": "1.75.0",
-          "SharpFont.Dependencies": "2.6.0",
-          "System.Drawing.Common": "9.0.0-preview.3.24172.9"
+          "ColorHelper": "1.8.1"
         },
         "runtime": {
           "Artifact.Plugins.Rendering.dll": {}
@@ -970,27 +835,6 @@
       "path": "colorhelper/1.8.1",
       "hashPath": "colorhelper.1.8.1.nupkg.sha512"
     },
-    "FreeTypeSharp/3.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-muhYzQEm5uZ4TVzdEZlPO+2zmNoJqVOcdamqfYZosUHg0V4tp6+we5mxPxh5Ib1ivYLBZlgEYey6sI8wNta26A==",
-      "path": "freetypesharp/3.0.0",
-      "hashPath": "freetypesharp.3.0.0.nupkg.sha512"
-    },
-    "ImGui.NET/1.90.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/VNgkRywtXV72cpxtBj09nZX9Yx+xG3NxiwEEXPVcK+pHKHA31cPJKy425tDGj68tgRbCS+C+DG8puBj3iJ4zA==",
-      "path": "imgui.net/1.90.1.1",
-      "hashPath": "imgui.net.1.90.1.1.nupkg.sha512"
-    },
-    "ImGui.NET.Docking/1.75.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OR1NksDIaBcL1cLTx8CztG6Dvpgc7tu82JWYoYkerzWlsq4k160ZOG+YUo5OBaIkEDBGh/6AQ6Y0xF58FXo8PQ==",
-      "path": "imgui.net.docking/1.75.0",
-      "hashPath": "imgui.net.docking.1.75.0.nupkg.sha512"
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1011,13 +855,6 @@
       "sha512": "sha512-9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
-    },
-    "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8BXlwADoECEiOm94z5BKUNfhTnSw3exFxEpdZ9Fni4lRjmAoCqFrkN4j4MnWCsYDRuXW92ZSrGpeXf18VOmRvg==",
-      "path": "microsoft.win32.systemevents/9.0.0-preview.3.24172.9",
-      "hashPath": "microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
@@ -1187,13 +1024,6 @@
       "path": "sharpdx.mathematics/4.2.0",
       "hashPath": "sharpdx.mathematics.4.2.0.nupkg.sha512"
     },
-    "SharpFont.Dependencies/2.6.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MuR0lFIZI1pSw0QAgdzK0teIUkkMjh4Q/3Hm06BQKuOiSmbJCglox5Ny+8XK6VQDkOrw5cuMw85K3HdTEYWk+w==",
-      "path": "sharpfont.dependencies/2.6.0",
-      "hashPath": "sharpfont.dependencies.2.6.0.nupkg.sha512"
-    },
     "StbImageSharp/2.27.14": {
       "type": "package",
       "serviceable": true,
@@ -1208,12 +1038,12 @@
       "path": "system.appcontext/4.3.0",
       "hashPath": "system.appcontext.4.3.0.nupkg.sha512"
     },
-    "System.Buffers/4.4.0": {
+    "System.Buffers/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
-      "path": "system.buffers/4.4.0",
-      "hashPath": "system.buffers.4.4.0.nupkg.sha512"
+      "sha512": "sha512-ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
+      "path": "system.buffers/4.3.0",
+      "hashPath": "system.buffers.4.3.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -1263,13 +1093,6 @@
       "sha512": "sha512-rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
-    },
-    "System.Drawing.Common/9.0.0-preview.3.24172.9": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KD3i/1Q1zvEejpW03lXKxhdyP0dAC8LQol/TU2zPVPIkLIe7fxXjMWcdZ1PKkZjbWDewqjtd815VRYBF9exESw==",
-      "path": "system.drawing.common/9.0.0-preview.3.24172.9",
-      "hashPath": "system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -1362,13 +1185,6 @@
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
     },
-    "System.Numerics.Vectors/4.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
-      "path": "system.numerics.vectors/4.4.0",
-      "hashPath": "system.numerics.vectors.4.4.0.nupkg.sha512"
-    },
     "System.ObjectModel/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1438,13 +1254,6 @@
       "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==",
-      "path": "system.runtime.compilerservices.unsafe/4.4.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",

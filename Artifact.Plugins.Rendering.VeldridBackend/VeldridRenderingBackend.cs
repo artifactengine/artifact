@@ -36,14 +36,25 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             commandList.ClearColorTarget(0, new RgbaFloat(color.UnitR, color.UnitG, color.UnitB, color.UnitA));
         }
 
-        public void CreateContext(nint windowHandle, int width, int height)
+        public void CreateContext(object windowHandle, int width, int height)
         {
             GraphicsDeviceOptions options = new GraphicsDeviceOptions
             {
                 PreferStandardClipSpaceYDirection = true,
                 PreferDepthRangeZeroToOne = true
             };
-            SwapchainSource source = SwapchainSource.CreateWin32(windowHandle, GetModuleHandle(null));
+            SwapchainSource source;
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                source = SwapchainSource.CreateWin32((nint)windowHandle, GetModuleHandle(null));
+            } else
+            {
+                var data = ((nint, nint))windowHandle;
+
+                source = SwapchainSource.CreateXlib(data.Item1, data.Item2);
+            }
+
             SwapchainDescription desc = new SwapchainDescription(
                 source,
                 (uint)width, (uint)height,
@@ -67,9 +78,16 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
 
         public void SwapBuffers()
         {
-            commandList.End();
-            device.SubmitCommands(commandList);
-            device.SwapBuffers();
+            try
+            {
+                commandList.End();
+                device.SubmitCommands(commandList);
+                device.SwapBuffers();
+            } catch (VeldridException)
+            {
+                Environment.Exit(0);
+            }
+            
         }
     }
 }

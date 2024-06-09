@@ -58,7 +58,7 @@ namespace Artifact.Plugins.Rendering
 
             windowing.Backend.TitleSuffix = " (" + Backend.FancyName + ")";
 
-            new Debug();
+            //new Debug();
         }
 
         public override void OnExit()

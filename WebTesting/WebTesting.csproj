@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<EmccFlags>-s FULL_ES3=1 -lGL -sMIN_SAFARI_VERSION=-1 -s</EmccFlags>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PublishTrimmed>true</PublishTrimmed>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<WasmBuildNative>true</WasmBuildNative>
+		<RunAOTCompilation>true</RunAOTCompilation>
+		<!-- Disable SIMD support as it's prerelease only on Safari -->
+		<WasmEnableSIMD>false</WasmEnableSIMD>
+		<!-- Normal,JustInterp,Full,FullInterp,Hybrid,LLVMOnly,LLVMOnlyInterp -->
+		<!-- <AOTMode>LLVMOnly</AOTMode> -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<NativeFileReference Include="Native/emscripten.c" ScanForPInvokes="true" />
+		<NativeFileReference Include="Native/gl.c" ScanForPInvokes="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Artifact.Plugins.Rendering.WebGLBackend\Artifact.Plugins.Rendering.WebGLBackend.csproj" />
+	  <ProjectReference Include="..\Artifact.WASM.Common\Artifact.WASM.Common.csproj" />
+	</ItemGroup>
+
+	
+</Project>

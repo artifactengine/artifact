@@ -11,7 +11,7 @@
     <PackageReference Include="SharpDX.Mathematics" Version="4.2.0" />
     <PackageReference Include="StbImageSharp" Version="2.27.14" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0-preview.3.24172.9" />
-    <PackageReference Include="System.Drawing.Common" Version="9.0.0-preview.3.24172.9" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0-preview.4.24267.1" />
     <PackageReference Include="System.Security.Permissions" Version="9.0.0-preview.3.24172.9" />
     <PackageReference Include="Veldrid.ImageSharp" Version="4.9.0" />
   </ItemGroup>
@@ -19,7 +19,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Audio.NAudioBackend\Artifact.Plugins.Audio.NAudioBackend.csproj" />
-    <ProjectReference Include="..\Artifact.Plugins.Input.PollBackend\Artifact.Plugins.Input.PollBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.DirectXBackend\Artifact.Plugins.Rendering.DirectXBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.OpenGLBackend\Artifact.Plugins.Rendering.OpenGLBackend.csproj" />

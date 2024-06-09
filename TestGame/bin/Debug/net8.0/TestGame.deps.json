@@ -12,7 +12,6 @@
           "Artifact.Plugin.Audio": "1.0.0",
           "Artifact.Plugins.Audio.NAudioBackend": "1.0.0",
           "Artifact.Plugins.Input": "1.0.0",
-          "Artifact.Plugins.Input.PollBackend": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
           "Artifact.Plugins.Rendering.DirectXBackend": "1.0.0",
           "Artifact.Plugins.Rendering.OpenGLBackend": "1.0.0",
@@ -25,7 +24,7 @@
           "SharpDX.Mathematics": "4.2.0",
           "StbImageSharp": "2.27.14",
           "System.Configuration.ConfigurationManager": "9.0.0-preview.3.24172.9",
-          "System.Drawing.Common": "9.0.0-preview.3.24172.9",
+          "System.Drawing.Common": "9.0.0-preview.4.24267.1",
           "System.Security.Permissions": "9.0.0-preview.3.24172.9",
           "Veldrid.ImageSharp": "4.9.0"
         },
@@ -77,11 +76,11 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
+      "Microsoft.Win32.SystemEvents/9.0.0-preview.4.24266.19": {
         "runtime": {
           "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
+            "fileVersion": "9.0.24.26619"
           }
         },
         "runtimeTargets": {
@@ -89,7 +88,7 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
+            "fileVersion": "9.0.24.26619"
           }
         }
       },
@@ -226,6 +225,54 @@
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.2.8.2366"
+          }
+        }
+      },
+      "PInvoke.Kernel32/0.7.124": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.7.124",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Kernel32.dll": {
+            "assemblyVersion": "0.7.0.0",
+            "fileVersion": "0.7.124.52293"
+          }
+        }
+      },
+      "PInvoke.User32/0.7.124": {
+        "dependencies": {
+          "PInvoke.Kernel32": "0.7.124",
+          "PInvoke.Windows.Core": "0.7.124",
+          "PInvoke.Windows.ShellScalingApi": "0.7.124",
+          "Validation": "2.4.15"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.User32.dll": {
+            "assemblyVersion": "0.7.0.0",
+            "fileVersion": "0.7.124.52293"
+          }
+        }
+      },
+      "PInvoke.Windows.Core/0.7.124": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Windows.Core.dll": {
+            "assemblyVersion": "0.7.0.0",
+            "fileVersion": "0.7.124.52293"
+          }
+        }
+      },
+      "PInvoke.Windows.ShellScalingApi/0.7.124": {
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.7.124"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Windows.ShellScalingApi.dll": {
+            "assemblyVersion": "0.7.0.0",
+            "fileVersion": "0.7.124.52293"
           }
         }
       },
@@ -415,7 +462,7 @@
           }
         }
       },
-      "Silk.NET.Core/2.20.0": {
+      "Silk.NET.Core/2.21.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
@@ -426,20 +473,40 @@
         },
         "runtime": {
           "lib/net6.0/Silk.NET.Core.dll": {
-            "assemblyVersion": "2.20.0.0",
-            "fileVersion": "2.20.0.0"
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
           }
         }
       },
-      "Silk.NET.GLFW/2.20.0": {
+      "Silk.NET.GLFW/2.21.0": {
         "dependencies": {
-          "Silk.NET.Core": "2.20.0",
-          "Ultz.Native.GLFW": "3.3.9.2"
+          "Silk.NET.Core": "2.21.0",
+          "Ultz.Native.GLFW": "3.4.0"
         },
         "runtime": {
           "lib/net5.0/Silk.NET.GLFW.dll": {
-            "assemblyVersion": "2.20.0.0",
-            "fileVersion": "2.20.0.0"
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
+          }
+        }
+      },
+      "Silk.NET.Maths/2.21.0": {
+        "runtime": {
+          "lib/net5.0/Silk.NET.Maths.dll": {
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
+          }
+        }
+      },
+      "Silk.NET.OpenGL/2.21.0": {
+        "dependencies": {
+          "Silk.NET.Core": "2.21.0",
+          "Silk.NET.Maths": "2.21.0"
+        },
+        "runtime": {
+          "lib/net5.0/Silk.NET.OpenGL.dll": {
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
           }
         }
       },
@@ -568,18 +635,18 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Drawing.Common/9.0.0-preview.3.24172.9": {
+      "System.Drawing.Common/9.0.0-preview.4.24267.1": {
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "9.0.0-preview.3.24172.9"
+          "Microsoft.Win32.SystemEvents": "9.0.0-preview.4.24266.19"
         },
         "runtime": {
           "lib/net8.0/System.Drawing.Common.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
+            "fileVersion": "9.0.24.26701"
           },
           "lib/net8.0/System.Private.Windows.Core.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.24.17209"
+            "fileVersion": "9.0.24.26701"
           }
         }
       },
@@ -1056,13 +1123,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Threading.Tasks.Extensions/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        }
-      },
+      "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Threading.Timer/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1102,7 +1163,7 @@
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
-          "System.Threading.Tasks.Extensions": "4.3.0"
+          "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
       "System.Xml.XDocument/4.3.0": {
@@ -1121,8 +1182,18 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Ultz.Native.GLFW/3.3.9.2": {
+      "Ultz.Native.GLFW/3.4.0": {
         "runtimeTargets": {
+          "runtimes/linux-arm/native/libglfw.so.3": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libglfw.so.3": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
           "runtimes/linux-x64/native/libglfw.so.3": {
             "rid": "linux-x64",
             "assetType": "native",
@@ -1141,17 +1212,25 @@
           "runtimes/win-arm64/native/glfw3.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "3.4.0.0"
           },
           "runtimes/win-x64/native/glfw3.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "3.4.0.0"
           },
           "runtimes/win-x86/native/glfw3.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "Validation/2.4.15": {
+        "runtime": {
+          "lib/netstandard1.3/Validation.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.15.30595"
           }
         }
       },
@@ -1349,6 +1428,14 @@
           }
         }
       },
+      "X11/1.0.6": {
+        "runtime": {
+          "lib/netcoreapp2.1/X11.dll": {
+            "assemblyVersion": "1.0.6.0",
+            "fileVersion": "1.0.6.0"
+          }
+        }
+      },
       "Artifact/1.0.0": {
         "dependencies": {
           "NLog": "5.2.8"
@@ -1377,27 +1464,18 @@
       },
       "Artifact.Plugins.Input/1.0.0": {
         "dependencies": {
-          "Artifact": "1.0.0"
+          "Artifact": "1.0.0",
+          "Artifact.Plugins.Windowing": "1.0.0"
         },
         "runtime": {
           "Artifact.Plugins.Input.dll": {}
-        }
-      },
-      "Artifact.Plugins.Input.PollBackend/1.0.0": {
-        "dependencies": {
-          "Artifact": "1.0.0",
-          "Artifact.Plugins.Input": "1.0.0"
-        },
-        "runtime": {
-          "Artifact.Plugins.Input.PollBackend.dll": {}
         }
       },
       "Artifact.Plugins.Rendering/1.0.0": {
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "ColorHelper": "1.8.1",
-          "System.Drawing.Common": "9.0.0-preview.3.24172.9"
+          "ColorHelper": "1.8.1"
         },
         "runtime": {
           "Artifact.Plugins.Rendering.dll": {}
@@ -1423,9 +1501,12 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
+          "PInvoke.User32": "0.7.124",
           "SharpGL": "3.1.1",
+          "Silk.NET.OpenGL": "2.21.0",
           "SixLabors.ImageSharp": "3.1.4",
-          "StbImageSharp": "2.27.14"
+          "StbImageSharp": "2.27.14",
+          "System.Drawing.Common": "9.0.0-preview.4.24267.1"
         },
         "runtime": {
           "Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
@@ -1456,7 +1537,8 @@
       },
       "Artifact.Plugins.Windowing/1.0.0": {
         "dependencies": {
-          "Artifact": "1.0.0"
+          "Artifact": "1.0.0",
+          "X11": "1.0.6"
         },
         "runtime": {
           "Artifact.Plugins.Windowing.dll": {}
@@ -1466,7 +1548,7 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "Silk.NET.GLFW": "2.20.0"
+          "Silk.NET.GLFW": "2.21.0"
         },
         "runtime": {
           "Artifact.Plugins.Windowing.GLFWBackend.dll": {}
@@ -1587,12 +1669,12 @@
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
+    "Microsoft.Win32.SystemEvents/9.0.0-preview.4.24266.19": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8BXlwADoECEiOm94z5BKUNfhTnSw3exFxEpdZ9Fni4lRjmAoCqFrkN4j4MnWCsYDRuXW92ZSrGpeXf18VOmRvg==",
-      "path": "microsoft.win32.systemevents/9.0.0-preview.3.24172.9",
-      "hashPath": "microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512"
+      "sha512": "sha512-rof/2ZT8nv/kc7Xf3y9bsyVnCzi3ZkDrGVUeNb0Gg0AMWqe8uRHZ2DJeHrhTmcbacnMX4c8Vn+Pq7GUtjqb+KA==",
+      "path": "microsoft.win32.systemevents/9.0.0-preview.4.24266.19",
+      "hashPath": "microsoft.win32.systemevents.9.0.0-preview.4.24266.19.nupkg.sha512"
     },
     "NativeLibraryLoader/1.0.13": {
       "type": "package",
@@ -1656,6 +1738,34 @@
       "sha512": "sha512-jAIELkWBs1CXFPp986KSGpDFQZHCFccO+LMbKBTTNm42KifaI1mYzFMFQQfuGmGMTrCx0TFPhDjHDE4cLAZWiQ==",
       "path": "nlog/5.2.8",
       "hashPath": "nlog.5.2.8.nupkg.sha512"
+    },
+    "PInvoke.Kernel32/0.7.124": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3yQudp7J20HH8oW2WsGdNlcRCJAG6Slens3n4P7c6m53m0SkXLyD5ry/bXYAFXYeIym9b0LIOvrmKjmzptmkWw==",
+      "path": "pinvoke.kernel32/0.7.124",
+      "hashPath": "pinvoke.kernel32.0.7.124.nupkg.sha512"
+    },
+    "PInvoke.User32/0.7.124": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xgrt/IFJWZhLT0S0MdP4ZU48gqgKVs+O+WmXb9Qge1T+me3oR5fhOl812qvLm2+D6DoHPxbUWTIc8MrH5i78Vw==",
+      "path": "pinvoke.user32/0.7.124",
+      "hashPath": "pinvoke.user32.0.7.124.nupkg.sha512"
+    },
+    "PInvoke.Windows.Core/0.7.124": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-er/PkwUBie3nXlwiKOfOxmdAj6ae8eFCLUgI5g6+9RAbyMoXMQnwAPx1atq0ZxU2LeozBdWtMQjogqcMNJhg1w==",
+      "path": "pinvoke.windows.core/0.7.124",
+      "hashPath": "pinvoke.windows.core.0.7.124.nupkg.sha512"
+    },
+    "PInvoke.Windows.ShellScalingApi/0.7.124": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mVKSSuvBcJUwWvfGAfJK05AXH0QEbiDdxYqN4wjCZBeXv4ewM2/N6U2wt5uCac8RFIvsd9MAsIdTnjMLqdkNZg==",
+      "path": "pinvoke.windows.shellscalingapi/0.7.124",
+      "hashPath": "pinvoke.windows.shellscalingapi.0.7.124.nupkg.sha512"
     },
     "PolySharp/1.10.0": {
       "type": "package",
@@ -1860,19 +1970,33 @@
       "path": "sharpgl/3.1.1",
       "hashPath": "sharpgl.3.1.1.nupkg.sha512"
     },
-    "Silk.NET.Core/2.20.0": {
+    "Silk.NET.Core/2.21.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vin8fW0bUBD3hDbN3s3br+ePtAzzdOCygslGfb7JR86ZKVQ/fAsgLcKQLDbNjZAn020F4eUEg/UNEZqpBwhOcg==",
-      "path": "silk.net.core/2.20.0",
-      "hashPath": "silk.net.core.2.20.0.nupkg.sha512"
+      "sha512": "sha512-U8gATeEGvSIc1ogSdG/LKr6SLgOjkis7Oo/QzCq+aOoGjw4tHYRVpm02V+pHp/qlQhziBbdQ/Vl5d58cmFY+PA==",
+      "path": "silk.net.core/2.21.0",
+      "hashPath": "silk.net.core.2.21.0.nupkg.sha512"
     },
-    "Silk.NET.GLFW/2.20.0": {
+    "Silk.NET.GLFW/2.21.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VCnaHew1xH+j0AxS54zVQNLQ4HJAaTpIFQdPpmMzbJ3XB21zNPV/5MBGhz4PyBgXKEHezjT6NPkYOerbzHqkfA==",
-      "path": "silk.net.glfw/2.20.0",
-      "hashPath": "silk.net.glfw.2.20.0.nupkg.sha512"
+      "sha512": "sha512-HWu21xUICqYH9ZfSlQo4c71Q7o++tip2v7LiWczvEwgqlJacZ3L9c1+jyOlfcGo9IN9pRao8QIbPNC9dlMcSZQ==",
+      "path": "silk.net.glfw/2.21.0",
+      "hashPath": "silk.net.glfw.2.21.0.nupkg.sha512"
+    },
+    "Silk.NET.Maths/2.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Hv05KJmKXzzlp3+nFHl2A8yaugGkAj0gCSOaSsLFNFnwuLUIKLBGaC6y23JgGYnK+1t1DS40oPOquHQPI06rg==",
+      "path": "silk.net.maths/2.21.0",
+      "hashPath": "silk.net.maths.2.21.0.nupkg.sha512"
+    },
+    "Silk.NET.OpenGL/2.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/8SnCbIM8PpddkacZm7trt0VRiZyN0xGTdwZr4bjsgkfbuqM86Qf0JsQLFPkZqIiVDAiIkRgw94kQbzJVz10Iw==",
+      "path": "silk.net.opengl/2.21.0",
+      "hashPath": "silk.net.opengl.2.21.0.nupkg.sha512"
     },
     "SixLabors.ImageSharp/3.1.4": {
       "type": "package",
@@ -1972,12 +2096,12 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
-    "System.Drawing.Common/9.0.0-preview.3.24172.9": {
+    "System.Drawing.Common/9.0.0-preview.4.24267.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KD3i/1Q1zvEejpW03lXKxhdyP0dAC8LQol/TU2zPVPIkLIe7fxXjMWcdZ1PKkZjbWDewqjtd815VRYBF9exESw==",
-      "path": "system.drawing.common/9.0.0-preview.3.24172.9",
-      "hashPath": "system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512"
+      "sha512": "sha512-JDaMkhAZ9jtFc06NFnrcPYGzF+N1SiQynDDraw2y+qsfkVIsMUonN4RG0YSkUpxB6QI7mXdcPQcY5ebDfBSYzQ==",
+      "path": "system.drawing.common/9.0.0-preview.4.24267.1",
+      "hashPath": "system.drawing.common.9.0.0-preview.4.24267.1.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -2322,12 +2446,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "System.Threading.Tasks.Extensions/4.3.0": {
+    "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
-      "path": "system.threading.tasks.extensions/4.3.0",
-      "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "System.Threading.Timer/4.3.0": {
       "type": "package",
@@ -2357,12 +2481,19 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Ultz.Native.GLFW/3.3.9.2": {
+    "Ultz.Native.GLFW/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4b7gJEfMZcw207CZkFV3VUBagmHlX9jYVkk1mrzacnAOgr90JoZSILTEFPc5lz5LT7yFKxQnsnqqIsFnVO7k/Q==",
-      "path": "ultz.native.glfw/3.3.9.2",
-      "hashPath": "ultz.native.glfw.3.3.9.2.nupkg.sha512"
+      "sha512": "sha512-Iy22JopynbOJ32vA0lBhFEzGi65GQJBuJHYBYRBpydrDpNoTiHnjIXfA65Gu+8qsOr/ZEoIF8r9aHCgAXuO6DA==",
+      "path": "ultz.native.glfw/3.4.0",
+      "hashPath": "ultz.native.glfw.3.4.0.nupkg.sha512"
+    },
+    "Validation/2.4.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KQFOtJKKhaXzuSiZhkFaFzQEdYsA+EN/XqKZDYwsGDOrS0Nxu6qzCvNTsDF4xtkiZbBA6u7I59QnsuP2O2fZgg==",
+      "path": "validation/2.4.15",
+      "hashPath": "validation.2.4.15.nupkg.sha512"
     },
     "Veldrid/4.9.0": {
       "type": "package",
@@ -2455,6 +2586,13 @@
       "path": "vortice.mathematics/1.4.25",
       "hashPath": "vortice.mathematics.1.4.25.nupkg.sha512"
     },
+    "X11/1.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z9mLLyDjeB3k3FI2r3sqP35fKbAx1+gVKLapgFeKxAyXlKIhuQMMYht6jgTrvNaP+cmc6hg0kgh5MvTkqNynVA==",
+      "path": "x11/1.0.6",
+      "hashPath": "x11.1.0.6.nupkg.sha512"
+    },
     "Artifact/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -2471,11 +2609,6 @@
       "sha512": ""
     },
     "Artifact.Plugins.Input/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Artifact.Plugins.Input.PollBackend/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

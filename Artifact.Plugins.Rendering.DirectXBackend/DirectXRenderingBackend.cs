@@ -43,7 +43,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             deviceContext.ClearRenderTargetView(renderView, new RawColor4(color.UnitR, color.UnitG, color.UnitB, color.UnitA));
         }
 
-        public void CreateContext(nint windowHandle, int width, int height)
+        public void CreateContext(object windowHandle, int width, int height)
         {
             SwapChainDescription swapchainDesc = new SwapChainDescription()
             {
@@ -52,7 +52,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
                                    new ModeDescription(width, height,
                                                        new Rational(60, 1), Format.R8G8B8A8_UNorm),
                 IsWindowed = true,
-                OutputHandle = windowHandle,
+                OutputHandle = (nint)windowHandle,
                 SampleDescription = new SampleDescription(1, 0),
                 SwapEffect = SwapEffect.Discard,
                 Usage = Usage.RenderTargetOutput
@@ -62,7 +62,7 @@ namespace Artifact.Plugins.Rendering.DirectXBackend
             deviceContext = device.ImmediateContext;
 
             factory = swapchain.GetParent<Factory>();
-            factory.MakeWindowAssociation(windowHandle, WindowAssociationFlags.IgnoreAll);
+            factory.MakeWindowAssociation((nint)windowHandle, WindowAssociationFlags.IgnoreAll);
 
             backBuffer = Texture2D.FromSwapChain<Texture2D>(swapchain, 0);
             renderView = new RenderTargetView(device, backBuffer);

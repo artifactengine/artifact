@@ -229,7 +229,7 @@ namespace Artifact.Plugins.Rendering.VeldridBackend
             Matrix4x4 scale = Matrix4x4.CreateScale(Scale);
             Matrix4x4 rotation = Matrix4x4.CreateFromYawPitchRoll(Rotation.X, Rotation.Y, Rotation.Z);
 
-            model = translation;
+            model = scale * rotation * translation;
 
             Matrix4x4 view = Camera.ViewMatrix;
             Matrix4x4 proj = Camera.ProjectionMatrix;

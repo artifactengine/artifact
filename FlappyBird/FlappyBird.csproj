@@ -19,7 +19,6 @@
     <ProjectReference Include="..\Artifact.Plugin.Audio\Artifact.Plugin.Audio.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Audio.NAudioBackend\Artifact.Plugins.Audio.NAudioBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.DebugMenu\Artifact.Plugins.DebugMenu.csproj" />
-    <ProjectReference Include="..\Artifact.Plugins.Input.PollBackend\Artifact.Plugins.Input.PollBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Input\Artifact.Plugins.Input.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.DirectXBackend\Artifact.Plugins.Rendering.DirectXBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Rendering.OpenGLBackend\Artifact.Plugins.Rendering.OpenGLBackend.csproj" />
@@ -28,6 +27,7 @@
     <ProjectReference Include="..\Artifact.Plugins.SplashScreen\Artifact.Plugins.SplashScreen.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing.GLFWBackend\Artifact.Plugins.Windowing.GLFWBackend.csproj" />
     <ProjectReference Include="..\Artifact.Plugins.Windowing\Artifact.Plugins.Windowing.csproj" />
+    <ProjectReference Include="..\Artifact.Rendering.Text\Artifact.Rendering.Text.csproj" />
     <ProjectReference Include="..\Artifact\Artifact.csproj" />
     <ProjectReference Include="..\Pong\Pong.csproj" />
   </ItemGroup>

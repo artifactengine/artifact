@@ -1,5 +1,6 @@
 ﻿using NLog;
 using SharpGL;
+using Silk.NET.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +17,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
     {
         public Type VisualImplementation => typeof(OpenGLVisual);
 
-        internal static OpenGL gl;
+        internal static GL gl;
         private Graphics gfx;
 
         public string FancyName => "OpenGL 3.3";
@@ -24,55 +25,39 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
         private Logger logger = LogManager.GetCurrentClassLogger();
 
 
-        uint pointShader;
-        uint pointVao;
-
-
         public OpenGLRenderingBackend() : base() { }
 
-        public void CreateContext(nint windowHandle, int width, int height)
+        public void CreateContext(object windowHandle, int width, int height)
         {
-            gl = new OpenGL();
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                CrossGL.Loader.LoadOpenGL(0, (nint)windowHandle);
+            else
+                CrossGL.Loader.LoadOpenGL((((nint, nint))windowHandle).Item1, (((nint, nint))windowHandle).Item2);
 
-            gl.Create(SharpGL.Version.OpenGLVersion.OpenGL3_3, RenderContextType.NativeWindow, width, height, 24, windowHandle);
-            gl.MakeCurrent();
-            gl.Viewport(0, 0, width, height);
-            gfx = Graphics.FromHwnd(windowHandle);
+            gl = GL.GetApi(CrossGL.Loader.GetProcAddress);
 
-            gl.Enable(OpenGL.GL_MULTISAMPLE);
+            gl.Enable(EnableCap.Multisample);
         }
 
         public void SwapBuffers()
         {
-            try
-            {
-                nint hdc = gfx.GetHdc();
-                gl.Blit(hdc);
-                gfx.ReleaseHdc(hdc);
-            } catch
-            {
-
-            }
-            
+            CrossGL.Loader.SwapBuffers();
         }
 
         public override void Dispose()
         {
-            gl.MakeNothingCurrent();
-            gfx.Dispose();
-
-            logger.Info("Disposed OpenGL 4.4 Context");
+            
         }
 
         public void Clear(ColorRGB color, float alpha)
         {
-            gl.ClearColor(color.UnitR, color.UnitG, color.UnitB, alpha);
-            gl.Clear(OpenGL.GL_COLOR_BUFFER_BIT);
+            gl.ClearColor(color.UnitR, color.UnitG, color.UnitB, color.UnitA);
+            gl.Clear(ClearBufferMask.ColorBufferBit);
         }
 
         public void Predraw()
         {
-            
+
         }
 
         public void DrawPoint(Vector3 position, ColorRGB color, float size = 10f)

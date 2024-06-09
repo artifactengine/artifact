@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Artifact\Artifact.csproj" />
+	  <ProjectReference Include="..\Artifact.Plugins.Windowing\Artifact.Plugins.Windowing.csproj" />
+	  <ProjectReference Include="..\Artifact\Artifact.csproj" />
   </ItemGroup>
 
 </Project>

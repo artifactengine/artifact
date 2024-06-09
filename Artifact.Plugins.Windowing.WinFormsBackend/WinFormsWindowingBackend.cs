@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Artifact.Plugins.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Artifact.Plugins.Windowing.WinFormsBackend
 {
     public class WinFormsWindowingBackend : IWindowingBackend
     {
-        public nint WindowHandle => form.Handle;
+        public object WindowHandle => form.Handle;
 
 
         private Application _app;
@@ -50,6 +51,11 @@ namespace Artifact.Plugins.Windowing.WinFormsBackend
         public bool ShouldClose()
         {
             return !form.Visible;
+        }
+
+        public bool IsKeyDown(Key key)
+        {
+            throw new NotImplementedException();
         }
     }
 }

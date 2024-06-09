@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Artifact.Plugins.Windowing.GLFWBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d42a068505431c96462fb3628f8a1296eac024c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+270146959bb690be968c55cfd8a0e14fb4e32747")]
 [assembly: System.Reflection.AssemblyProductAttribute("Artifact.Plugins.Windowing.GLFWBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Artifact.Plugins.Windowing.GLFWBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

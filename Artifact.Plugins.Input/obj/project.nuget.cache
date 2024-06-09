@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "idLYuFTzwnFDootUOm5ccUENBdU6vT/amuWBLvQNqxxmkZrOOX3/p1IK82ZFDXz4OKjWrtUWLVgs4wOG+dWX9w==",
+  "dgSpecHash": "HJqdqc3hKJHVX6RHc7IEmRO1yKBpyMrZ2jD1K+d7mS0fmYMjtDyBeo6Yzrepd9tbIe2/PjGwGjEUMcWEzO2GuQ==",
   "success": true,
-  "projectFilePath": "J:\\code\\artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj",
+  "projectFilePath": "R:\\code\\Artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joel\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512"
+    "C:\\Users\\rhys\\.nuget\\packages\\nlog\\5.2.8\\nlog.5.2.8.nupkg.sha512",
+    "C:\\Users\\rhys\\.nuget\\packages\\x11\\1.0.6\\x11.1.0.6.nupkg.sha512"
   ],
   "logs": []
 }

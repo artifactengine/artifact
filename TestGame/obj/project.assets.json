@@ -11,113 +11,6 @@
           "lib/netstandard2.0/ColorHelper.dll": {}
         }
       },
-      "FreeTypeSharp/3.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/FreeTypeSharp.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/FreeTypeSharp.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libfreetype.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx/native/libfreetype.dylib": {
-            "assetType": "native",
-            "rid": "osx"
-          },
-          "runtimes/win-arm64/native/freetype.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/freetype.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/freetype.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
-      "ImGui.NET/1.90.1.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
-        },
-        "compile": {
-          "lib/net6.0/ImGui.NET.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/ImGui.NET.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libcimgui.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx/native/libcimgui.dylib": {
-            "assetType": "native",
-            "rid": "osx"
-          },
-          "runtimes/win-arm64/native/cimgui.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/cimgui.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/cimgui.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
-      "ImGui.NET.Docking/1.75.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Buffers": "4.4.0",
-          "System.Numerics.Vectors": "4.4.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/ImGui.NET.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/ImGui.NET.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/libcimgui.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/libcimgui.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win-x64/native/cimgui.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/cimgui.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -218,7 +111,7 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
+      "Microsoft.Win32.SystemEvents/9.0.0-preview.4.24266.19": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
@@ -413,6 +306,74 @@
         },
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PInvoke.Kernel32/0.7.124": {
+        "type": "package",
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.7.124",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/PInvoke.Kernel32.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Kernel32.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PInvoke.User32/0.7.124": {
+        "type": "package",
+        "dependencies": {
+          "PInvoke.Kernel32": "0.7.124",
+          "PInvoke.Windows.Core": "0.7.124",
+          "PInvoke.Windows.ShellScalingApi": "0.7.124",
+          "Validation": "2.4.15"
+        },
+        "compile": {
+          "lib/netstandard2.0/PInvoke.User32.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.User32.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PInvoke.Windows.Core/0.7.124": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/PInvoke.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Windows.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "PInvoke.Windows.ShellScalingApi/0.7.124": {
+        "type": "package",
+        "dependencies": {
+          "PInvoke.Windows.Core": "0.7.124"
+        },
+        "compile": {
+          "lib/netstandard2.0/PInvoke.Windows.ShellScalingApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/PInvoke.Windows.ShellScalingApi.dll": {
             "related": ".xml"
           }
         }
@@ -741,12 +702,6 @@
           }
         }
       },
-      "SharpFont.Dependencies/2.6.0": {
-        "type": "package",
-        "build": {
-          "build/_._": {}
-        }
-      },
       "SharpGen.Runtime/2.0.0-beta.13": {
         "type": "package",
         "dependencies": {
@@ -797,7 +752,7 @@
           }
         }
       },
-      "Silk.NET.Core/2.20.0": {
+      "Silk.NET.Core/2.21.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -818,11 +773,11 @@
           }
         }
       },
-      "Silk.NET.GLFW/2.20.0": {
+      "Silk.NET.GLFW/2.21.0": {
         "type": "package",
         "dependencies": {
-          "Silk.NET.Core": "2.20.0",
-          "Ultz.Native.GLFW": "3.3.9.2"
+          "Silk.NET.Core": "2.21.0",
+          "Ultz.Native.GLFW": "3.4.0"
         },
         "compile": {
           "lib/net5.0/Silk.NET.GLFW.dll": {
@@ -831,6 +786,36 @@
         },
         "runtime": {
           "lib/net5.0/Silk.NET.GLFW.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Silk.NET.Maths/2.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Silk.NET.Maths.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Silk.NET.Maths.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Silk.NET.OpenGL/2.21.0": {
+        "type": "package",
+        "dependencies": {
+          "Silk.NET.Core": "2.21.0",
+          "Silk.NET.Maths": "2.21.0"
+        },
+        "compile": {
+          "lib/net5.0/Silk.NET.OpenGL.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Silk.NET.OpenGL.dll": {
             "related": ".xml"
           }
         }
@@ -874,13 +859,20 @@
           "lib/netstandard1.6/System.AppContext.dll": {}
         }
       },
-      "System.Buffers/4.4.0": {
+      "System.Buffers/4.3.0": {
         "type": "package",
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
         "compile": {
-          "ref/netcoreapp2.0/_._": {}
+          "lib/netstandard1.1/_._": {}
         },
         "runtime": {
-          "lib/netcoreapp2.0/_._": {}
+          "lib/netstandard1.1/System.Buffers.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -1055,10 +1047,10 @@
           }
         }
       },
-      "System.Drawing.Common/9.0.0-preview.3.24172.9": {
+      "System.Drawing.Common/9.0.0-preview.4.24267.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "9.0.0-preview.3.24172.9"
+          "Microsoft.Win32.SystemEvents": "9.0.0-preview.4.24266.19"
         },
         "compile": {
           "lib/net8.0/System.Drawing.Common.dll": {
@@ -2043,22 +2035,13 @@
           }
         }
       },
-      "System.Threading.Tasks.Extensions/4.3.0": {
+      "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Threading.Timer/4.3.0": {
@@ -2146,7 +2129,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Ultz.Native.GLFW/3.3.9.2": {
+      "Ultz.Native.GLFW/3.4.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -2155,6 +2138,14 @@
           "lib/netstandard2.0/_._": {}
         },
         "runtimeTargets": {
+          "runtimes/linux-arm/native/libglfw.so.3": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libglfw.so.3": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
           "runtimes/linux-x64/native/libglfw.so.3": {
             "assetType": "native",
             "rid": "linux-x64"
@@ -2178,6 +2169,19 @@
           "runtimes/win-x86/native/glfw3.dll": {
             "assetType": "native",
             "rid": "win-x86"
+          }
+        }
+      },
+      "Validation/2.4.15": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/Validation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/Validation.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2507,27 +2511,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Artifact": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Artifact.Plugins.Input.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Artifact.Plugins.Input.dll": {}
-        }
-      },
-      "Artifact.Plugins.Input.PollBackend/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
           "Artifact": "1.0.0",
-          "Artifact.Plugins.Input": "1.0.0"
+          "Artifact.Plugins.Windowing": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Artifact.Plugins.Input.PollBackend.dll": {}
+          "bin/placeholder/Artifact.Plugins.Input.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Artifact.Plugins.Input.PollBackend.dll": {}
+          "bin/placeholder/Artifact.Plugins.Input.dll": {}
         }
       },
       "Artifact.Plugins.Rendering/1.0.0": {
@@ -2536,12 +2527,7 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "ColorHelper": "1.8.1",
-          "FreeTypeSharp": "3.0.0",
-          "ImGui.NET": "1.90.1.1",
-          "ImGui.NET.Docking": "1.75.0",
-          "SharpFont.Dependencies": "2.6.0",
-          "System.Drawing.Common": "9.0.0-preview.3.24172.9"
+          "ColorHelper": "1.8.1"
         },
         "compile": {
           "bin/placeholder/Artifact.Plugins.Rendering.dll": {}
@@ -2577,9 +2563,12 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Rendering": "1.0.0",
+          "PInvoke.User32": "0.7.124",
           "SharpGL": "3.1.1",
+          "Silk.NET.OpenGL": "2.21.0",
           "SixLabors.ImageSharp": "3.1.4",
-          "StbImageSharp": "2.27.14"
+          "StbImageSharp": "2.27.14",
+          "System.Drawing.Common": "9.0.0-preview.4.24267.1"
         },
         "compile": {
           "bin/placeholder/Artifact.Plugins.Rendering.OpenGLBackend.dll": {}
@@ -2641,7 +2630,7 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "Silk.NET.GLFW": "2.20.0"
+          "Silk.NET.GLFW": "2.21.0"
         },
         "compile": {
           "bin/placeholder/Artifact.Plugins.Windowing.GLFWBackend.dll": {}
@@ -2693,83 +2682,6 @@
         "colorhelper.nuspec",
         "lib/netstandard2.0/ColorHelper.dll",
         "logo.jpg"
-      ]
-    },
-    "FreeTypeSharp/3.0.0": {
-      "sha512": "muhYzQEm5uZ4TVzdEZlPO+2zmNoJqVOcdamqfYZosUHg0V4tp6+we5mxPxh5Ib1ivYLBZlgEYey6sI8wNta26A==",
-      "type": "package",
-      "path": "freetypesharp/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "freetypesharp.3.0.0.nupkg.sha512",
-        "freetypesharp.nuspec",
-        "lib/net8.0-android34.0/FreeTypeSharp.aar",
-        "lib/net8.0-android34.0/FreeTypeSharp.dll",
-        "lib/net8.0-android34.0/FreeTypeSharp.pdb",
-        "lib/net8.0-android34.0/FreeTypeSharp.xml",
-        "lib/net8.0-ios17.2/FreeTypeSharp.dll",
-        "lib/net8.0-ios17.2/FreeTypeSharp.pdb",
-        "lib/net8.0-ios17.2/FreeTypeSharp.resources/FreeType2.xcframework/Info.plist",
-        "lib/net8.0-ios17.2/FreeTypeSharp.resources/FreeType2.xcframework/ios-arm64/libfreetype.a",
-        "lib/net8.0-ios17.2/FreeTypeSharp.resources/FreeType2.xcframework/ios-arm64_x86_64-simulator/libfreetype.a",
-        "lib/net8.0-ios17.2/FreeTypeSharp.resources/manifest",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.dll",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.pdb",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.resources/FreeType2.xcframework/Info.plist",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.resources/FreeType2.xcframework/tvos-arm64/libfreetype.a",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.resources/FreeType2.xcframework/tvos-arm64_x86_64-simulator/libfreetype.a",
-        "lib/net8.0-tvos17.2/FreeTypeSharp.resources/manifest",
-        "lib/net8.0/FreeTypeSharp.dll",
-        "lib/net8.0/FreeTypeSharp.pdb",
-        "lib/netcoreapp3.1/FreeTypeSharp.dll",
-        "lib/netcoreapp3.1/FreeTypeSharp.pdb",
-        "lib/netstandard2.0/FreeTypeSharp.dll",
-        "lib/netstandard2.0/FreeTypeSharp.pdb",
-        "runtimes/linux-x64/native/libfreetype.so",
-        "runtimes/osx/native/libfreetype.dylib",
-        "runtimes/win-arm64/native/freetype.dll",
-        "runtimes/win-x64/native/freetype.dll",
-        "runtimes/win-x86/native/freetype.dll"
-      ]
-    },
-    "ImGui.NET/1.90.1.1": {
-      "sha512": "/VNgkRywtXV72cpxtBj09nZX9Yx+xG3NxiwEEXPVcK+pHKHA31cPJKy425tDGj68tgRbCS+C+DG8puBj3iJ4zA==",
-      "type": "package",
-      "path": "imgui.net/1.90.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/net40/ImGui.NET.targets",
-        "imgui.net.1.90.1.1.nupkg.sha512",
-        "imgui.net.nuspec",
-        "lib/net6.0/ImGui.NET.dll",
-        "lib/net6.0/ImGui.NET.xml",
-        "lib/netstandard2.0/ImGui.NET.dll",
-        "lib/netstandard2.0/ImGui.NET.xml",
-        "runtimes/linux-x64/native/libcimgui.so",
-        "runtimes/osx/native/libcimgui.dylib",
-        "runtimes/win-arm64/native/cimgui.dll",
-        "runtimes/win-x64/native/cimgui.dll",
-        "runtimes/win-x86/native/cimgui.dll"
-      ]
-    },
-    "ImGui.NET.Docking/1.75.0": {
-      "sha512": "OR1NksDIaBcL1cLTx8CztG6Dvpgc7tu82JWYoYkerzWlsq4k160ZOG+YUo5OBaIkEDBGh/6AQ6Y0xF58FXo8PQ==",
-      "type": "package",
-      "path": "imgui.net.docking/1.75.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/net40/ImGui.NET.targets",
-        "imgui.net.docking.1.75.0.nupkg.sha512",
-        "imgui.net.docking.nuspec",
-        "lib/netstandard2.0/ImGui.NET.dll",
-        "runtimes/linux-x64/native/libcimgui.so",
-        "runtimes/osx-x64/native/libcimgui.dylib",
-        "runtimes/win-x64/native/cimgui.dll",
-        "runtimes/win-x86/native/cimgui.dll"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -3008,10 +2920,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Win32.SystemEvents/9.0.0-preview.3.24172.9": {
-      "sha512": "8BXlwADoECEiOm94z5BKUNfhTnSw3exFxEpdZ9Fni4lRjmAoCqFrkN4j4MnWCsYDRuXW92ZSrGpeXf18VOmRvg==",
+    "Microsoft.Win32.SystemEvents/9.0.0-preview.4.24266.19": {
+      "sha512": "rof/2ZT8nv/kc7Xf3y9bsyVnCzi3ZkDrGVUeNb0Gg0AMWqe8uRHZ2DJeHrhTmcbacnMX4c8Vn+Pq7GUtjqb+KA==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/9.0.0-preview.3.24172.9",
+      "path": "microsoft.win32.systemevents/9.0.0-preview.4.24266.19",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3031,7 +2943,7 @@
         "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.9.0.0-preview.3.24172.9.nupkg.sha512",
+        "microsoft.win32.systemevents.9.0.0-preview.4.24266.19.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
@@ -3182,6 +3094,80 @@
         "lib/netstandard2.0/NLog.xml",
         "nlog.5.2.8.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "PInvoke.Kernel32/0.7.124": {
+      "sha512": "3yQudp7J20HH8oW2WsGdNlcRCJAG6Slens3n4P7c6m53m0SkXLyD5ry/bXYAFXYeIym9b0LIOvrmKjmzptmkWw==",
+      "type": "package",
+      "path": "pinvoke.kernel32/0.7.124",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PInvoke.Kernel32.dll",
+        "lib/net45/PInvoke.Kernel32.xml",
+        "lib/net46/PInvoke.Kernel32.dll",
+        "lib/net46/PInvoke.Kernel32.xml",
+        "lib/netstandard2.0/PInvoke.Kernel32.dll",
+        "lib/netstandard2.0/PInvoke.Kernel32.xml",
+        "lib/uap10.0.19041/PInvoke.Kernel32.dll",
+        "lib/uap10.0.19041/PInvoke.Kernel32.pri",
+        "lib/uap10.0.19041/PInvoke.Kernel32.xml",
+        "pinvoke.kernel32.0.7.124.nupkg.sha512",
+        "pinvoke.kernel32.nuspec"
+      ]
+    },
+    "PInvoke.User32/0.7.124": {
+      "sha512": "Xgrt/IFJWZhLT0S0MdP4ZU48gqgKVs+O+WmXb9Qge1T+me3oR5fhOl812qvLm2+D6DoHPxbUWTIc8MrH5i78Vw==",
+      "type": "package",
+      "path": "pinvoke.user32/0.7.124",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PInvoke.User32.dll",
+        "lib/net45/PInvoke.User32.xml",
+        "lib/netstandard2.0/PInvoke.User32.dll",
+        "lib/netstandard2.0/PInvoke.User32.xml",
+        "lib/uap10.0.19041/PInvoke.User32.dll",
+        "lib/uap10.0.19041/PInvoke.User32.pri",
+        "lib/uap10.0.19041/PInvoke.User32.xml",
+        "pinvoke.user32.0.7.124.nupkg.sha512",
+        "pinvoke.user32.nuspec"
+      ]
+    },
+    "PInvoke.Windows.Core/0.7.124": {
+      "sha512": "er/PkwUBie3nXlwiKOfOxmdAj6ae8eFCLUgI5g6+9RAbyMoXMQnwAPx1atq0ZxU2LeozBdWtMQjogqcMNJhg1w==",
+      "type": "package",
+      "path": "pinvoke.windows.core/0.7.124",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PInvoke.Windows.Core.dll",
+        "lib/net45/PInvoke.Windows.Core.xml",
+        "lib/netstandard2.0/PInvoke.Windows.Core.dll",
+        "lib/netstandard2.0/PInvoke.Windows.Core.xml",
+        "lib/uap10.0.19041/PInvoke.Windows.Core.dll",
+        "lib/uap10.0.19041/PInvoke.Windows.Core.pri",
+        "lib/uap10.0.19041/PInvoke.Windows.Core.xml",
+        "pinvoke.windows.core.0.7.124.nupkg.sha512",
+        "pinvoke.windows.core.nuspec"
+      ]
+    },
+    "PInvoke.Windows.ShellScalingApi/0.7.124": {
+      "sha512": "mVKSSuvBcJUwWvfGAfJK05AXH0QEbiDdxYqN4wjCZBeXv4ewM2/N6U2wt5uCac8RFIvsd9MAsIdTnjMLqdkNZg==",
+      "type": "package",
+      "path": "pinvoke.windows.shellscalingapi/0.7.124",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/PInvoke.Windows.ShellScalingApi.dll",
+        "lib/net45/PInvoke.Windows.ShellScalingApi.xml",
+        "lib/netstandard2.0/PInvoke.Windows.ShellScalingApi.dll",
+        "lib/netstandard2.0/PInvoke.Windows.ShellScalingApi.xml",
+        "lib/uap10.0.19041/PInvoke.Windows.ShellScalingApi.dll",
+        "lib/uap10.0.19041/PInvoke.Windows.ShellScalingApi.pri",
+        "lib/uap10.0.19041/PInvoke.Windows.ShellScalingApi.xml",
+        "pinvoke.windows.shellscalingapi.0.7.124.nupkg.sha512",
+        "pinvoke.windows.shellscalingapi.nuspec"
       ]
     },
     "PolySharp/1.10.0": {
@@ -3621,26 +3607,6 @@
         "sharpdx.mathematics.nuspec"
       ]
     },
-    "SharpFont.Dependencies/2.6.0": {
-      "sha512": "MuR0lFIZI1pSw0QAgdzK0teIUkkMjh4Q/3Hm06BQKuOiSmbJCglox5Ny+8XK6VQDkOrw5cuMw85K3HdTEYWk+w==",
-      "type": "package",
-      "path": "sharpfont.dependencies/2.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "bin/msvc10/x64/freetype6.dll",
-        "bin/msvc10/x86/freetype6.dll",
-        "bin/msvc11/x64/freetype6.dll",
-        "bin/msvc11/x86/freetype6.dll",
-        "bin/msvc12/x64/freetype6.dll",
-        "bin/msvc12/x86/freetype6.dll",
-        "bin/msvc9/x64/freetype6.dll",
-        "bin/msvc9/x86/freetype6.dll",
-        "build/SharpFont.Dependencies.props",
-        "sharpfont.dependencies.2.6.0.nupkg.sha512",
-        "sharpfont.dependencies.nuspec"
-      ]
-    },
     "SharpGen.Runtime/2.0.0-beta.13": {
       "sha512": "H+Up2Er3ptWzcQ+CAO652fEsBLAmoXqKqtvc/6ycRV9XfLN2XJch0h8CwKQ3muD6eADPFf8Xp+nDQ8wDpcRDlg==",
       "type": "package",
@@ -3706,10 +3672,10 @@
         "sharpgl.nuspec"
       ]
     },
-    "Silk.NET.Core/2.20.0": {
-      "sha512": "vin8fW0bUBD3hDbN3s3br+ePtAzzdOCygslGfb7JR86ZKVQ/fAsgLcKQLDbNjZAn020F4eUEg/UNEZqpBwhOcg==",
+    "Silk.NET.Core/2.21.0": {
+      "sha512": "U8gATeEGvSIc1ogSdG/LKr6SLgOjkis7Oo/QzCq+aOoGjw4tHYRVpm02V+pHp/qlQhziBbdQ/Vl5d58cmFY+PA==",
       "type": "package",
-      "path": "silk.net.core/2.20.0",
+      "path": "silk.net.core/2.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3724,15 +3690,15 @@
         "lib/netstandard2.0/Silk.NET.Core.xml",
         "lib/netstandard2.1/Silk.NET.Core.dll",
         "lib/netstandard2.1/Silk.NET.Core.xml",
-        "silk.net.core.2.20.0.nupkg.sha512",
+        "silk.net.core.2.21.0.nupkg.sha512",
         "silk.net.core.nuspec",
         "silkdotnet_v3.png"
       ]
     },
-    "Silk.NET.GLFW/2.20.0": {
-      "sha512": "VCnaHew1xH+j0AxS54zVQNLQ4HJAaTpIFQdPpmMzbJ3XB21zNPV/5MBGhz4PyBgXKEHezjT6NPkYOerbzHqkfA==",
+    "Silk.NET.GLFW/2.21.0": {
+      "sha512": "HWu21xUICqYH9ZfSlQo4c71Q7o++tip2v7LiWczvEwgqlJacZ3L9c1+jyOlfcGo9IN9pRao8QIbPNC9dlMcSZQ==",
       "type": "package",
-      "path": "silk.net.glfw/2.20.0",
+      "path": "silk.net.glfw/2.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3745,8 +3711,54 @@
         "lib/netstandard2.0/Silk.NET.GLFW.xml",
         "lib/netstandard2.1/Silk.NET.GLFW.dll",
         "lib/netstandard2.1/Silk.NET.GLFW.xml",
-        "silk.net.glfw.2.20.0.nupkg.sha512",
+        "silk.net.glfw.2.21.0.nupkg.sha512",
         "silk.net.glfw.nuspec",
+        "silkdotnet_v3.png"
+      ]
+    },
+    "Silk.NET.Maths/2.21.0": {
+      "sha512": "1Hv05KJmKXzzlp3+nFHl2A8yaugGkAj0gCSOaSsLFNFnwuLUIKLBGaC6y23JgGYnK+1t1DS40oPOquHQPI06rg==",
+      "type": "package",
+      "path": "silk.net.maths/2.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Silk.NET.Maths.dll",
+        "lib/net5.0/Silk.NET.Maths.xml",
+        "lib/net6.0-android31.0/Silk.NET.Maths.dll",
+        "lib/net6.0-android31.0/Silk.NET.Maths.xml",
+        "lib/net6.0-ios16.1/Silk.NET.Maths.dll",
+        "lib/net6.0-ios16.1/Silk.NET.Maths.xml",
+        "lib/netcoreapp3.1/Silk.NET.Maths.dll",
+        "lib/netcoreapp3.1/Silk.NET.Maths.xml",
+        "lib/netstandard2.0/Silk.NET.Maths.dll",
+        "lib/netstandard2.0/Silk.NET.Maths.xml",
+        "lib/netstandard2.1/Silk.NET.Maths.dll",
+        "lib/netstandard2.1/Silk.NET.Maths.xml",
+        "silk.net.maths.2.21.0.nupkg.sha512",
+        "silk.net.maths.nuspec",
+        "silkdotnet_v3.png"
+      ]
+    },
+    "Silk.NET.OpenGL/2.21.0": {
+      "sha512": "/8SnCbIM8PpddkacZm7trt0VRiZyN0xGTdwZr4bjsgkfbuqM86Qf0JsQLFPkZqIiVDAiIkRgw94kQbzJVz10Iw==",
+      "type": "package",
+      "path": "silk.net.opengl/2.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Silk.NET.OpenGL.dll",
+        "lib/net5.0/Silk.NET.OpenGL.xml",
+        "lib/netcoreapp3.1/Silk.NET.OpenGL.dll",
+        "lib/netcoreapp3.1/Silk.NET.OpenGL.xml",
+        "lib/netstandard2.0/Silk.NET.OpenGL.dll",
+        "lib/netstandard2.0/Silk.NET.OpenGL.xml",
+        "lib/netstandard2.1/Silk.NET.OpenGL.dll",
+        "lib/netstandard2.1/Silk.NET.OpenGL.xml",
+        "silk.net.opengl.2.21.0.nupkg.sha512",
+        "silk.net.opengl.nuspec",
         "silkdotnet_v3.png"
       ]
     },
@@ -3834,29 +3846,19 @@
         "system.appcontext.nuspec"
       ]
     },
-    "System.Buffers/4.4.0": {
-      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+    "System.Buffers/4.3.0": {
+      "sha512": "ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
       "type": "package",
-      "path": "system.buffers/4.4.0",
+      "path": "system.buffers/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netcoreapp2.0/_._",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.1/.xml",
         "lib/netstandard1.1/System.Buffers.dll",
-        "lib/netstandard1.1/System.Buffers.xml",
-        "lib/netstandard2.0/System.Buffers.dll",
-        "lib/netstandard2.0/System.Buffers.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.1/System.Buffers.dll",
-        "ref/netstandard1.1/System.Buffers.xml",
-        "ref/netstandard2.0/System.Buffers.dll",
-        "ref/netstandard2.0/System.Buffers.xml",
-        "system.buffers.4.4.0.nupkg.sha512",
-        "system.buffers.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.buffers.4.3.0.nupkg.sha512",
+        "system.buffers.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -4359,10 +4361,10 @@
         "system.diagnostics.tracing.nuspec"
       ]
     },
-    "System.Drawing.Common/9.0.0-preview.3.24172.9": {
-      "sha512": "KD3i/1Q1zvEejpW03lXKxhdyP0dAC8LQol/TU2zPVPIkLIe7fxXjMWcdZ1PKkZjbWDewqjtd815VRYBF9exESw==",
+    "System.Drawing.Common/9.0.0-preview.4.24267.1": {
+      "sha512": "JDaMkhAZ9jtFc06NFnrcPYGzF+N1SiQynDDraw2y+qsfkVIsMUonN4RG0YSkUpxB6QI7mXdcPQcY5ebDfBSYzQ==",
       "type": "package",
-      "path": "system.drawing.common/9.0.0-preview.3.24172.9",
+      "path": "system.drawing.common/9.0.0-preview.4.24267.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4396,7 +4398,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.drawing.common.9.0.0-preview.3.24172.9.nupkg.sha512",
+        "system.drawing.common.9.0.0-preview.4.24267.1.nupkg.sha512",
         "system.drawing.common.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -7036,21 +7038,41 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Extensions/4.3.0": {
-      "sha512": "npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
-      "path": "system.threading.tasks.extensions/4.3.0",
+      "path": "system.threading.tasks.extensions/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
-        "system.threading.tasks.extensions.4.3.0.nupkg.sha512",
-        "system.threading.tasks.extensions.nuspec"
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Threading.Timer/4.3.0": {
@@ -7274,10 +7296,10 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Ultz.Native.GLFW/3.3.9.2": {
-      "sha512": "4b7gJEfMZcw207CZkFV3VUBagmHlX9jYVkk1mrzacnAOgr90JoZSILTEFPc5lz5LT7yFKxQnsnqqIsFnVO7k/Q==",
+    "Ultz.Native.GLFW/3.4.0": {
+      "sha512": "Iy22JopynbOJ32vA0lBhFEzGi65GQJBuJHYBYRBpydrDpNoTiHnjIXfA65Gu+8qsOr/ZEoIF8r9aHCgAXuO6DA==",
       "type": "package",
-      "path": "ultz.native.glfw/3.3.9.2",
+      "path": "ultz.native.glfw/3.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7285,6 +7307,8 @@
         "build/net461/Ultz.Native.GLFW.targets",
         "lib/net461/_._",
         "lib/netstandard2.0/_._",
+        "runtimes/linux-arm/native/libglfw.so.3",
+        "runtimes/linux-arm64/native/libglfw.so.3",
         "runtimes/linux-x64/native/libglfw.so.3",
         "runtimes/osx-arm64/native/libglfw.3.dylib",
         "runtimes/osx-x64/native/libglfw.3.dylib",
@@ -7292,8 +7316,41 @@
         "runtimes/win-x64/native/glfw3.dll",
         "runtimes/win-x86/native/glfw3.dll",
         "silkdotnet_v3.png",
-        "ultz.native.glfw.3.3.9.2.nupkg.sha512",
+        "ultz.native.glfw.3.4.0.nupkg.sha512",
         "ultz.native.glfw.nuspec"
+      ]
+    },
+    "Validation/2.4.15": {
+      "sha512": "KQFOtJKKhaXzuSiZhkFaFzQEdYsA+EN/XqKZDYwsGDOrS0Nxu6qzCvNTsDF4xtkiZbBA6u7I59QnsuP2O2fZgg==",
+      "type": "package",
+      "path": "validation/2.4.15",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net20/Validation.dll",
+        "lib/net20/Validation.xml",
+        "lib/net40/Validation.dll",
+        "lib/net40/Validation.xml",
+        "lib/net45/Validation.dll",
+        "lib/net45/Validation.xml",
+        "lib/netstandard1.0/Validation.dll",
+        "lib/netstandard1.0/Validation.xml",
+        "lib/netstandard1.3/Validation.dll",
+        "lib/netstandard1.3/Validation.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Validation.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Validation.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Validation.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Validation.xml",
+        "tools/2013/RequiresNotNull.snippet",
+        "tools/2013/RequiresNotNullOrEmpty.snippet",
+        "tools/2015/RequiresNotNull.snippet",
+        "tools/2015/RequiresNotNullOrEmpty.snippet",
+        "tools/install_snippets.cmd",
+        "tools/uninstall_snippets.cmd",
+        "validation.2.4.15.nupkg.sha512",
+        "validation.nuspec"
       ]
     },
     "Veldrid/4.9.0": {
@@ -7562,11 +7619,6 @@
       "path": "../Artifact.Plugins.Input/Artifact.Plugins.Input.csproj",
       "msbuildProject": "../Artifact.Plugins.Input/Artifact.Plugins.Input.csproj"
     },
-    "Artifact.Plugins.Input.PollBackend/1.0.0": {
-      "type": "project",
-      "path": "../Artifact.Plugins.Input.PollBackend/Artifact.Plugins.Input.PollBackend.csproj",
-      "msbuildProject": "../Artifact.Plugins.Input.PollBackend/Artifact.Plugins.Input.PollBackend.csproj"
-    },
     "Artifact.Plugins.Rendering/1.0.0": {
       "type": "project",
       "path": "../Artifact.Plugins.Rendering/Artifact.Plugins.Rendering.csproj",
@@ -7619,7 +7671,6 @@
       "Artifact.Plugin.Audio >= 1.0.0",
       "Artifact.Plugins.Audio.NAudioBackend >= 1.0.0",
       "Artifact.Plugins.Input >= 1.0.0",
-      "Artifact.Plugins.Input.PollBackend >= 1.0.0",
       "Artifact.Plugins.Rendering >= 1.0.0",
       "Artifact.Plugins.Rendering.DirectXBackend >= 1.0.0",
       "Artifact.Plugins.Rendering.OpenGLBackend >= 1.0.0",
@@ -7632,29 +7683,29 @@
       "SharpDX.Mathematics >= 4.2.0",
       "StbImageSharp >= 2.27.14",
       "System.Configuration.ConfigurationManager >= 9.0.0-preview.3.24172.9",
-      "System.Drawing.Common >= 9.0.0-preview.3.24172.9",
+      "System.Drawing.Common >= 9.0.0-preview.4.24267.1",
       "System.Security.Permissions >= 9.0.0-preview.3.24172.9",
       "Veldrid.ImageSharp >= 4.9.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joel\\.nuget\\packages\\": {},
+    "C:\\Users\\rhys\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "J:\\code\\artifact\\TestGame\\TestGame.csproj",
+      "projectUniqueName": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
       "projectName": "TestGame",
-      "projectPath": "J:\\code\\artifact\\TestGame\\TestGame.csproj",
-      "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
-      "outputPath": "J:\\code\\artifact\\TestGame\\obj\\",
+      "projectPath": "R:\\code\\Artifact\\TestGame\\TestGame.csproj",
+      "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+      "outputPath": "R:\\code\\Artifact\\TestGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7670,47 +7721,44 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "J:\\code\\artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugin.Audio\\Artifact.Plugin.Audio.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Audio.NAudioBackend\\Artifact.Plugins.Audio.NAudioBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Input.PollBackend\\Artifact.Plugins.Input.PollBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Input\\Artifact.Plugins.Input.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.DirectXBackend\\Artifact.Plugins.Rendering.DirectXBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.OpenGLBackend\\Artifact.Plugins.Rendering.OpenGLBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering.VeldridBackend\\Artifact.Plugins.Rendering.VeldridBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Rendering\\Artifact.Plugins.Rendering.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.SplashScreen\\Artifact.Plugins.SplashScreen.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.SDL2Backend\\Artifact.Plugins.Windowing.SDL2Backend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.WinFormsBackend\\Artifact.Plugins.Windowing.WinFormsBackend.csproj"
+            "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
             },
-            "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
-            },
-            "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
-              "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
+            "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+              "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
             }
           }
         }
@@ -7744,7 +7792,7 @@
           },
           "System.Drawing.Common": {
             "target": "Package",
-            "version": "[9.0.0-preview.3.24172.9, )"
+            "version": "[9.0.0-preview.4.24267.1, )"
           },
           "System.Security.Permissions": {
             "target": "Package",

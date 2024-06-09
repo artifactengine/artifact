@@ -79,8 +79,6 @@ R:\code\Artifact\TestGame\bin\Debug\net8.0\System.Deployment.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\System.Runtime.Serialization.Formatters.Soap.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Windowing.WinFormsBackend.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.dll
-R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.dll
-R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.PollBackend.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.Input.pdb
 R:\code\Artifact\TestGame\obj\Debug\net8.0\TestGame.sourcelink.json
 R:\code\Artifact\TestGame\bin\Debug\net8.0\SharpDX.Mathematics.dll
@@ -125,3 +123,13 @@ R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.SplashScreen.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\Artifact.Plugins.SplashScreen.pdb
 R:\code\Artifact\TestGame\bin\Debug\net8.0\StbImageSharp.dll
 R:\code\Artifact\TestGame\bin\Debug\net8.0\SharpDX.Direct2D1.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\X11.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\runtimes\linux-arm\native\libglfw.so.3
+R:\code\Artifact\TestGame\bin\Debug\net8.0\runtimes\linux-arm64\native\libglfw.so.3
+R:\code\Artifact\TestGame\bin\Debug\net8.0\PInvoke.Kernel32.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\PInvoke.User32.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\PInvoke.Windows.Core.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\PInvoke.Windows.ShellScalingApi.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Silk.NET.Maths.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Silk.NET.OpenGL.dll
+R:\code\Artifact\TestGame\bin\Debug\net8.0\Validation.dll

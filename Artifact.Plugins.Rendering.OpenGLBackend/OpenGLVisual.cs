@@ -1,6 +1,7 @@
 ﻿using Artifact.Plugins.Windowing;
 using NLog;
 using SharpGL;
+using Silk.NET.OpenGL;
 using StbImageSharp;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 {
     public class OpenGLVisual : ArtifactDisposable, IVisual
     {
-        private OpenGL gl;
+        private GL gl;
 
         private uint vbo, vao, ebo;
         private uint shaderProgram, vertexShader, fragmentShader;
@@ -36,21 +37,6 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
         public ColorRGB Tint { get; set; } = new ColorRGB(255, 255, 255, 255);
 
-        public static IntPtr ConvertStructArrayToIntPtr<T>(T[] structArray) where T : struct
-        {
-            // Allocate unmanaged memory
-            IntPtr ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(T)) * structArray.Length);
-
-            // Copy each struct to the unmanaged memory
-            for (int i = 0; i < structArray.Length; i++)
-            {
-                IntPtr currentPtr = new IntPtr(ptr.ToInt64() + (i * Marshal.SizeOf(typeof(T))));
-                Marshal.StructureToPtr(structArray[i], currentPtr, false);
-            }
-
-            // Return the IntPtr pointing to the start of the unmanaged memory
-            return ptr;
-        }
 
         public unsafe OpenGLVisual(Mesh mesh) : base()
         {
@@ -62,26 +48,28 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             if (vertexShaderCache.ContainsKey(fullVertexPath))
             {
                 vertexShader = vertexShaderCache[fullVertexPath];
-            } else
+            }
+            else
             {
                 string vertexShaderSource = File.ReadAllText(fullVertexPath);
 
-                vertexShader = gl.CreateShader(OpenGL.GL_VERTEX_SHADER);
+                vertexShader = gl.CreateShader(GLEnum.VertexShader);
 
                 gl.ShaderSource(vertexShader, vertexShaderSource);
                 gl.CompileShader(vertexShader);
 
                 vertexShaderCache.Add(fullVertexPath, vertexShader);
             }
-            
+
             if (fragmentShaderCache.ContainsKey(fullFragmentPath))
             {
                 fragmentShader = fragmentShaderCache[fullFragmentPath];
-            } else
+            }
+            else
             {
                 string fragmentShaderSource = File.ReadAllText(fullFragmentPath);
 
-                fragmentShader = gl.CreateShader(OpenGL.GL_FRAGMENT_SHADER);
+                fragmentShader = gl.CreateShader(GLEnum.FragmentShader);
 
                 gl.ShaderSource(fragmentShader, fragmentShaderSource);
                 gl.CompileShader(fragmentShader);
@@ -89,7 +77,7 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
                 fragmentShaderCache.Add(fullFragmentPath, fragmentShader);
             }
 
-            
+
 
             shaderProgram = gl.CreateProgram();
 
@@ -98,11 +86,16 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
             gl.LinkProgram(shaderProgram);
 
+
+
+
+
             if (vertexArrayCache.ContainsKey(mesh.Vertices))
             {
                 Console.WriteLine("Use cached VAO");
                 vao = vertexArrayCache[mesh.Vertices];
-            } else
+            }
+            else
             {
                 Console.WriteLine("Create new VAO");
                 uint[] vbos = new uint[1];
@@ -119,30 +112,32 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
                 gl.BindVertexArray(vao);
 
 
-                gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, vbo);
-                gl.BufferData(OpenGL.GL_ARRAY_BUFFER, mesh.Vertices.Length * sizeof(Vertex), ConvertStructArrayToIntPtr(mesh.Vertices), OpenGL.GL_STATIC_DRAW);
+                gl.BindBuffer(GLEnum.ArrayBuffer, vbo);
+                fixed (Vertex* vertices = mesh.Vertices)
+                    gl.BufferData(GLEnum.ArrayBuffer, (nuint)(mesh.Vertices.Length * sizeof(Vertex)), vertices, GLEnum.StaticDraw);
 
                 uint positionLocation = (uint)gl.GetAttribLocation(shaderProgram, "aPos");
                 uint colorLocation = (uint)gl.GetAttribLocation(shaderProgram, "aTexCoord");
 
                 Console.WriteLine(positionLocation);
 
-                gl.VertexAttribPointer(positionLocation, 4, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 0);
-                gl.VertexAttribPointer(colorLocation, 2, OpenGL.GL_FLOAT, false, 6 * sizeof(float), 4 * sizeof(float));
+                gl.VertexAttribPointer(positionLocation, 4, GLEnum.Float, false, 6 * sizeof(float), 0);
+                gl.VertexAttribPointer(colorLocation, 2, GLEnum.Float, false, 6 * sizeof(float), 4 * sizeof(float));
                 gl.EnableVertexAttribArray(positionLocation);
                 gl.EnableVertexAttribArray(colorLocation);
 
-                gl.BindBuffer(OpenGL.GL_ARRAY_BUFFER, 0);
+                gl.BindBuffer(GLEnum.ArrayBuffer, 0);
 
                 vertexArrayCache.Add(mesh.Vertices, vao);
             }
 
-            
+
             if (elementBufferCache.ContainsKey(mesh.Indices))
             {
                 Console.WriteLine("Use cached ebo");
                 ebo = elementBufferCache[mesh.Indices];
-            } else
+            }
+            else
             {
                 Console.WriteLine("Create new ebo");
                 uint[] ebos = new uint[1];
@@ -150,14 +145,14 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
                 ebo = ebos[0];
 
-                gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
-                gl.BufferData(OpenGL.GL_ELEMENT_ARRAY_BUFFER, mesh.Indices, OpenGL.GL_STATIC_DRAW);
-                gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, 0);
+                gl.BindBuffer(GLEnum.ElementArrayBuffer, ebo);
+                fixed (ushort* indices = mesh.Indices)
+                    gl.BufferData(GLEnum.ElementArrayBuffer, (nuint)(sizeof(ushort) * mesh.Indices.Length), indices, GLEnum.StaticDraw);
+                gl.BindBuffer(GLEnum.ElementArrayBuffer, 0);
 
                 elementBufferCache.Add(mesh.Indices, ebo);
 
             }
-
 
             _mesh = mesh;
 
@@ -165,24 +160,25 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             {
                 Console.WriteLine("Use cached texture");
                 texture = textureCache[mesh.TexturePath];
-            } else
+            }
+            else
             {
                 uint[] textures = new uint[1];
                 gl.GenTextures(1, textures);
 
                 texture = textures[0];
 
-                gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
+                gl.BindTexture(GLEnum.Texture2D, texture);
                 //gl.ActiveTexture(OpenGL.GL_TEXTURE0);
 
                 gl.UseProgram(shaderProgram);
 
                 gl.Uniform1(gl.GetUniformLocation(shaderProgram, "tex0"), 0);
 
-                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_S, OpenGL.GL_REPEAT);
-                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_WRAP_T, OpenGL.GL_REPEAT);
-                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MIN_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
-                gl.TexParameter(OpenGL.GL_TEXTURE_2D, OpenGL.GL_TEXTURE_MAG_FILTER, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? OpenGL.GL_LINEAR : OpenGL.GL_NEAREST);
+                gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureWrapS, (int)TextureWrapMode.Repeat);
+                gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureWrapT, (int)TextureWrapMode.Repeat);
+                gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureMinFilter, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? (int)TextureMinFilter.Linear : (int)TextureMinFilter.Nearest);
+                gl.TexParameterI(GLEnum.Texture2D, GLEnum.TextureMagFilter, Application.current.GetPlugin<RenderingPlugin>().SamplerMode == SamplerMode.Smooth ? (int)TextureMagFilter.Linear : (int)TextureMagFilter.Nearest);
 
 
                 StbImage.stbi_set_flip_vertically_on_load(0);
@@ -191,18 +187,16 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
 
                 ImageResult image = ImageResult.FromStream(stream, ColorComponents.RedGreenBlueAlpha);
 
-                gl.TexImage2D(OpenGL.GL_TEXTURE_2D, 0, OpenGL.GL_RGBA, image.Width, image.Height, 0, OpenGL.GL_RGBA, OpenGL.GL_UNSIGNED_BYTE, image.Data);
-                gl.GenerateMipmapEXT(OpenGL.GL_TEXTURE_2D);
+                fixed (byte* ptr = image.Data)
+                    gl.TexImage2D(GLEnum.Texture2D, 0, InternalFormat.Rgba, (uint)image.Width, (uint)image.Height, 0, PixelFormat.Rgba, PixelType.UnsignedByte, ptr);
 
                 textureCache.Add(mesh.TexturePath, texture);
 
                 Console.WriteLine("Load new texture");
             }
-
-
         }
 
-        public void Draw()
+        public unsafe void Draw()
         {
             Matrix4x4 model = Matrix4x4.Identity;
 
@@ -219,25 +213,22 @@ namespace Artifact.Plugins.Rendering.OpenGLBackend
             gl.UniformMatrix4(gl.GetUniformLocation(shaderProgram, "view"), 1, false, Camera.ViewMatrix.AsFloatArray());
             gl.Uniform4(gl.GetUniformLocation(shaderProgram, "tint"), Tint.UnitR, Tint.UnitG, Tint.UnitB, Tint.UnitA);
 
-            gl.BindTexture(OpenGL.GL_TEXTURE_2D, texture);
-            gl.ActiveTexture(OpenGL.GL_TEXTURE0);
+            gl.BindTexture(GLEnum.Texture2D, texture);
+            gl.ActiveTexture(GLEnum.Texture0);
 
             //Console.WriteLine(string.Join(", ", Camera.ViewMatrix.AsFloatArray()));
 
             //Console.WriteLine("[" + string.Join(", ", translation.AsFloatArray()) + "]");
 
             gl.BindVertexArray(vao);
-            gl.BindBuffer(OpenGL.GL_ELEMENT_ARRAY_BUFFER, ebo);
-            
-            gl.DrawElements(OpenGL.GL_TRIANGLES, _mesh.Indices.Length, OpenGL.GL_UNSIGNED_SHORT, 0);
+            gl.BindBuffer(GLEnum.ElementArrayBuffer, ebo);
+
+            gl.DrawElements(GLEnum.Triangles, (uint)_mesh.Indices.Length, GLEnum.UnsignedShort, (void*)0);
         }
 
         public override void Dispose()
         {
-            //gl.DeleteBuffers()
-            //gl.DeleteVertexArrays(1, [vao]);
 
-            //gl.DeleteProgram(shaderProgram);
         }
     }
 }

@@ -19,12 +19,6 @@ namespace Artifact.Plugins.Windowing
 
         public IWindowingBackend Backend { get; set; }
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, IntPtr lParam);
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern IntPtr LoadImage(IntPtr hInstance, string lpszName, uint uType, int cxDesired, int cyDesired, uint fuLoad);
-
         public const int WM_SETICON = 0x0080;
         public const int ICON_SMALL = 0;
         public const int IMAGE_ICON = 1;
@@ -51,17 +45,6 @@ namespace Artifact.Plugins.Windowing
         public override void OnLoad()
         {
             Backend.CreateWindow(Title, Width, Height, Application);
-
-            Console.WriteLine("Set icon");
-            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
-            {
-                Console.WriteLine("Set icon windows");
-                IntPtr hIcon = LoadImage(IntPtr.Zero, "Assets/icon.ico", IMAGE_ICON, 256, 256, LR_LOADFROMFILE);
-                SendMessage(Backend.WindowHandle, WM_SETICON, ICON_SMALL, hIcon);
-            } else
-            {
-                Console.WriteLine("no icons for windows in linux :(");
-            }
             
         }
 

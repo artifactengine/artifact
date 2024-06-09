@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {}
+    "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {}
   },
   "projects": {
-    "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
+    "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
+        "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
         "projectName": "Artifact.Plugins.Windowing.GLFWBackend",
-        "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
-        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
-        "outputPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing.GLFWBackend\\obj\\",
+        "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\Artifact.Plugins.Windowing.GLFWBackend.csproj",
+        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+        "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing.GLFWBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
-                "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
+              "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj"
               },
-              "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
-                "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
+              "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
               }
             }
           }
@@ -59,7 +59,7 @@
           "dependencies": {
             "Silk.NET.GLFW": {
               "target": "Package",
-              "version": "[2.20.0, )"
+              "version": "[2.21.0, )"
             }
           },
           "imports": [
@@ -82,20 +82,20 @@
         }
       }
     },
-    "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
+    "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+        "projectUniqueName": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
         "projectName": "Artifact.Plugins.Windowing",
-        "projectPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
-        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
-        "outputPath": "J:\\code\\artifact\\Artifact.Plugins.Windowing\\obj\\",
+        "projectPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\Artifact.Plugins.Windowing.csproj",
+        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+        "outputPath": "R:\\code\\Artifact\\Artifact.Plugins.Windowing\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
-                "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj"
+              "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
+                "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj"
               }
             }
           }
@@ -157,20 +157,20 @@
         }
       }
     },
-    "J:\\code\\artifact\\Artifact\\Artifact.csproj": {
+    "R:\\code\\Artifact\\Artifact\\Artifact.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\code\\artifact\\Artifact\\Artifact.csproj",
+        "projectUniqueName": "R:\\code\\Artifact\\Artifact\\Artifact.csproj",
         "projectName": "Artifact",
-        "projectPath": "J:\\code\\artifact\\Artifact\\Artifact.csproj",
-        "packagesPath": "C:\\Users\\joel\\.nuget\\packages\\",
-        "outputPath": "J:\\code\\artifact\\Artifact\\obj\\",
+        "projectPath": "R:\\code\\Artifact\\Artifact\\Artifact.csproj",
+        "packagesPath": "C:\\Users\\rhys\\.nuget\\packages\\",
+        "outputPath": "R:\\code\\Artifact\\Artifact\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rhys\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

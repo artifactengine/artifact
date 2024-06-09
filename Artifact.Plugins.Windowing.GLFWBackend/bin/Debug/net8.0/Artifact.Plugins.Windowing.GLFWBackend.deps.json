@@ -10,7 +10,7 @@
         "dependencies": {
           "Artifact": "1.0.0",
           "Artifact.Plugins.Windowing": "1.0.0",
-          "Silk.NET.GLFW": "2.20.0"
+          "Silk.NET.GLFW": "2.21.0"
         },
         "runtime": {
           "Artifact.Plugins.Windowing.GLFWBackend.dll": {}
@@ -45,7 +45,7 @@
           }
         }
       },
-      "Silk.NET.Core/2.20.0": {
+      "Silk.NET.Core/2.21.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
@@ -56,20 +56,20 @@
         },
         "runtime": {
           "lib/net6.0/Silk.NET.Core.dll": {
-            "assemblyVersion": "2.20.0.0",
-            "fileVersion": "2.20.0.0"
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
           }
         }
       },
-      "Silk.NET.GLFW/2.20.0": {
+      "Silk.NET.GLFW/2.21.0": {
         "dependencies": {
-          "Silk.NET.Core": "2.20.0",
-          "Ultz.Native.GLFW": "3.3.9.2"
+          "Silk.NET.Core": "2.21.0",
+          "Ultz.Native.GLFW": "3.4.0"
         },
         "runtime": {
           "lib/net5.0/Silk.NET.GLFW.dll": {
-            "assemblyVersion": "2.20.0.0",
-            "fileVersion": "2.20.0.0"
+            "assemblyVersion": "2.21.0.0",
+            "fileVersion": "2.21.0.0"
           }
         }
       },
@@ -82,8 +82,18 @@
           "System.Text.Encodings.Web": "8.0.0"
         }
       },
-      "Ultz.Native.GLFW/3.3.9.2": {
+      "Ultz.Native.GLFW/3.4.0": {
         "runtimeTargets": {
+          "runtimes/linux-arm/native/libglfw.so.3": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libglfw.so.3": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
           "runtimes/linux-x64/native/libglfw.so.3": {
             "rid": "linux-x64",
             "assetType": "native",
@@ -177,19 +187,19 @@
       "path": "nlog/5.2.8",
       "hashPath": "nlog.5.2.8.nupkg.sha512"
     },
-    "Silk.NET.Core/2.20.0": {
+    "Silk.NET.Core/2.21.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vin8fW0bUBD3hDbN3s3br+ePtAzzdOCygslGfb7JR86ZKVQ/fAsgLcKQLDbNjZAn020F4eUEg/UNEZqpBwhOcg==",
-      "path": "silk.net.core/2.20.0",
-      "hashPath": "silk.net.core.2.20.0.nupkg.sha512"
+      "sha512": "sha512-U8gATeEGvSIc1ogSdG/LKr6SLgOjkis7Oo/QzCq+aOoGjw4tHYRVpm02V+pHp/qlQhziBbdQ/Vl5d58cmFY+PA==",
+      "path": "silk.net.core/2.21.0",
+      "hashPath": "silk.net.core.2.21.0.nupkg.sha512"
     },
-    "Silk.NET.GLFW/2.20.0": {
+    "Silk.NET.GLFW/2.21.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VCnaHew1xH+j0AxS54zVQNLQ4HJAaTpIFQdPpmMzbJ3XB21zNPV/5MBGhz4PyBgXKEHezjT6NPkYOerbzHqkfA==",
-      "path": "silk.net.glfw/2.20.0",
-      "hashPath": "silk.net.glfw.2.20.0.nupkg.sha512"
+      "sha512": "sha512-HWu21xUICqYH9ZfSlQo4c71Q7o++tip2v7LiWczvEwgqlJacZ3L9c1+jyOlfcGo9IN9pRao8QIbPNC9dlMcSZQ==",
+      "path": "silk.net.glfw/2.21.0",
+      "hashPath": "silk.net.glfw.2.21.0.nupkg.sha512"
     },
     "System.Memory/4.5.5": {
       "type": "package",
@@ -226,12 +236,12 @@
       "path": "system.text.json/8.0.0",
       "hashPath": "system.text.json.8.0.0.nupkg.sha512"
     },
-    "Ultz.Native.GLFW/3.3.9.2": {
+    "Ultz.Native.GLFW/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4b7gJEfMZcw207CZkFV3VUBagmHlX9jYVkk1mrzacnAOgr90JoZSILTEFPc5lz5LT7yFKxQnsnqqIsFnVO7k/Q==",
-      "path": "ultz.native.glfw/3.3.9.2",
-      "hashPath": "ultz.native.glfw.3.3.9.2.nupkg.sha512"
+      "sha512": "sha512-Iy22JopynbOJ32vA0lBhFEzGi65GQJBuJHYBYRBpydrDpNoTiHnjIXfA65Gu+8qsOr/ZEoIF8r9aHCgAXuO6DA==",
+      "path": "ultz.native.glfw/3.4.0",
+      "hashPath": "ultz.native.glfw.3.4.0.nupkg.sha512"
     },
     "X11/1.0.6": {
       "type": "package",

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -79,6 +79,54 @@ namespace Artifact
 
                 if (elapsedTime < targetElapsedTime)
                 {
+                    continue;
+                }
+
+                // Calculate delta time
+                float dt = (float)elapsedTime / Stopwatch.Frequency;
+
+                app.FPS = 1 / dt;
+
+                app.OnUpdate(dt);
+
+                lastTime = currentTime;
+            }
+
+            app.OnExit();
+
+            app.logger.Info("Disposing...");
+
+            GarbageCollect();
+        }
+
+        public static async void RunAsync<T>() where T : Application
+        {
+            Application app = Activator.CreateInstance<T>();
+
+            app.logger.Info($"Starting application {app.Name}...");
+            app.logger.Info($"Target FPS: {app.TargetFPS}");
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            long targetElapsedTime = Stopwatch.Frequency / app.TargetFPS; // Target time per frame for 60 FPS
+            long lastTime = stopwatch.ElapsedTicks;
+
+            foreach (PluginBase plugin in app.plugins)
+            {
+                plugin.OnLoad();
+            }
+
+            app.OnLoad();
+
+            while (app.IsOpen)
+            {
+                long currentTime = stopwatch.ElapsedTicks;
+                long elapsedTime = currentTime - lastTime;
+
+                if (elapsedTime < targetElapsedTime)
+                {
+                    await Task.Delay(1);
                     continue;
                 }
 

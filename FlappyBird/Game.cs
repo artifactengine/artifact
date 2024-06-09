@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Artifact.Plugins.Input;
-using Artifact.Plugins.Input.PollBackend;
 using System.Numerics;
 using Artifact.Plugin.Audio;
 using Artifact.Plugins.Audio.NAudioBackend;
@@ -60,7 +59,7 @@ namespace Platformer
 
             AddPlugin(new WindowingPlugin(this, "Flappy Bird", 1280, 720, typeof(GLFWWindowingBackend)));
             AddPlugin(new RenderingPlugin(this, typeof(VeldridRenderingBackend)));
-            AddPlugin(new InputPlugin(this, typeof(PollingInputBackend)));
+            AddPlugin(new InputPlugin(this));
             AddPlugin(new AudioPlugin(this, typeof(NAudioBackend)));
             AddPlugin(new SplashScreenPlugin(this, ["Assets/FullLogo.png"], 0.75f));
             AddPlugin(new DebugMenuPlugin(this));
